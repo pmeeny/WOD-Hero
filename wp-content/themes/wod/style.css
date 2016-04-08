@@ -1,0 +1,30 @@
+/*
+Theme Name: WOD
+Theme URI:
+Description: WOD Theme
+Version: 1
+Author: Rajni Sharma
+Author URI:
+*/
+
+
+
+#ui-datepicker-div{ display: none;}
+.fc-day-header {
+    background: #f0f0f0 none repeat scroll 0 0;
+    color: #797979;
+    padding: 10px !important;
+}
+.fc-toolbar .fc-right{ display: block!important;}
+.fc-event{ background: none!important; border: none!important;}
+ul.workout_images{ margin: 0; padding: 0; position:relative; top:36px;}
+ul.workout_images li{ display: inline-block; vertical-align:middle; margin:0 1px;}
+.workout_data{ text-align: right;}
+.fc-event-container,.fc-event-container a{height: 58px;}
+
+.photo #userprofilePic{ width:100%; text-transform:uppercase; font-weight:bold;}
+#upload{background: rgb(238,238,238); border:1px solid #dbdbdb; border-radius:3px; width:20%; padding:20px; text-align:center;}
+
+.has_error{ border: solid 1px #ff0000; }
+.normal-hide{display:none;}
+a.fc-event{cursor: pointer;}

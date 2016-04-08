@@ -1,0 +1,19 @@
+[30-Mar-2016 05:20:36 UTC] PHP Notice:  Undefined variable: post in /home/pmeeny/public_html/wp-content/themes/wod/includes/custom_functions.php on line 604
+[30-Mar-2016 05:20:36 UTC] PHP Notice:  Trying to get property of non-object in /home/pmeeny/public_html/wp-content/themes/wod/includes/custom_functions.php on line 604
+[30-Mar-2016 05:21:03 UTC] PHP Notice:  Undefined variable: post in /home/pmeeny/public_html/wp-content/themes/wod/includes/custom_functions.php on line 604
+[30-Mar-2016 05:21:03 UTC] PHP Notice:  Trying to get property of non-object in /home/pmeeny/public_html/wp-content/themes/wod/includes/custom_functions.php on line 604
+[30-Mar-2016 05:25:20 UTC] PHP Notice:  Undefined variable: post in /home/pmeeny/public_html/wp-content/themes/wod/includes/custom_functions.php on line 604
+[30-Mar-2016 05:25:20 UTC] PHP Notice:  Trying to get property of non-object in /home/pmeeny/public_html/wp-content/themes/wod/includes/custom_functions.php on line 604
+[30-Mar-2016 05:25:39 UTC] PHP Notice:  Undefined variable: post in /home/pmeeny/public_html/wp-content/themes/wod/includes/custom_functions.php on line 604
+[30-Mar-2016 05:25:39 UTC] PHP Notice:  Trying to get property of non-object in /home/pmeeny/public_html/wp-content/themes/wod/includes/custom_functions.php on line 604
+[30-Mar-2016 05:25:39 UTC] PHP Notice:  Undefined variable: post in /home/pmeeny/public_html/wp-content/themes/wod/includes/custom_functions.php on line 604
+[30-Mar-2016 05:25:39 UTC] PHP Notice:  Trying to get property of non-object in /home/pmeeny/public_html/wp-content/themes/wod/includes/custom_functions.php on line 604
+[30-Mar-2016 05:25:39 UTC] PHP Notice:  Undefined variable: post in /home/pmeeny/public_html/wp-content/themes/wod/includes/custom_functions.php on line 604
+[30-Mar-2016 05:25:39 UTC] PHP Notice:  Trying to get property of non-object in /home/pmeeny/public_html/wp-content/themes/wod/includes/custom_functions.php on line 604
+[30-Mar-2016 05:25:39 UTC] PHP Notice:  Undefined variable: post in /home/pmeeny/public_html/wp-content/themes/wod/includes/custom_functions.php on line 604
+[30-Mar-2016 05:25:39 UTC] PHP Notice:  Trying to get property of non-object in /home/pmeeny/public_html/wp-content/themes/wod/includes/custom_functions.php on line 604
+[30-Mar-2016 05:27:25 UTC] PHP Notice:  Undefined variable: post in /home/pmeeny/public_html/wp-content/themes/wod/includes/custom_functions.php on line 604
+[30-Mar-2016 05:27:25 UTC] PHP Notice:  Trying to get property of non-object in /home/pmeeny/public_html/wp-content/themes/wod/includes/custom_functions.php on line 604
+[30-Mar-2016 05:27:50 UTC] PHP Notice:  Undefined variable: post in /home/pmeeny/public_html/wp-content/themes/wod/includes/custom_functions.php on line 604
+[30-Mar-2016 05:27:50 UTC] PHP Notice:  Trying to get property of non-object in /home/pmeeny/public_html/wp-content/themes/wod/includes/custom_functions.php on line 604
+[06-Apr-2016 21:41:58 UTC] WordPress database error No database selected for query SELECT * FROM wp_users WHERE user_login = 'whero' made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), WP->init, wp_get_current_user, get_currentuserinfo, apply_filters('determine_current_user'), call_user_func_array, wp_validate_auth_cookie, get_user_by, WP_User::get_data_by

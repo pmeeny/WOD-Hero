@@ -1,0 +1,135 @@
+********************************************************************************
+DUPLICATOR INSTALL-LOG
+STEP1 START @ 12:02:22
+NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+VERSION:	1.1.6
+PHP:		5.6.10 | SAPI: apache2handler
+SERVER:		Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zf DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0
+DOC ROOT:	/Applications/MAMP/htdocs/test-site
+DOC ROOT 755:	true
+LOG FILE 644:	true
+BUILD NAME:	20160406_wod_57058548291476887160406215312
+REQUEST URL:	http://localhost/test-site/installer.php
+
+********************************************************************************
+ARCHIVE SETUP
+********************************************************************************
+NAME:	20160406_wod_57058548291476887160406215312_archive.zip
+SIZE:	38.46MB
+ZIP:	Enabled (ZipArchive Support)
+EXTRACTING
+ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 2655
+    [filename] => /Applications/MAMP/htdocs/test-site/20160406_wod_57058548291476887160406215312_archive.zip
+    [comment] => 
+)
+COMPLETE: true
+
+WEB SERVER CONFIGURATION FILE RESET:
+- Backup of .htaccess/web.config made to .orig
+- Reset of .htaccess/web.config files
+
+UPDATED FILES:
+- SQL FILE:  '/Applications/MAMP/htdocs/test-site/installer-data.sql'
+- WP-CONFIG: '/Applications/MAMP/htdocs/test-site/wp-config.php'
+
+ARCHIVE RUNTIME: 1.9417 sec.
+
+
+********************************************************************************
+DATABASE-ROUTINES
+********************************************************************************
+--------------------------------------
+SERVER ENVIROMENT
+--------------------------------------
+MYSQL VERSION:	5.5.42
+TIMEOUT:	5000
+MAXPACK:	1048576
+--------------------------------------
+DATABASE RESULTS
+--------------------------------------
+ERRORS FOUND:	0
+DROP TABLE:	removed (12) tables
+QUERIES RAN:	1125
+
+wp_add_workout: (71)
+wp_commentmeta: (0)
+wp_comments: (0)
+wp_duplicator_packages: (2)
+wp_links: (0)
+wp_options: (336)
+wp_postmeta: (271)
+wp_posts: (114)
+wp_term_relationships: (16)
+wp_term_taxonomy: (7)
+wp_termmeta: (0)
+wp_terms: (7)
+wp_usermeta: (276)
+wp_users: (9)
+Removed '95' cache/transient rows
+
+SECTION RUNTIME: 2.0613 sec.
+
+********************************************************************************
+STEP1 COMPLETE @ 12:02:27 - TOTAL RUNTIME: 4.1052 sec.
+********************************************************************************
+
+
+
+********************************************************************************
+DUPLICATOR INSTALL-LOG
+STEP2 START @ 12:03:11
+NOTICE: Do not post to public sites or forums
+********************************************************************************
+CHARSET SERVER:	latin1
+CHARSET CLIENT:	 utf8 
+
+--------------------------------------
+SERIALIZER ENGINE
+[*] scan every column
+[~] scan only text columns
+[^] no searchable columns
+--------------------------------------
+wp_add_workout~ (71)
+wp_commentmeta^ (0)
+wp_comments^ (0)
+wp_duplicator_packages^ (0)
+wp_links^ (0)
+wp_options~ (240)
+wp_postmeta~ (271)
+wp_posts~ (114)
+wp_term_relationships~ (16)
+wp_term_taxonomy~ (7)
+wp_termmeta^ (0)
+wp_terms~ (7)
+wp_usermeta~ (276)
+wp_users~ (9)
+--------------------------------------
+SEARCH1:	'http://wodhero.net' 
+REPLACE1:	'http://localhost:8888/test-site' 
+SEARCH2:	'/home/pmeeny/public_html/' 
+REPLACE2:	'/Applications/MAMP/htdocs/test-site/' 
+SCANNED:	Tables:14 | Rows:1011 | Cells:6901 
+UPDATED:	Tables:1 | Rows:12 |Cells:12 
+ERRORS:		0 
+RUNTIME:	0.221500 sec
+
+********************************************************************************
+START FINAL CLEANUP: 12:03:11
+********************************************************************************
+UPDATE `wp_blogs` SET domain = 'localhost' WHERE domain = 'wodhero.net'
+
+--------------------------------------
+WARNINGS
+--------------------------------------
+WP-CONFIG WARNING: The wp-config.php has one or more of these values "WP_CONTENT_DIR, WP_CONTENT_URL, WPCACHEHOME, COOKIE_DOMAIN, WP_SITEURL, WP_HOME, WP_TEMP_DIR" which may cause issues please validate these values by opening the file.
+
+WEB SERVER CONFIGURATION FILE BASIC SETUP:
+created basic .htaccess file.  If using IIS web.config this process will need to be done manually.
+********************************************************************************
+STEP 2 COMPLETE @ 12:03:11 - TOTAL RUNTIME: 0.2785 sec.
+********************************************************************************
