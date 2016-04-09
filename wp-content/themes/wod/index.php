@@ -1,7 +1,8 @@
 <?php get_header('home'); ?>
 
-    <div class="slider"> <div class="container"><h1>The Sport Of <br>
-                Fitness Has arrived</h1> </div> </div>
+    <div class="slider"> <div class="container">
+      <!--  <h1>Become a WOD Hero</h1> -->
+        </div> </div>
 
     <div class="container home-page-container">
         <div class="row">
