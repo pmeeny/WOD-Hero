@@ -50,7 +50,7 @@ get_header();
                            <div class="gender-section">
                                <div class="sub-heading">Gender</div>
                                  <ul>
-                                     <li><input type="radio" <?php if(isset($_REQUEST['gender']) && $_REQUEST['gender'] == 'male'){ echo "checked"; } ?> name="gender" id="Male" value="male"><label for="Male">Male</label></li>
+                                     <li><input type="radio" required <?php if(isset($_REQUEST['gender']) && $_REQUEST['gender'] == 'male'){ echo "checked"; } ?> name="gender" id="Male" value="male"><label for="Male">Male</label></li>
                                      <li><input type="radio" <?php if(isset($_REQUEST['gender']) &&  $_REQUEST['gender'] == 'female'){ echo "checked"; } ?> name="gender" id="Female" value="female"><label for="Female">Female</label></li>
                                  </ul>
                             </div>
@@ -68,7 +68,14 @@ get_header();
                                     while ( $exercise_query->have_posts() ) :
                                         $exercise_query->the_post();
                                         ?>
+                                        
+                                        <?php
+        
+                                        if($post->ID == 363 || $post->ID == 364 || $post->ID == 365 || $post->ID == 370 || $post->ID == 371 || $post->ID == 372 || $post->ID == 375 || $post->ID == 376 || $post->ID == 377 || $post->ID == 379 || $post->ID == 380 || $post->ID == 58){ ?>
+                                        
                                         <li><input type="checkbox" id="<?php echo $post->ID; ?>_Exercise" <?php if(!empty($_REQUEST['exercise']) && in_array($post->ID, $_REQUEST['exercise'])){ echo "checked"; } ?>  name="exercise[]" value="<?php echo $post->ID; ?>"><label for="<?php echo $post->ID; ?>_Exercise"> <?php the_title(); ?></label></li><?php
+                                        
+                                        }
                                         $p++;
                                     endwhile;
                                 endif;

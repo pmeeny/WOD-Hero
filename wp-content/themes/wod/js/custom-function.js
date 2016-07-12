@@ -610,7 +610,7 @@ function get_workout_lists(id,sid,obj){
 
                 obj.parents('.row_data').find('.tr_reps,.tr_weight,.tr_times,.tr_box_jump,.tr_distance').addClass('hide');
             }
-        }
+        }         
     });
 }
 
@@ -631,7 +631,7 @@ function workout_fields(obj,new_obj){
             ajaxLoaderStop();
             var workout_cat =  new_obj.parents('.row_data').find('.workout_cat option:selected').val();
             if(data!=''){
-
+  
                 if(workout_cat == 'cardio'){
                     new_obj.parents('.row_data').find('.tr_box_jump').removeClass('hide');
                     new_obj.parents('.row_data').find('.addWorkoutPB').formValidation('revalidateField', new_obj.parents('.row_data').find('.tr_box_jump').find('input[type="text"]').attr('name'));
@@ -664,6 +664,7 @@ function workout_fields(obj,new_obj){
                 new_obj.parents('.row_data').find('.tr_reps,.tr_weight,.tr_times,.tr_box_jump,.tr_distance').addClass('hide');
             }
         }
+
     });
 
 

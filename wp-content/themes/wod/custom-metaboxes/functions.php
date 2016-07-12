@@ -39,11 +39,14 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
                     'lb' => __( 'lb', 'cmb' ),
                     'km' => __( 'Km', 'cmb' ),
                     'cm' => __( 'Cm', 'cmb' ),
-                    'inche' => __( 'Inche', 'cmb' ),
+                    'inch' => __( 'Inch', 'cmb' ),
+					'metres' => __( 'Metres', 'cmb' ),
+					'calories' => __( 'Calories', 'cmb' ),
                 ),
                 // 'inline'  => true, // Toggles display to inline
             ),
-            array(
+
+			array(
                 'name'    => __( 'Reps', 'cmb' ),
                 'desc'    => __( 'Select one option', 'cmb' ),
                 'id'      => $prefix . 'reps',
