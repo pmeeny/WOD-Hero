@@ -614,6 +614,38 @@ function get_workout_lists(id,sid,obj){
     });
 }
 
+function get_workout_lists_pb_specific(id,sid,obj){
+    ajaxLoaderStart();
+    jQuery.ajax({
+        type	: "POST",
+        cache	: false,
+        url     : ajaxurl,
+        dataType : 'json',
+        data: {
+            'action' : 'get_workout_lists_pb_specific',
+            'cid':id,
+            'sid':sid
+        },
+        success: function(data) {
+            ajaxLoaderStop();
+            obj.parents('.row_data').find('.tr_reps, .tr_weight, .tr_times, .tr_box_jump, .tr_distance').find('input[type="text"] , select , input[type="number"]').val('');
+
+            obj.parents('.row_data').find('.tr_reps, .tr_weight, .tr_times, .tr_box_jump, .tr_distance').addClass('hide');
+            if(data.states!=''){
+                if(data.set){
+                    obj.parents('.row_data').find('.'+data.id).html(data.states);
+                }
+            }
+            else{
+                obj.parents('.row_data').find('.tr_reps,.tr_weight,.tr_times,.tr_box_jump,.tr_distance').find('input[type="text"] , select , input[type="number"]').val('');
+
+                obj.parents('.row_data').find('.tr_reps,.tr_weight,.tr_times,.tr_box_jump,.tr_distance').addClass('hide');
+            }
+        }         
+    });
+}
+
+
 function workout_fields(obj,new_obj){
     var id  = $(obj).val();
 
@@ -657,11 +689,15 @@ function workout_fields(obj,new_obj){
                 }
             }
             else{
-
                 new_obj.parents('.row_data').find('.tr_reps,.tr_weight,.tr_times,.tr_box_jump,.tr_distance').find('input[type="text"] , select , input[type="number"]').val('');
-
-
                 new_obj.parents('.row_data').find('.tr_reps,.tr_weight,.tr_times,.tr_box_jump,.tr_distance').addClass('hide');
+                if(workout_cat == 'running'){
+                    new_obj.parents('.row_data').find('.tr_distance').removeClass('hide');
+                    new_obj.parents('.row_data').find('.addWorkoutPB').formValidation('revalidateField', new_obj.parents('.row_data').find('.tr_distance').find('input[type="text"]').attr('name'));
+
+                }
+
+
             }
         }
 

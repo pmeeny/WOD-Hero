@@ -55,6 +55,15 @@ get_header();
                                  </ul>
                             </div>
 
+                   <!--     <div class="gym-section">
+                            <div class="sub-heading">Gym
+                                <select class="form-control" name="gym" id="gym">
+                                    <option value="Crossfit C2F" data-name="Crossfit C2F">Crossfit C2F</option>
+                                    <option value="Crossfit Athlone" data-name="Crossfit Athlone">Crossfit Athlone</option>
+                                </select>
+                            </div>
+                        </div> -->
+
                             <div class="exercise-section">
                                <div class="sub-heading">Exercise</div>
                                <ul>
@@ -71,7 +80,7 @@ get_header();
                                         
                                         <?php
         
-                                        if($post->ID == 363 || $post->ID == 364 || $post->ID == 365 || $post->ID == 370 || $post->ID == 371 || $post->ID == 372 || $post->ID == 375 || $post->ID == 376 || $post->ID == 377 || $post->ID == 379 || $post->ID == 380 || $post->ID == 58){ ?>
+                                        if($post->ID == 363 || $post->ID == 364 || $post->ID == 365 || $post->ID == 370 || $post->ID == 371 || $post->ID == 372 || $post->ID == 375 || $post->ID == 376 || $post->ID == 377 || $post->ID == 379 || $post->ID == 380){ ?>
                                         
                                         <li><input type="checkbox" id="<?php echo $post->ID; ?>_Exercise" <?php if(!empty($_REQUEST['exercise']) && in_array($post->ID, $_REQUEST['exercise'])){ echo "checked"; } ?>  name="exercise[]" value="<?php echo $post->ID; ?>"><label for="<?php echo $post->ID; ?>_Exercise"> <?php the_title(); ?></label></li><?php
                                         
@@ -112,6 +121,8 @@ get_header();
                         $condition .= implode(' AND ',$conditionArray);
                     }
 
+                    error_log($total_sql_query);
+
                     $total_sql_query = "SELECT wd.*,u.ID as IdUser
                                           FROM {$wpdb->prefix}users u
                                           ".$inner_query."
@@ -119,7 +130,21 @@ get_header();
                                           ".$condition."
                                           ORDER BY wd.id DESC";
 
-                    $list_items = $wpdb->get_results($total_sql_query);
+                error_log($total_sql_query);
+                /*
+                 * error_log($total_sql_query);
+                 *[15-Jul-2016 21:49:20 UTC] SELECT wd.*,u.ID as IdUser
+                                          FROM wp_users u
+                                          INNER JOIN wp_usermeta m ON m.user_id = u.ID
+                                          LEFT  JOIN wp_add_workout wd ON wd.user_id = u.ID
+                                           WHERE  m.meta_key = 'gender' AND  m.meta_value LIKE 'male' AND  wd.wk_name IN (380) AND  wd.over_all_publish = '1'
+                                          ORDER BY wd.id DESC
+
+                 *
+                 *
+                 */
+
+                $list_items = $wpdb->get_results($total_sql_query);
 
                     $p = new pagination;
                     $p->Items(count($list_items));

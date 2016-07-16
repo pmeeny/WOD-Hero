@@ -614,6 +614,53 @@ function get_workout_lists(){
     }
 }
 
+
+add_action('wp_ajax_get_workout_lists_pb_specific','get_workout_lists_pb_specific');
+function get_workout_lists_pb_specific(){
+    global $wpdb;
+    $args=array(
+        'post_type' => 'workout',
+        'post_status' => 'publish',
+        'posts_per_page' => -1,
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'workout_category',
+                'field' => 'slug',
+                'terms' => $_POST['cid']
+            )
+        )
+    );
+    $my_query = null;
+    $my_query = new WP_Query($args);
+    $state='';
+    if(!empty($my_query)){
+        if($my_query->have_posts()){
+            $state.='<option value="">--Select Type--</option>';
+            while ($my_query->have_posts()) : $my_query->the_post();
+            
+            $workoutValue=get_the_ID();
+
+            if($workoutValue == 363 || $workoutValue == 364 || $workoutValue == 365 || $workoutValue == 370 || $workoutValue == 371 || $workoutValue == 372
+               || $workoutValue == 375 || $workoutValue == 376 || $workoutValue == 377 || $workoutValue == 379 || $workoutValue == 380 ){
+ 
+            $state.='<option value="'.get_the_ID().'">'.get_the_title($post->ID).'</option>';
+            }
+           
+            endwhile;
+        }
+        wp_send_json($response=array('set'=>true,'states'=>$state,'id'=>$_POST['sid']));
+        exit;
+    }
+    else
+    {
+        wp_send_json($response=array('set'=>false));
+        exit;
+    }
+}
+
+
+
+
 add_action('wp_ajax_enabled_disabled','options_enabled_disabled');
 function options_enabled_disabled(){
     $post_id = $_POST['post_id'];

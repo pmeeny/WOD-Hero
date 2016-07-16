@@ -13,11 +13,7 @@ if($user_detail->roles[0] == 'trainer'){
 get_header(); ?>
 
 <head>
-	<meta charset="utf-8" />
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 </head>
 
    <div class="clear"></div>
@@ -44,8 +40,20 @@ get_header(); ?>
                 </div>
                 <div class="col-md-8 col-sm-8">
 
-                    	<div id="map" style="width: 800px; height: 400px"></div>
+                    	<div class="map-responsive" id="map">
 
+
+<?php echo do_shortcode('[google_maps id="395"]');?>
+
+
+<!---
+
+    <script src="https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurants+in+Dublin&key=AIzaSyD7Vdh3ndfddbeHeNt-ID-yTbPWxt-KGGk">
+		
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Vdh3ndfddbeHeNt-ID-yTbPWxt-KGGk&query=restaurants+in+Dublin&callback=initMap" async defer></script>
+		
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Vdh3ndfddbeHeNt-ID-yTbPWxt-KGGk&libraries=places&callback=initMap" async defer></script>
+		
 	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 	<script>
 
@@ -60,14 +68,9 @@ get_header(); ?>
 		}).addTo(map);
 
 
-		L.marker([53.4222,-7.9713]).addTo(map)
-			.bindPopup("<b>Crossfit Cu Chulainn</b><br />I am a popup. for more info, click on the link");
-
-        
-        L.marker([53.288,-7.5209]).addTo(map)
-			.bindPopup("<b>CrossFit Tullamore</b><br />I am a popup.");
-
-        L.marker([40.3604,-74.2894]).addTo(map).bindPopup("<b>CrossFit Persist</b><br />I am a popup. for more info, click on the link"); 
+L.marker([53.4222,-7.9713]).addTo(map).bindPopup("<b>Crossfit Cu Chulainn</b><br />I am a popup. for more info, click on the link");     
+L.marker([53.288,-7.5209]).addTo(map).bindPopup("<b>CrossFit Tullamore</b><br />I am a popup.");
+L.marker([40.3604,-74.2894]).addTo(map).bindPopup("<b>CrossFit Persist</b><br />I am a popup. for more info, click on the link"); 
 L.marker([-35.727,174.3274]).addTo(map).bindPopup("<b>Far North CrossFit</b><br />I am a popup. for more info, click on the link"); 
 L.marker([42.4787,-90.7068]).addTo(map).bindPopup("<b>CrossFit Dubuque</b><br />I am a popup. for more info, click on the link"); 
 L.marker([38.8838,-77.1172]).addTo(map).bindPopup("<b>Ballston CrossFit</b><br />I am a popup. for more info, click on the link"); 
@@ -85,7 +88,7 @@ L.marker([-37.9423,145.062]).addTo(map).bindPopup("<b>CrossFit Moorabbin</b><br 
 		map.on('click', onMapClick); */
 
 	</script>
-                    
+    -->                
                     </div>
                 </div>
                 </div>

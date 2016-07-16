@@ -164,9 +164,12 @@ foreach ($categories as $category):
                                             <label>Distance</label>
                                             <div>
                                                 <div class="form-group">
-                                                    <input type="number" min="0"  class="form-control weight distance field_required" name="PERSONALBEST[1][distance][text]"  style="float: left; margin-right: 10px; width:29%">
-                                                    <select style="width: 20%;" class="form-control weight_metter field_required"
-                                                            placeholder="" name="PERSONALBEST[1][distance][unit]"></select>
+                                                    <input type="number" min="0"  class="form-control distance field_required" name="PERSONALBEST[1][distance][text]"  style="float: left; margin-right: 10px; width:29%">
+                                                    <select style="width: 20%;" class="form-control distance_meter field_required"  name="PERSONALBEST[1][distance][unit]" value="Value" defaultValue="km">
+                                                       <option value="metres">metres</option>
+                                                        <option value="km">km</option> 
+                                                       <option value="calories">calories</option> 
+                                                    </select>           
                                                 </div>
                                             </div>
                                         </div>
@@ -238,7 +241,7 @@ for ($i = 0; $i < 60; $i++) {
                                                     field_required times" value="hours/mins/secs"  type="hidden" />
                                                 </div>
 
-
+<!--
                                                 <div class="form-group">
                                                     <label>&nbsp;</label>
                                                     <div class="publishPB"><label> <input type="checkbox"
@@ -251,7 +254,7 @@ for ($i = 0; $i < 60; $i++) {
                                                     <label>&nbsp;</label>
                                                     <div class="publishPB"><label> <input type="checkbox" name="PERSONALBEST[1][over_all_publish]" value="1"> <span>Publish your PB to the overall gyms</span></label></div>
                                                 </div>
-
+-->
 
                                             <div class="remove hide btn btnred">DELETE</div>
 
@@ -264,7 +267,7 @@ for ($i = 0; $i < 60; $i++) {
                                 <div class="bottom-Button">
                                     <div><div class="add_more_section"> <a href="javascript:void(0)" class="add_more
                                     btn btnred">ADD NEW</a> </div></div>
-                                    <div><input type="submit" value="SUBMIT  WORK" class="submit_PB"></div>
+                                    <div><input type="submit" value="SUBMIT WORKOUT" class="submit_PB"></div>
                                 </div>
                         </form>
                         </div>

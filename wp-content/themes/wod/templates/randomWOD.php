@@ -1,8 +1,9 @@
 <?php
-/* Template Name: Random WOD */
-
-if(!(is_user_logged_in() )) {
-    wp_redirect(site_url().'/login');
+/*
+ *  Template Name: Random WOD
+ */
+if (!is_user_logged_in()) {
+    wp_redirect(site_url());
     exit();
 }
 $user_detail = wp_get_current_user();
@@ -10,8 +11,12 @@ if($user_detail->roles[0] == 'trainer'){
     wp_redirect(site_url().'/settings');
     exit();
 }
-get_header(); ?>
-<body onload="rotate()"></body>
+
+get_header();
+
+?>
+
+=<body onload="rotate()">
    <div class="clear"></div>
 
     <div class="bridcrumb">
@@ -39,12 +44,44 @@ get_header(); ?>
     <div class="col-md-8 col-sm-8">
 
 
-        <input type=button value="Random WOD Generator" onclick="rotate()">
+
    <p></p>
         <div id="quote">
         
         </div>
+        <div class="submit-section">
+            <button type="submit" onclick="rotate()">Generator a random WOD</button>
+        </div>
 
+<!--        <div>
+
+            <table class="table table-condensed table-striped table-bordered table-hover no-margin overall_personal_best  ">
+                <thead>
+
+                    <th style="width:20%" class="exercise">Gym Name</th>
+
+                </tr>
+                </thead>
+                <tbody>
+
+                <tr>
+
+                    <td class="trainer_name">Crossfit C2F</td>
+
+
+                </tr>
+
+                <tr>
+
+                    <td class="trainer_name">Crossfit C2F</td>
+
+                </tbody>
+            </table>
+
+
+
+        </div>
+-->
      </div>  
 </div>       </div>   </div>          
 
@@ -52,16 +89,57 @@ get_header(); ?>
 <script type="text/javascript">
 quotes = [];
 authors = [];
-quotes[0] = "50 box jumps<br>50 kb swings<br>50 burpees<br>50 kb press<br>";
-    
-authors[0] = "<h3>Filthy 50s<h3>";
+quotes[0] = "<tr>" +
+    "<td>50 box jumps</td>" +
+    "</tr><tr>" +
+    "<td>50 kb swings</td>" +
+    "</tr><tr>" +
+    "<td>50 burpees</td>" +
+    "</tr><tr>" +
+    "<td>50 kb press</td>" +
+    "</tr><tr>";
+authors[0] = "Filthy 50s";
 
-function rotate(){
+quotes[1] = "<tr>" +
+    "<td>21 Thrusters</td>" +
+    "</tr><tr>" +
+    "<td>21 Pull-ups</td>" +
+    "</tr><tr>" +
+    "<td>15 Thrusters</td>" +
+    "</tr><tr>" +
+    "<td>15 Pull-ups</td>" +
+    "</tr><tr>" +
+    "<td>9 Thrusters</td>" +
+    "</tr><tr>" +
+    "<td>9 Pull-ups</td>" +
+    "</tr><tr>";
+authors[1] = "FRAN";
 
-index = Math.floor(Math.random() * quotes.length);
+function rotate() {
 
-    
-    document.getElementById('quote').innerHTML=quotes[index] + "<p><p>"  + "<b>" + authors[index] + "</b>";
+    index = Math.floor(Math.random() * quotes.length);
+
+
+    document.getElementById('quote').innerHTML =
+'<table class="table table-condensed table-striped table-bordered table-hover no-margin overall_personal_best  ">'
+
+
+       + "<thead><tr>" +
+'<th style="width:20%" class="exercise">' +
+authors[index] +
+"</th></tr></thead>" +
+"<tbody>" +
+
+quotes[index]    +
+
+
+"</tbody>" +
+"</table>";
+
+
+
+
+
 
 //document.write("<p>\n");
 //document.write("<DT>" + "\"" + quotes[index] + "\"</DT>\n");
@@ -69,6 +147,6 @@ index = Math.floor(Math.random() * quotes.length);
 //document.write("</p>\n");
 }
 
-</script> 
-
+</script>
+</body>
                 <?php get_footer(); ?>

@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Social Media */
+/* Template Name: My gym's social media feed */
 if(!(is_user_logged_in() )) {
     wp_redirect(site_url().'/login');
     exit();

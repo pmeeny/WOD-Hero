@@ -8,12 +8,13 @@
         <?php }else{ ?>
             <li><a href="<?php echo site_url().'/mydashboard'; ?>"><span><i class="fa fa-bar-chart"></i></span> Dashboard</a></li>
             <li><a href="<?php echo site_url().'/overall-personal-best/'; ?>"> <span><i class="fa fa-users"></i></span> Overall Personal Best</a></li>
-            <li><a href="<?php echo site_url().'/personal-best/'; ?>"> <span><i class="fa fa-user"></i></span> Personal Bests</a></li>
-            <li><a href="<?php echo site_url().'/social-media/'; ?>"> <span> <i class="fa fa-share-alt"></i> </span> Social Media</a></li>
-            <li><a href="<?php echo site_url().'/add-workoutpb/'; ?>"> <span><i class="fa fa-plus-square"></i></span> Add Workout/PB</a></li>
+            <li><a href="<?php echo site_url().'/personal-best/'; ?>"> <span><i class="fa fa-user"></i></span> My Personal Bests</a></li>
+            <li><a href="<?php echo site_url().'/social-media/'; ?>"> <span> <i class="fa fa-share-alt"></i> </span> My gyms social media</a></li>
+            <li><a href="<?php echo site_url().'/add-workoutpb/'; ?>"> <span><i class="fa fa-plus-square"></i></span> Add a WOD</a></li>
+            <li><a href="<?php echo site_url().'/add-pb/'; ?>"> <span><i class="fa fa-plus-square"></i></span> Add a personal best</a></li>
             <li><a href="<?php echo site_url().'/gym-finder/'; ?>"> <span><i class="fa fa-user"></i></span> Gym Finder</a></li>
-            <li><a href="<?php echo site_url().'/random-wod/'; ?>"> <span><i class="fa fa-user"></i></span> Random WOD</a></li>
-            <li><a href="<?php echo site_url().'/youtube-channel/'; ?>"> <span><i class="fa fa-user"></i></span> Youtube Channel</a></li>
+            <li><a href="<?php echo site_url().'/random-wod/'; ?>"> <span><i class="fa fa-user"></i></span> Random WOD Generator</a></li>
+            <li><a href="<?php echo site_url().'/youtube-channel/'; ?>"> <span><i class="fa fa-user"></i></span> WOD Hero youtube channel</a></li>
         <?php } ?>
     </ul>
 </div>
