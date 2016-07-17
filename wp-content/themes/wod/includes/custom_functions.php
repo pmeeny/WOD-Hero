@@ -952,7 +952,7 @@ function getLastPersonalBest(){
 
         if (!empty($personalBests)) {
 
-            $html .= '<table class="table">';
+            $html .= '<table class="table"';
             foreach ($personalBests as $result) {
 
                 $box_jump = json_decode($result['box_jump'], true);
