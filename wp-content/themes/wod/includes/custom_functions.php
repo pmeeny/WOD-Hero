@@ -697,10 +697,10 @@ function options_enabled_disabled(){
 }
 
 function addWorkoutPB(){
+
     global $wpdb,$current_user;
     $db_process = false;
     extract($_POST);
-
     if(!empty($PERSONALBEST))
     {
         foreach($PERSONALBEST as $key=>$val)
@@ -744,7 +744,7 @@ function addWorkoutPB(){
 
 
     if($db_process){
-        respond_by_json(true,'Workout has been added successfully.','alert-success','','');
+        respond_by_json(true,'Workout has been added successfully, Well Done.','alert-success','','');
     }
     else{
         respond_by_json(true,'Something went wrong please try again.','alert-danger','','');
@@ -932,6 +932,79 @@ function getSingleWorkoutDetail(){
     }
 }
 add_action('wp_ajax_workoutDetail','getSingleWorkoutDetail');
+
+
+add_action('wp_ajax_get_personal_best_for_graph1','get_personal_best_for_graph1');
+
+
+function get_personal_best_for_graph1(){
+    global $wpdb;
+    if(!empty($_POST['wid'])) {
+        echo getLastPersonalBestWithWorkoutId();
+        //echo get_personal_best_for_graph_json_option($_POST['wid'], $_POST['graph_plot_by']);
+        exit();
+    }
+}
+
+
+
+function getLastPersonalBestWithWorkoutId(){
+    global $wpdb;
+    $wk_id=$_POST['wid'];
+    error_log($wk_id);
+    $userId = get_current_user_id();
+    //if($userId != '' && $wk_id != '') {
+
+        if($userId != '') {
+
+        $sql = "SELECT * FROM " . $wpdb->prefix . "add_workout WHERE user_id = " . $userId ."  AND wk_name =". $wk_id  ." order by id desc limit 20 ";
+
+        error_log("SQL is");
+        error_log($sql);
+        $workout_results = $wpdb->get_results($sql, ARRAY_A);
+        //echo "<pre>"; print_r($workout_results);die;
+        $html = '';
+        $personalBest = array();
+        foreach ($workout_results as $result) {
+
+            if ($result['publish'] == 1) {
+                $personalBests[] = $result;
+            }
+        }
+        if (!empty($personalBests)) {
+
+            $html .= '<table class="table"';
+            foreach ($personalBests as $result) {
+
+                $box_jump = json_decode($result['box_jump'], true);
+                $distance = json_decode($result['distance'], true);
+                $weight = json_decode($result['weight'], true);
+
+                $html .= '<tr>';
+                $html .= '<td>' . get_the_title($result['wk_name']) . '</td>';
+                if (!empty($box_jump)) {
+                    $html .= '<td>' . $box_jump['text'] . '' . $box_jump['unit'] . '</td>';
+                }
+                if (!empty($distance)) {
+                    $html .= '<td>' . $distance['text'] . '' . $distance['unit'] . '</td>';
+                }
+                if (!empty($weight)) {
+                    $html .= '<td>' . $weight['text'] . '' . $weight['unit'] . '</td>';
+                }
+                if (!empty($result['add_date'])) {
+                    $html .= '<td>' . date('d M Y', strtotime($result['complete_date'])) . '</td>';
+                }
+                $html .= '</tr>';
+
+            }
+            $html .= '</table>';
+        }
+    }
+    //$html="<body>dd</body>";
+    echo $html;
+    exit();
+}
+add_action('wp_ajax_LastPersonalBestWithWorkoutId','getLastPersonalBestWithWorkoutId');
 
 
 function getLastPersonalBest(){

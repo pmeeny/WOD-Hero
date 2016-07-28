@@ -1,6 +1,6 @@
 *{ outline:none}
 
-a{color:#f00; text-decoration:none}
+a{color:#0f7c3c; text-decoration:none}
 
 a:hover{color:#000; text-decoration:none;}
 
@@ -332,7 +332,7 @@ ul.f-social{float:right;}
 
 .form-control {height: 46px !important;}
 
-
+.form-control-wod    { border: 1px solid #ccc; border-radius: 4px; width: 60% !important;}
 
 
 

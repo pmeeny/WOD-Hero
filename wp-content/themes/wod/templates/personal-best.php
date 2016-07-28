@@ -44,16 +44,20 @@ get_header(); ?>
                              <div class="personal-best">
 
                                  <h3>My last personal best</h3>
+
                                  <?php
                                  global $wpdb,$current_user;
                                  get_currentuserinfo();
                                  $current_user_workouts = $wpdb->get_results($wpdb->prepare("SELECT * FROM  ".$wpdb->prefix."add_workout  WHERE 1=%d AND publish=%d AND user_id = %d GROUP BY wk_name",array(1, 1,$current_user->ID)));
                                  $first_post_title ='';
                                  ?>
-                                 <form class="form-group" id="wk_name1" role="form" method="post">
-                                 <!--<div class="form-group"> -->
+                                 <div class="form-group">
 
-                                     <select class="form-control plot_again_map" name="wk_name1" id="wk_name1" method="post" onchange="this.form.submit()" >
+                                 <form class="form-group" id="wk_name1" role="form" method="post">
+
+                                     <select class="form-control plot_again_map" name="wk_name2" id="wk_name2">
+
+                                     <!-- onchange="this.form.submit() -->
                                          <?php
                                          if(!empty($current_user_workouts))
                                          {
@@ -70,28 +74,90 @@ get_header(); ?>
                                                  <?php
                                              }
                                          } ?>
+                                        </select>
 
 
-                                     </select>
-                                     <noscript><input type="submit" value="Submit"></noscript>
+                                     <script type="text/javascript">
+
+
+                                         $(document).ready(function(){
+                                             var id = $("#wk_name2").val();
+                                             // var wname = $("#wk_name").attr('data-name');
+                                             ajaxLoaderStart();
+                                             jQuery.ajax({
+                                                 type	: "POST",
+                                                 cache	: false,
+                                                 url     : ajaxurl,
+                                                 dataType : 'text',
+                                                 data: {
+                                                     'action' : 'get_personal_best_for_graph1',
+                                                     'wid':id
+                                                 },
+                                                 success: function(data) {
+                                                     ajaxLoaderStop();
+
+                                                     if(data)
+                                                     {
+                                                         $('#personal_graph1').html(data);
+                                                     }
+                                                     else
+                                                     {
+                                                         $('#personal_graph1').html('No Result111 Found');
+                                                     }
+
+
+                                                 }
+                                             });
+
+
+                                             $(".plot_again_map").change(function() {
+                                                 var id = $("#wk_name2").val();
+                                                 // var wname = $("#wk_name").attr('data-name');
+                                                 ajaxLoaderStart();
+                                                 jQuery.ajax({
+                                                     type	: "POST",
+                                                     cache	: false,
+                                                     url     : ajaxurl,
+                                                     dataType : 'text',
+                                                     data: {
+                                                         'action' : 'get_personal_best_for_graph1',
+                                                         'wid':id
+                                                     },
+                                                     success: function(data) {
+                                                         ajaxLoaderStop();
+
+                                                         if(data)
+                                                         {
+                                                             $('#personal_graph1').html(data);
+                                                         }
+                                                         else
+                                                         {
+                                                             $('#personal_graph1').html('No Result111 Found');
+                                                         }
+
+
+                                                     }
+                                                 });
+                                             });
+                                         });
+                                     </script>
 
 
 
-                                     <?php
-                                     if($lastPerBest != ''){
-                                         echo $lastPerBest;
-                                         error_log("LATEST5 is ");
-                                         error_log($_POST['wk_name1']);
-
-                                         //error_log($lastPerBest);
-                                     }else{
-                                         echo "No personal best found.";
-                                     }
-                                     ?>
+                            <!--         <noscript><input type="submit" value="Submit"></noscript>  -->
 
 
-                                <!-- </div> -->
+
+
+
                                 </form>
+                                     <div class="clear"></div>
+                                     <div class="personal_graph1">
+                                         <div class="highcharts-container" id="personal_graph1"></div>
+                                     </div>
+
+
+                                 </div>
                                  <div class="clear"></div>
                                  <h3>My personal bests</h3>
                                  <span class="sort_graph">

@@ -15,6 +15,7 @@
             <li><a href="<?php echo site_url().'/gym-finder/'; ?>"> <span><i class="fa fa-user"></i></span> Gym Finder</a></li>
             <li><a href="<?php echo site_url().'/random-wod/'; ?>"> <span><i class="fa fa-user"></i></span> Random WOD Generator</a></li>
             <li><a href="<?php echo site_url().'/youtube-channel/'; ?>"> <span><i class="fa fa-user"></i></span> WOD Hero youtube channel</a></li>
+                <li><a href="<?php echo site_url().'/forum/'; ?>"> <span><i class="fa fa-user"></i></span> Forum</a></li>
         <?php } ?>
     </ul>
 </div>

@@ -693,8 +693,14 @@ function workout_fields(obj,new_obj){
                 new_obj.parents('.row_data').find('.tr_reps,.tr_weight,.tr_times,.tr_box_jump,.tr_distance').addClass('hide');
                 if(workout_cat == 'running'){
                     new_obj.parents('.row_data').find('.tr_distance').removeClass('hide');
-                    new_obj.parents('.row_data').find('.addWorkoutPB').formValidation('revalidateField', new_obj.parents('.row_data').find('.tr_distance').find('input[type="text"]').attr('name'));
+                    //new_obj.parents('.row_data').find('.addWorkoutPB').formValidation('revalidateField', new_obj.parents('.row_data').find('.tr_distance').find('input[type="text"]').attr('name'));
+                    var data = new Object();
+                    data.unit = new String("<option value=metres>metres</option><option value=km>km</option><option value=calories>calories</option>");
+                    new_obj.parents('.row_data').find('.distance_meter').html(data.unit);
 
+                }
+                else if(workout_cat == 'wod'){
+                    new_obj.parents('.row_data').find('.tr_wod').removeClass('hide');
                 }
 
 

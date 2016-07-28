@@ -43,11 +43,11 @@ get_header();
                                     <div><div class="form-group"><input name="completed_date" id="completed_date"
                                                                         value="" class="form-control field_required" type="text" ></div></div>
                                 </div>
-                                
-                                    
+
+
                                 <div class="overall_times">
                                         <label>Time Hours/Mins/Secs</label>
-                                            <div class="form-group-overallTime">
+                                            <div class="form-group">
                                                 <div  class="input-append time ">
                                                     <div class="hours">
                                                         <select name="PERSONALBEST[1][times][text][hours]" class="field_required form-control">
@@ -165,10 +165,7 @@ foreach ($categories as $category):
                                             <div>
                                                 <div class="form-group">
                                                     <input type="number" min="0"  class="form-control distance field_required" name="PERSONALBEST[1][distance][text]"  style="float: left; margin-right: 10px; width:29%">
-                                                    <select style="width: 20%;" class="form-control distance_meter field_required"  name="PERSONALBEST[1][distance][unit]" value="Value" defaultValue="km">
-                                                       <option value="metres">metres</option>
-                                                        <option value="km">km</option> 
-                                                       <option value="calories">calories</option> 
+                                                    <select style="width: 20%;" class="form-control distance_meter field_required"  name="PERSONALBEST[1][distance][unit]" >
                                                     </select>           
                                                 </div>
                                             </div>
@@ -179,7 +176,15 @@ foreach ($categories as $category):
                                             <div><div class="form-group"> <input name="PERSONALBEST[1][reps]" min="0"
                                                                                  class="form-control reps field_required"
                                                                                  type="number" ></div></div>
-                                        </div> 
+                                        </div>
+
+                                        <div class="tr_wod hide">
+                                            <label>WOD</label>
+                                            <div><div class="form-group"> <textarea name="PERSONALBEST[1][wod]" min="0" rows="15"
+                                                                                 class="form-control-wod"
+                                                                                 type="text" ></textarea></div></div>
+                                        </div>
+
                                         <div class="tr_times hide">
                                         <label>Time Hours/Mins/Secs</label>
                                             <div class="form-group">
