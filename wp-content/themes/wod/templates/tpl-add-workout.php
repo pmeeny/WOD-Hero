@@ -185,66 +185,11 @@ foreach ($categories as $category):
                                                                                  type="text" ></textarea></div></div>
                                         </div>
 
-                                        <div class="tr_times hide">
-                                        <label>Time Hours/Mins/Secs</label>
-                                            <div class="form-group">
-                                                <div  class="input-append time ">
-                                                    <div class="hours">
-                                                        <select name="PERSONALBEST[1][times][text][hours]" class="field_required form-control">
-                                                            <option value="">Hours</option>
-                                                            <?php
-for ($i = 0; $i < 24; $i++) {
-    $hour = ($i <= 9) ? '0' . $i : $i;
-    ?>
-    <option value="<?php echo $i ?>"><?php echo
-        $hour;
-        ?></option>
-<?php
-}
-?>
-
-                                                        </select>
-                                                    </div>
-                                                    <div class="mins">
-                                                        <select name="PERSONALBEST[1][times][text][mins]" class="field_required form-control">
-                                                            <option value="">Mins</option>
-                                                            <?php
-for ($i = 0; $i < 60; $i++) {
-    $mins = ($i <= 9) ? '0' . $i : $i;
-    ?>
-    <option value="<?php echo $i ?>"><?php echo $mins;
-        ?></option>
-<?php
-}
-?>
-
-                                                        </select>
-                                                    </div>
-
-                                                    <div class="secs">
-                                                        <select name="PERSONALBEST[1][times][text][secs]" class="field_required form-control">
-                                                            <option value="">Secs</option>
-                                                            <?php
-for ($i = 0; $i < 60; $i++) {
-    $secs = ($i <= 9) ? '0' . $i : $i;
-    ?>
-    <option value="<?php echo $i ?>"><?php echo
-        $secs;
-        ?></option>
-<?php
-}
-?>
-
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <div class="clear"></div>
-                                                <div class="form-group hidden">
+                                               <!-- <div class="form-group hidden">
                                                     <input name="PERSONALBEST[1][times][unit]"  class="form-control
                                                     field_required times" value="hours/mins/secs"  type="hidden" />
-                                                </div>
+                                                </div> -->
 
 <!--
                                                 <div class="form-group">
