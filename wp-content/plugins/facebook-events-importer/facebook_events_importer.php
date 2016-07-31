@@ -919,8 +919,8 @@ $a = $a['show'];
 		  $featured = get_post_meta($post->ID, 'feature_event', true);
 	?>
 	  <div class="fbecol-1-3">
-	  <div class="fbecol" data-id="<?php echo $permalink; ?>">	
-	  <div class="fbe_list_image" style="background-image:url(<?php echo get_fbe_image('cover'); ?>);" >	  
+	  <div class="fbecol" data-id="<?php echo $permalink; ?>">
+	  <div class="fbe_list_image" style="background-image:url(<?php echo get_fbe_image('cover'); ?>);" >
 	  <div class="fbe_list_bar">
 	  <div class="fbe_list_date">
 	  	<div class="fbe_list_month"><?php echo $event_starts_month; ?></div>
@@ -928,10 +928,10 @@ $a = $a['show'];
 	  </div>	
 	  <div class="fbe_col_title"><h2><?php echo limitFBETxt( $event_title,30); ?></h2></div>
 	  <div class="fbe_col_location"><h4><?php echo limitFBETxt($location,40); ?></h4></div>
-	  </div>	
 	  </div>
-	  </div>  
-	  </div> 
+	  </div>
+	  </div>
+	  </div>
 	<?php
 	     endwhile;     		
 	wp_reset_postdata(); 

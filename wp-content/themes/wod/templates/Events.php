@@ -41,7 +41,7 @@ get_header(); ?>
                 $args = array (
                     'post_type' => 'facebook_events',
                     'posts_per_page' => -1,
-                    'order' => 'ASC',
+                    'orderby' => 'post_excerpt'
                 );
 
                 $fbe_query = new WP_Query( $args );
@@ -51,12 +51,48 @@ get_header(); ?>
                         $event_title = get_the_title();
                         $event_desc =  get_the_content();
                         $event_image = get_fbe_image('cover');
+                        $event_starts_month = get_fbe_date('event_starts','M');
+                        $event_starts_day = get_fbe_date('event_starts','j');
+                        $location = get_fbe_field('location');
+                        $fb_event_uri = get_fbe_field('fb_event_uri');
+                        $permalink = get_permalink();
+                        $featured = get_post_meta($post->ID, 'feature_event', true);
 
                         ?>
-                      <!--  <img src="<?php //echo get_fbe_image('cover'); ?>" alt="" /> -->
-                        <h1><?php echo $event_title; ?></h1>
-                        <p><?php echo $event_desc; ?></p>
-                        <?php
+                      <!--  <div class="fbe_col_title"><h3><?php //echo limitFBETxt( $event_title,50); ?></h3></div> -->
+                        <img src="<?php echo get_fbe_image('cover'); ?>" alt="" />
+                                       <!-- <div class="fbe_list_date">
+                                            <div class="fbe_list_month"><?php echo $event_starts_month; ?></div>
+                                            <div class="fbe_list_day"><?php echo $event_starts_day; ?></div>
+                                        </div> -->
+                                       <!-- <div class="fbe_col_location"><?php echo limitFBETxt($location,40); ?></div> -->
+
+
+
+                        <table class="table table-condensed table-striped table-bordered table-hover no-margin overall_personal_best  ">
+
+
+                            <thead><tr>
+                                <th style="width:20%" class="exercise"><?php echo limitFBETxt( $event_title,70); ?>
+                                    </th></tr></thead>
+                            <tbody>
+                            <tr>
+                                <td>Date: <?php echo $event_starts_day; ?> <?php echo $event_starts_month;?></td>
+                                </tr><tr>
+                                <td>Location: <?php echo limitFBETxt($location,70); ?></td>
+                                </tr><tr>
+                                <td>Event Details: <?php echo $event_desc ?></td>
+                                </tr><tr>
+
+                                <td>Facebook Event Link: <a href="<?php echo $fb_event_uri;?>"> Click for the fb event </a>  </td>
+
+
+                            </tr><tr>
+                            </tbody>
+                            </table>
+
+
+            <?php
 
                     endwhile;
                 endif;
