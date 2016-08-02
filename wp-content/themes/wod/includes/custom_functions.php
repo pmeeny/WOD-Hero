@@ -853,6 +853,7 @@ function getSingleWorkoutDetail(){
 
         $html.='<table class="table">';
         $personalBest = array();
+        $workOutDetails = array();
             foreach($workout_results as $result){
 
                 if($result['publish'] == 1){
@@ -863,9 +864,21 @@ function getSingleWorkoutDetail(){
                 $distance = json_decode($result['distance'],true);
                 $weight = json_decode($result['weight'],true);
                 $times = json_decode($result['times'],true);
+                $addDate = json_decode($result['add_date'],true);
+                $reps = json_decode($result['reps'],true);
 
+                $time_slot  =  explode(':',$times['text']);
+
+                array_push($workOutDetails, $addDate, array(get_the_title($result['wk_name']), json_decode($result['reps'],true) ,$weight['text'], time_formatted_pad($time_slot[0]).':'.time_formatted_pad($time_slot[1]).':'.time_formatted_pad($time_slot[2])));
+
+                //$workOutDetails = array($addDate, array(get_the_title($result['wk_name']), json_decode($result['reps'],true) ,$weight['text'], time_formatted_pad($time_slot[0]).':'.time_formatted_pad($time_slot[1]).':'.time_formatted_pad($time_slot[2])));
+/*
                 $html.='<tr>';
                     $html.='<td>'.get_the_title($result['wk_name']).'</td>';
+                    $time_slot  =  explode(':',$times['text']);
+                    $html.='<td>'.time_formatted_pad($time_slot[0]).':'.time_formatted_pad($time_slot[1]).':'.time_formatted_pad($time_slot[2]).' '.$unit.'</td>';
+                    $html.='<td>'.json_decode($result['add_date'],true).'</td>';
+                    $html.='<td>'.json_decode($result['reps'],true).'</td>';
                     if(!empty($box_jump)){
                         $html.='<td>'.$box_jump['text'].' '.$box_jump['unit'].'</td>';
                     }
@@ -884,12 +897,129 @@ function getSingleWorkoutDetail(){
                     else{
                         $html.='<td>'.$result['reps'].' reps</td>';
                     }
-                $html.='</tr>';
+                $html.='</tr>'; */
 
             }
+        $n=0;
+        $i=0;
+        for ($i = $n; $i < count($workOutDetails); $i++) {
+            if(($i % 2) == 0){
+                $postedDate=$workOutDetails[$i];
+                $workOutDetailsNewArray = array($workOutDetails[$i+1]);
+
+                if(!($workOutDetailsNewArray[0][3]=="00:00:00")) {
+
+                    //if (strpos($html, $workOutDetailsNewArray[0][3]) !== true){
+                        $html .= '<td>Overall Time:' . $workOutDetailsNewArray[0][3] . '</td>';
+                    //}
+                }
+
+                if (!(strpos($html, "Exercise:".$workOutDetailsNewArray[0][0]) == true)) {
+                    $html .= '<td>Exercise:' . $workOutDetailsNewArray[0][0] . '</td>';
+                }
+                if (!(strpos($html, "Reps:".$workOutDetailsNewArray[0][1]) == true)) {
+                    $html .= '<td>Reps:' . $workOutDetailsNewArray[0][1] . '</td>';
+                }
+                //$html.='<td>Key:'.$workOutDetailsNewArray[0][2].'</td>';
+                //$html.='<td>Time:'.$workOutDetailsNewArray[0][3].'</td>';
+
+                for ($j = $n+2; $j < count($workOutDetails); $j++) {
+                    if(($j % 2) == 0) {
+                        if ($workOutDetails[$j] == $postedDate) {
+                            $workOutDetailsNewArray1 = array($workOutDetails[$j + 1]);
+
+                            // first workout
+                            //if(!($workOutDetailsNewArray[0][3]=="00:00:00")) {
+
+                            //    $html .= '<td>Overall Time:' . $workOutDetailsNewArray[0][3] . '</td>';
+                            //}
+                            //$html.='<td>Exercise:'.$workOutDetailsNewArray[0][0].'</td>';
+                            //$html.='<td>Reps:'.$workOutDetailsNewArray[0][1].'</td>';
+
+                            // second workout
+                            $html .= '<td>Exercise:' . $workOutDetailsNewArray1[0][0] . '</td>';
+                            $html .= '<td>Reps:' . $workOutDetailsNewArray1[0][1] . '</td>';
+                            // $html.='<td>Key:'.$workOutDetailsNewArray1[0][2].'</td>';
+                            if (!($workOutDetailsNewArray1[0][3] == "00:00:00")) {
+                                $html .= '<td>Time:' . $workOutDetailsNewArray1[0][3] . '</td>';
+                            }
+                    }
+                    }
+
+                }
+            }
+            $n=$n+1;
+            $html.='</tr>';
+        }
+
+
+        //foreach($workOutDetails as $key => $value) {
+         //   $html.='<tr>';
+           // $html.='<td>Key:'.$key.'</td>';
+           // $html .= '<td>Value:' . $value . '</td>';
+
+              //  $html.='<td>Key:'.$key.'</td>';
+
+              //  if($key == 0){
+              //      $workOutDetailsNewArray = array($workOutDetails[1]);
+
+              //      $html.='<td>Key:'.$workOutDetailsNewArray[0][0].'</td>';
+              //      $html.='<td>Key:'.$workOutDetailsNewArray[0][1].'</td>';
+             //       $html.='<td>Key:'.$workOutDetailsNewArray[0][2].'</td>';
+             //       $html.='<td>Key:'.$workOutDetailsNewArray[0][3].'</td>';
+             //       $i=0;
+             //       foreach($workOutDetails as $key1 => $value1) {
+             //           if($value == $value1){
+             //               $workOutDetailsNewArray1 = array($workOutDetails[4]);
+             //               $html.='<td>Key1:'.$workOutDetailsNewArray1[4][0].'</td>';
+             //               $html.='<td>Key1:'.$workOutDetailsNewArray1[4][1].'</td>';
+             //               $html.='<td>Key1:'.$workOutDetailsNewArray1[4][2].'</td>';
+             //               $html.='<td>Key1:'.$workOutDetailsNewArray1[4][3].'</td>';
+//
+              //          }
+              //          $i++;
+              //      }
+              //  }
+
+             //   $html.='<td>Value:'.$value.'</td>';
+              //  if($key1 == "add_date") {
+               //     $html .= '<td>Value:' . $value1 . '</td>';
+                //    $html .= '<td>Reps:' .$value["reps"]. '</td>';
+               //     $html .= '<td>Wk name:'.get_the_title($value['wk_name']).'</td>';
+
+              //      foreach($workout_results as $key22 => $value22) {
+
+               //         foreach($value as $key33 => $value33) {
+               //             if($value1 == $value33){
+               //                 $html .= '<td>Found:'.$value1.'</td>';
+               //             }
+               //         }
+
+               //     }
+               // }
+
+           // $html.='</tr>';
+         //   $FirstValue = $value;
+
+          //  foreach ($value as $key2 => $SecondValue) {
+          //      if ($FirstValue == $key2) {
+          //          $html .= '<td>Value:' . $FirstValue . '</td>';
+          //          foreach ($value as $key2 => $value) {
+          //              $html .= '<td>SecondValue:' . $SecondValue . '</td>';
+          //          }
+          //          break;
+                    //$html.='<td>Value1:'.$value1.'</td>';
+                    //$html.='<td>Key2:'.$key2.'</td>';
+          //      }
+          //      break;
+                //$dt = new DateTime("@$value");  // convert UNIX timestamp to PHP DateTime
+                //$html.='<td>Value:' .$dt->format('Y-m-d H:i:s').'</td>';
+         //   }
+        //}
+        //$html.='</tr>';
         $html.='</table>';
 
-        if(!empty($personalBests)){
+        if(empty($personalBests)){ // should be if(!empty($personalBests)){
             $html.='<h3>My Personal Best</h3>';
 
             $html.='<table class="table">';

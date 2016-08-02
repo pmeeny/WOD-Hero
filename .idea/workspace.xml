@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2809e1b2-ae02-465d-9245-816dc774b804" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/facebook-events-importer/facebook_events_importer.php" afterPath="$PROJECT_DIR$/wp-content/plugins/facebook-events-importer/facebook_events_importer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wod/sidebar.php" afterPath="$PROJECT_DIR$/wp-content/themes/wod/sidebar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wod/templates/Events.php" afterPath="$PROJECT_DIR$/wp-content/themes/wod/templates/Events.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wod/includes/custom_functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/wod/includes/custom_functions.php" />
     </list>
     <ignored path="test-site.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,98 +24,92 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="add-pb.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/wod/templates/add-pb.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/wod/templates/dashboard.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="89">
+              <caret line="133" column="13" selection-start-line="133" selection-start-column="13" selection-end-line="133" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom-function.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/wod/js/custom-function.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="732" column="1" selection-start-line="732" selection-start-column="1" selection-end-line="732" selection-end-column="1" />
+              <folding>
+                <marker date="1469564074000" expanded="true" signature="197:209" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom_functions.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/wod/includes/custom_functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="1020" column="0" selection-start-line="1020" selection-start-column="0" selection-end-line="1020" selection-end-column="0" />
+              <folding>
+                <marker date="1470177208000" expanded="true" signature="26645:26836" ph="SELECT * FRO... ${$wpdb-&gt;prefix}" />
+                <marker date="1470177208000" expanded="true" signature="28933:29053" ph="SELECT * FRO... ${$wpdb-&gt;prefix}" />
+                <marker date="1470177208000" expanded="true" signature="29179:29700" ph="..." />
+                <marker date="1470177208000" expanded="true" signature="29223:29700" ph="..." />
+                <marker date="1470177208000" expanded="true" signature="29266:29620" ph="..." />
+                <marker date="1470177208000" expanded="false" signature="29390:29406" ph="..." />
+                <marker date="1470177208000" expanded="false" signature="29433:29440" ph="×" />
+                <marker date="1470177208000" expanded="true" signature="34971:36331" ph="..." />
+                <marker date="1470177208000" expanded="true" signature="40102:40233" ph="SELECT * FRO... ${$wpdb-&gt;prefix}" />
+                <marker date="1470177208000" expanded="true" signature="42062:42165" ph="SELECT * FRO... ${$wpdb-&gt;prefix}" />
+                <marker date="1470177208000" expanded="true" signature="44027:44193" ph="SELECT * FRO... ${$wpdb-&gt;prefix}" />
+                <marker date="1470177208000" expanded="true" signature="45376:45544" ph="SELECT * FRO... ${$wpdb-&gt;prefix}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../bin/mamp/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+            <state relative-caret-position="30">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Events.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/wod/templates/Events.php">
+      <file leaf-file-name="wp-db.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-includes/wp-db.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="42" column="43" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
+            <state relative-caret-position="9900">
+              <caret line="668" column="0" selection-start-line="668" selection-start-column="0" selection-end-line="668" selection-end-column="0" />
               <folding>
-                <marker date="1469998972000" expanded="true" signature="2274:2572" ph="..." />
-                <marker date="1469998972000" expanded="true" signature="2839:3781" ph="..." />
-                <marker date="1469998972000" expanded="true" signature="2877:3052" ph="..." />
-                <marker date="1469998972000" expanded="true" signature="2881:3044" ph="..." />
-                <marker date="1469998972000" expanded="false" signature="2926:2935" ph="..." />
-                <marker date="1469998972000" expanded="true" signature="2953:3039" ph="..." />
-                <marker date="1469998972000" expanded="true" signature="3088:3744" ph="..." />
-                <marker date="1469998972000" expanded="true" signature="3121:3273" ph="..." />
-                <marker date="1469998972000" expanded="true" signature="3277:3407" ph="..." />
-                <marker date="1469998972000" expanded="true" signature="3411:3531" ph="..." />
-                <marker date="1469998972000" expanded="true" signature="3535:3703" ph="..." />
-                <marker date="1469998972000" expanded="true" signature="3707:3736" ph="..." />
+                <marker date="1459980143000" expanded="true" signature="23572:23579" ph="..." />
+                <marker date="1459980143000" expanded="true" signature="38434:38441" ph="..." />
+                <marker date="1459980143000" expanded="true" signature="41512:41519" ph="..." />
+                <marker date="1459980143000" expanded="true" signature="54101:54135" ph="UPDATE `${$t... " />
+                <marker date="1459980143000" expanded="true" signature="56090:56117" ph="DELETE FROM " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sidebar.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/wod/sidebar.php">
+      <file leaf-file-name="cache.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-includes/cache.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fb-events.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/plugins/facebook-events-importer/assets/includes/fb-events.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="262" column="57" selection-start-line="262" selection-start-column="43" selection-end-line="262" selection-end-column="57" />
-              <folding>
-                <marker date="1469906272000" expanded="true" signature="4105:4154" ph="..." />
-                <marker date="1469906272000" expanded="true" signature="5979:6028" ph="..." />
-                <marker date="1469906272000" expanded="true" signature="7619:7695" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navigation.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../bin/phpMyAdmin/navigation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="randomWOD.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/wod/templates/randomWOD.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="225" column="0" selection-start-line="225" selection-start-column="0" selection-end-line="226" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="youtube-channel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/wod/templates/youtube-channel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="phpmyadmin.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../bin/mamp/phpmyadmin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="57" selection-start-line="0" selection-start-column="57" selection-end-line="0" selection-end-column="57" />
+            <state relative-caret-position="344">
+              <caret line="635" column="54" selection-start-line="635" selection-start-column="54" selection-end-line="635" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -160,17 +152,17 @@
         <option value="$PROJECT_DIR$/wp-content/plugins/bbpress/templates/default/css/bbpress.css" />
         <option value="$PROJECT_DIR$/wp-content/themes/wod/css/style.css" />
         <option value="$PROJECT_DIR$/wp-content/themes/wod/js/custom-function.js" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wod/templates/dashboard.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wod/templates/forum.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wod/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wod/templates/bbpress.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wod/bbpress.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wod/includes/custom_functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wod/templates/tpl-add-workout.php" />
         <option value="$PROJECT_DIR$/../../bin/mamp/index.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/facebook-events-importer/facebook_events_importer.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wod/templates/Events.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wod/sidebar.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wod/templates/dashboard.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wod/includes/custom_functions.php" />
       </list>
     </option>
   </component>
@@ -193,8 +185,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="562" />
-    <option name="y" value="382" />
+    <option name="x" value="33" />
+    <option name="y" value="466" />
     <option name="width" value="2435" />
     <option name="height" value="902" />
   </component>
@@ -375,136 +367,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test-site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test-site" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test-site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test-site" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbpress" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test-site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test-site" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbpress" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test-site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test-site" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbpress" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test-site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test-site" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbpress" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -615,34 +477,37 @@
       <workItem from="1469727929588" duration="3978000" />
       <workItem from="1469813658659" duration="1350000" />
       <workItem from="1469903946953" duration="588000" />
-      <workItem from="1469982581198" duration="8427000" />
+      <workItem from="1469982581198" duration="8917000" />
+      <workItem from="1470064386100" duration="19158000" />
+      <workItem from="1470159857531" duration="2417000" />
+      <workItem from="1470172851753" duration="4403000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64880000" />
+    <option name="totallyTimeSpent" value="91348000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="562" y="382" width="2435" height="902" extended-state="0" />
+    <frame x="33" y="466" width="2435" height="902" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14620124" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47211897" sideWeight="0.5207392" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4708798" sideWeight="0.060780287" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283767" sideWeight="0.4919918" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901296" sideWeight="0.49843383" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283767" sideWeight="0.49445584" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24984306" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47211897" sideWeight="0.47926077" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4708798" sideWeight="0.9392197" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283767" sideWeight="0.48870638" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -680,26 +545,26 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="php">
+        <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/../../functions.php</url>
           <line>9</line>
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
+        <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/wp-content/themes/wod/includes/custom_functions.php</url>
           <line>712</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
+        <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/wp-content/themes/wod/includes/custom_functions.php</url>
           <line>710</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" log-message="true" type="php">
+        <line-breakpoint log-message="true" type="php">
           <url>file://$PROJECT_DIR$/wp-content/themes/wod/includes/custom_functions.php</url>
           <line>705</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
+        <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/wp-content/themes/wod/includes/custom_functions.php</url>
           <line>700</line>
           <option name="timeStamp" value="5" />
@@ -719,32 +584,7 @@
           <line>58</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/wp-content/themes/wod/includes/custom_functions.php</url>
-          <line>862</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/wp-content/themes/wod/includes/custom_functions.php</url>
-          <line>864</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/wp-content/themes/wod/includes/custom_functions.php</url>
-          <line>866</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/wp-content/themes/wod/includes/custom_functions.php</url>
-          <line>900</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/wp-content/themes/wod/includes/custom_functions.php</url>
-          <line>899</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
+        <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/../../bin/mamp/index.php</url>
           <line>15</line>
           <option name="timeStamp" value="15" />
@@ -754,71 +594,71 @@
           <line>52</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
+        <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/wp-content/themes/wod/templates/Events.php</url>
           <line>44</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
+        <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/wp-content/themes/wod/templates/Events.php</url>
           <line>41</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
+        <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/wp-content/themes/wod/templates/Events.php</url>
           <line>42</line>
           <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/wod/includes/custom_functions.php</url>
+          <line>952</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/wod/includes/custom_functions.php</url>
+          <line>1019</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/wod/includes/custom_functions.php</url>
+          <line>904</line>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/wod/includes/custom_functions.php</url>
+          <line>917</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/wod/includes/custom_functions.php</url>
+          <line>920</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/wod/includes/custom_functions.php</url>
+          <line>907</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/wp-content/themes/wod/js/custom-function.js</url>
+          <line>728</line>
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="37" />
+      <option name="time" value="78" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="admin-ajax.php">
         <watch expression="$PERSONALBEST" />
         <watch expression="$personalBest" />
+        <watch expression="$html" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wod/templates/socialmedia.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="69" column="34" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wod/templates/overall_personal_best.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wod/templates/Signup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="59" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wod/templates/gym-finder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/20160406_wod_57058548291476887160406215312_archive/wp-content/themes/wod/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3270">
@@ -870,13 +710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="334" column="75" selection-start-line="334" selection-start-column="75" selection-end-line="334" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wod/templates/dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="46" column="116" selection-start-line="46" selection-start-column="116" selection-end-line="46" selection-end-column="116" />
         </state>
       </provider>
     </entry>
@@ -978,13 +811,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wod/js/custom-function.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="62" column="12" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../_intellij_phpdebug_validator.php" />
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -1022,39 +848,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wod/includes/custom_functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10680">
-          <caret line="712" column="0" selection-start-line="712" selection-start-column="0" selection-end-line="712" selection-end-column="0" />
-          <folding>
-            <marker date="1469732769000" expanded="true" signature="26645:26836" ph="SELECT * FRO... ${$wpdb-&gt;prefix}" />
-            <marker date="1469732769000" expanded="true" signature="28933:29053" ph="SELECT * FRO... ${$wpdb-&gt;prefix}" />
-            <marker date="1469732769000" expanded="true" signature="29179:29700" ph="..." />
-            <marker date="1469732769000" expanded="true" signature="29223:29700" ph="..." />
-            <marker date="1469732769000" expanded="true" signature="29266:29620" ph="..." />
-            <marker date="1469732769000" expanded="false" signature="29390:29406" ph="..." />
-            <marker date="1469732769000" expanded="false" signature="29433:29440" ph="×" />
-            <marker date="1469732769000" expanded="true" signature="33616:33747" ph="SELECT * FRO... ${$wpdb-&gt;prefix}" />
-            <marker date="1469732769000" expanded="true" signature="35576:35679" ph="SELECT * FRO... ${$wpdb-&gt;prefix}" />
-            <marker date="1469732769000" expanded="true" signature="37541:37707" ph="SELECT * FRO... ${$wpdb-&gt;prefix}" />
-            <marker date="1469732769000" expanded="true" signature="38890:39058" ph="SELECT * FRO... ${$wpdb-&gt;prefix}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../bin/phpMyAdmin/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-          <folding>
-            <marker date="1436186045000" expanded="true" signature="3953:3980" ph="..." />
-            <marker date="1436186045000" expanded="true" signature="16396:16402" ph=" " />
-            <marker date="1436186045000" expanded="true" signature="16402:16408" ph=" " />
-            <marker date="1436186045000" expanded="true" signature="16408:16414" ph=" " />
-            <marker date="1436186045000" expanded="true" signature="16414:16420" ph=" " />
-            <marker date="1436186045000" expanded="true" signature="16420:16426" ph=" " />
-            <marker date="1436186045000" expanded="true" signature="16426:16432" ph=" " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1062,15 +859,106 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/facebook-events-importer/assets/includes/templates/single-facebook_events.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1025">
+          <caret line="74" column="34" selection-start-line="74" selection-start-column="34" selection-end-line="74" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/facebook-events-importer/assets/includes/templates/facebook-events-template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/facebook-events-importer/facebook_events_importer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="558" column="44" selection-start-line="558" selection-start-column="32" selection-end-line="558" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wod/templates/Events.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="43" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../bin/mamp/phpmyadmin.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wod/sidebar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="75" selection-start-line="6" selection-start-column="75" selection-end-line="6" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/facebook-events-importer/assets/includes/fb-events.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3930">
+          <caret line="262" column="57" selection-start-line="262" selection-start-column="43" selection-end-line="262" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../bin/phpMyAdmin/navigation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wod/templates/youtube-channel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="57" selection-start-line="0" selection-start-column="57" selection-end-line="0" selection-end-column="57" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wod/templates/add-pb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20160406_wod_57058548291476887160406215312_archive/wp-content/themes/wod/templates/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="131" column="16" selection-start-line="131" selection-start-column="16" selection-end-line="131" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wod/templates/randomWOD.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="225" column="0" selection-start-line="225" selection-start-column="0" selection-end-line="226" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-includes/load.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="637" column="0" selection-start-line="637" selection-start-column="0" selection-end-line="637" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-includes/wp-db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9900">
+          <caret line="668" column="0" selection-start-line="668" selection-start-column="0" selection-end-line="668" selection-end-column="0" />
+          <folding>
+            <marker date="1459980143000" expanded="true" signature="23572:23579" ph="..." />
+            <marker date="1459980143000" expanded="true" signature="38434:38441" ph="..." />
+            <marker date="1459980143000" expanded="true" signature="41512:41519" ph="..." />
+            <marker date="1459980143000" expanded="true" signature="54101:54135" ph="UPDATE `${$t... " />
+            <marker date="1459980143000" expanded="true" signature="56090:56117" ph="DELETE FROM " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1090,118 +978,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wod/templates/youtube-channel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/facebook-events-importer/assets/includes/templates/single-facebook_events.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1025">
-          <caret line="74" column="34" selection-start-line="74" selection-start-column="34" selection-end-line="74" selection-end-column="34" />
-          <folding>
-            <marker date="1469906272000" expanded="true" signature="2511:2528" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/facebook-events-importer/assets/includes/templates/facebook-events-template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/facebook-events-importer/facebook_events_importer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="558" column="44" selection-start-line="558" selection-start-column="32" selection-end-line="558" selection-end-column="44" />
-          <folding>
-            <element signature="e#33187#33255#0#HTML" expanded="true" />
-            <marker date="1469983979000" expanded="true" signature="4235:4294" ph="..." />
-            <marker date="1469983979000" expanded="true" signature="4463:4522" ph="..." />
-            <marker date="1469983979000" expanded="true" signature="13238:13269" ph="..." />
-            <marker date="1469983979000" expanded="true" signature="13302:13316" ph="..." />
-            <marker date="1469983979000" expanded="true" signature="13626:13994" ph="..." />
-            <marker date="1469983979000" expanded="false" signature="13733:13821" ph="..." />
-            <marker date="1469983979000" expanded="false" signature="13887:13970" ph="..." />
-            <marker date="1469983979000" expanded="true" signature="17965:18024" ph="..." />
-            <marker date="1469983979000" expanded="true" signature="18103:18162" ph="..." />
-            <marker date="1469983979000" expanded="true" signature="23684:24477" ph="..." />
-            <marker date="1469983979000" expanded="true" signature="23794:24400" ph="{...}" />
-            <marker date="1469983979000" expanded="true" signature="23815:24181" ph="{...}" />
-            <marker date="1469983979000" expanded="true" signature="24062:24176" ph="{...}" />
-            <marker date="1469983979000" expanded="true" signature="24305:24394" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wod/templates/randomWOD.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="225" column="0" selection-start-line="225" selection-start-column="0" selection-end-line="226" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../bin/phpMyAdmin/navigation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../bin/mamp/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        <state relative-caret-position="30">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/facebook-events-importer/assets/includes/fb-events.php">
+    <entry file="file://$PROJECT_DIR$/../../bin/mamp/phpmyadmin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="262" column="57" selection-start-line="262" selection-start-column="43" selection-end-line="262" selection-end-column="57" />
-          <folding>
-            <marker date="1469906272000" expanded="true" signature="4105:4154" ph="..." />
-            <marker date="1469906272000" expanded="true" signature="5979:6028" ph="..." />
-            <marker date="1469906272000" expanded="true" signature="7619:7695" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wod/templates/Events.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="42" column="43" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
-          <folding>
-            <marker date="1469998972000" expanded="true" signature="2274:2572" ph="..." />
-            <marker date="1469998972000" expanded="true" signature="2839:3781" ph="..." />
-            <marker date="1469998972000" expanded="true" signature="2877:3052" ph="..." />
-            <marker date="1469998972000" expanded="true" signature="2881:3044" ph="..." />
-            <marker date="1469998972000" expanded="false" signature="2926:2935" ph="..." />
-            <marker date="1469998972000" expanded="true" signature="2953:3039" ph="..." />
-            <marker date="1469998972000" expanded="true" signature="3088:3744" ph="..." />
-            <marker date="1469998972000" expanded="true" signature="3121:3273" ph="..." />
-            <marker date="1469998972000" expanded="true" signature="3277:3407" ph="..." />
-            <marker date="1469998972000" expanded="true" signature="3411:3531" ph="..." />
-            <marker date="1469998972000" expanded="true" signature="3535:3703" ph="..." />
-            <marker date="1469998972000" expanded="true" signature="3707:3736" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wod/sidebar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-includes/cache.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="635" column="54" selection-start-line="635" selection-start-column="54" selection-end-line="635" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wod/templates/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="133" column="13" selection-start-line="133" selection-start-column="13" selection-end-line="133" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wod/js/custom-function.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="732" column="1" selection-start-line="732" selection-start-column="1" selection-end-line="732" selection-end-column="1" />
+          <folding>
+            <marker date="1469564074000" expanded="true" signature="197:209" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wod/includes/custom_functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="1020" column="0" selection-start-line="1020" selection-start-column="0" selection-end-line="1020" selection-end-column="0" />
+          <folding>
+            <marker date="1470177208000" expanded="true" signature="26645:26836" ph="SELECT * FRO... ${$wpdb-&gt;prefix}" />
+            <marker date="1470177208000" expanded="true" signature="28933:29053" ph="SELECT * FRO... ${$wpdb-&gt;prefix}" />
+            <marker date="1470177208000" expanded="true" signature="29179:29700" ph="..." />
+            <marker date="1470177208000" expanded="true" signature="29223:29700" ph="..." />
+            <marker date="1470177208000" expanded="true" signature="29266:29620" ph="..." />
+            <marker date="1470177208000" expanded="false" signature="29390:29406" ph="..." />
+            <marker date="1470177208000" expanded="false" signature="29433:29440" ph="×" />
+            <marker date="1470177208000" expanded="true" signature="34971:36331" ph="..." />
+            <marker date="1470177208000" expanded="true" signature="40102:40233" ph="SELECT * FRO... ${$wpdb-&gt;prefix}" />
+            <marker date="1470177208000" expanded="true" signature="42062:42165" ph="SELECT * FRO... ${$wpdb-&gt;prefix}" />
+            <marker date="1470177208000" expanded="true" signature="44027:44193" ph="SELECT * FRO... ${$wpdb-&gt;prefix}" />
+            <marker date="1470177208000" expanded="true" signature="45376:45544" ph="SELECT * FRO... ${$wpdb-&gt;prefix}" />
+          </folding>
         </state>
       </provider>
     </entry>
