@@ -850,7 +850,7 @@ function getSingleWorkoutDetail(){
 
                 </div>
                 <div class="modal-body gform_wrapper symptom_tracking_wrapper">';
-
+        $html.='<h3>WOD</h3>';
         $html.='<table class="table">';
         $personalBest = array();
         $workOutDetails = array();
@@ -866,10 +866,11 @@ function getSingleWorkoutDetail(){
                 $times = json_decode($result['times'],true);
                 $addDate = json_decode($result['add_date'],true);
                 $reps = json_decode($result['reps'],true);
+                $isPB = json_decode($result['publish'],true);
 
                 $time_slot  =  explode(':',$times['text']);
 
-                array_push($workOutDetails, $addDate, array(get_the_title($result['wk_name']), json_decode($result['reps'],true) ,$weight['text'], time_formatted_pad($time_slot[0]).':'.time_formatted_pad($time_slot[1]).':'.time_formatted_pad($time_slot[2])));
+                array_push($workOutDetails, $addDate, array(get_the_title($result['wk_name']), json_decode($result['reps'],true) ,$weight['text'], time_formatted_pad($time_slot[0]).':'.time_formatted_pad($time_slot[1]).':'.time_formatted_pad($time_slot[2]), $distance['text']." ".$distance['unit'], $isPB));
 
                 //$workOutDetails = array($addDate, array(get_the_title($result['wk_name']), json_decode($result['reps'],true) ,$weight['text'], time_formatted_pad($time_slot[0]).':'.time_formatted_pad($time_slot[1]).':'.time_formatted_pad($time_slot[2])));
 /*
@@ -910,16 +911,40 @@ function getSingleWorkoutDetail(){
                 if(!($workOutDetailsNewArray[0][3]=="00:00:00")) {
 
                     //if (strpos($html, $workOutDetailsNewArray[0][3]) !== true){
-                        $html .= '<td>Overall Time:' . $workOutDetailsNewArray[0][3] . '</td>';
+                    $html .= '<td><b><h4>Overall Time: ' . $workOutDetailsNewArray[0][3] . '</h4></b></td><tr></tr>';
+                    //}
+                }
+                if($workOutDetailsNewArray[0][5]=="1") {
+
+                    $html .= '<td><b><h4>Overall Time: ' . "NA/NA/NA" . '</h4></b></td><tr></tr>';
                     //}
                 }
 
-                if (!(strpos($html, "Exercise:".$workOutDetailsNewArray[0][0]) == true)) {
-                    $html .= '<td>Exercise:' . $workOutDetailsNewArray[0][0] . '</td>';
+                //if ((!(strpos($html, $workOutDetailsNewArray[0][0]) == true)) && (!(strpos($html, $workOutDetailsNewArray[0][1]) == true)) && (!(strpos($html, $workOutDetailsNewArray[0][4]) == true)))  {
+                if ((!(strpos($html, $workOutDetailsNewArray[0][0]) == true)) ) {
+
+                        $metric="";
+                        if($workOutDetailsNewArray[0][1] != ""){
+                            $metric=$workOutDetailsNewArray[0][1]." reps";
+                            if(!($workOutDetailsNewArray[0][2]) ==""){
+                                $metric=$metric."@".$workOutDetailsNewArray[0][2]."kg";
+                            }
+                        }
+                        if(($workOutDetailsNewArray[0][4] != "") && ($workOutDetailsNewArray[0][4] != " ")){
+                            $metric= $workOutDetailsNewArray[0][4];
+                        }
+
+                        $html .= '<td>'.$workOutDetailsNewArray[0][0]."(". $metric. ")".'</td>';
+                    }
                 }
-                if (!(strpos($html, "Reps:".$workOutDetailsNewArray[0][1]) == true)) {
-                    $html .= '<td>Reps:' . $workOutDetailsNewArray[0][1] . '</td>';
-                }
+
+                //if($workOutDetailsNewArray[0][4] != ""){
+                //    $html .= '<td>'.$workOutDetailsNewArray[0][4].'</td>';
+                //}
+
+                //if (!(strpos($html, "Reps:".$workOutDetailsNewArray[0][1]) == true)) {
+                //    $html .= '<td>Reps:' . $workOutDetailsNewArray[0][1] . '</td>';
+                //}
                 //$html.='<td>Key:'.$workOutDetailsNewArray[0][2].'</td>';
                 //$html.='<td>Time:'.$workOutDetailsNewArray[0][3].'</td>';
 
@@ -937,13 +962,32 @@ function getSingleWorkoutDetail(){
                             //$html.='<td>Reps:'.$workOutDetailsNewArray[0][1].'</td>';
 
                             // second workout
-                            $html .= '<td>Exercise:' . $workOutDetailsNewArray1[0][0] . '</td>';
-                            $html .= '<td>Reps:' . $workOutDetailsNewArray1[0][1] . '</td>';
+                            if ((!(strpos($html, $workOutDetailsNewArray1[0][0]) == true)) && (!(strpos($html, $workOutDetailsNewArray1[0][1]) == true)))  {
+                                $html .= '<td>'.$workOutDetailsNewArray1[0][0] . "(". $workOutDetailsNewArray1[0][1]. " reps)".'</td>';
+                            }
+
+
                             // $html.='<td>Key:'.$workOutDetailsNewArray1[0][2].'</td>';
                             if (!($workOutDetailsNewArray1[0][3] == "00:00:00")) {
                                 $html .= '<td>Time:' . $workOutDetailsNewArray1[0][3] . '</td>';
                             }
-                    }
+                            if($workOutDetailsNewArray1[0][4] != ""){
+                            //    $html .= '<td>'.$workOutDetailsNewArray1[0][4].'</td>';
+                            }
+
+                            //if ((!(strpos($html, $workOutDetailsNewArray1[0][0]) == true)) && (!(strpos($html, $workOutDetailsNewArray1[0][1]) == true)) && (!(strpos($html, $workOutDetailsNewArray1[0][4]) == true)))  {
+
+                            //    $metric="";
+                            //    if($workOutDetailsNewArray1[0][1] != ""){
+                            //        $metric=$workOutDetailsNewArray1[0][1]."reps";
+                           //     }
+                           //     if($workOutDetailsNewArray1[0][4] != ""){
+                           //         $metric= $workOutDetailsNewArray1[0][4];
+                           //     }
+
+                           //     $html .= '<td>'.$workOutDetailsNewArray1[0][0]."(". $metric. ")".'</td>';
+                           // }
+
                     }
 
                 }
@@ -1019,7 +1063,7 @@ function getSingleWorkoutDetail(){
         //$html.='</tr>';
         $html.='</table>';
 
-        if(empty($personalBests)){ // should be if(!empty($personalBests)){
+        if(!empty($personalBests)){
             $html.='<h3>My Personal Best</h3>';
 
             $html.='<table class="table">';

@@ -20,7 +20,7 @@ body{ color:#787878; background:#fff; font-family: 'Lato', sans-serif;}
 
 .header{padding:0; background:url(../images/header-transparent.png) repeat; position:absolute; top:0; width:100%; z-index:99;}
 
-.header-in{padding:0; background:url(../images/header-1.png) no-repeat center center; top:0; width:100%; z-index:99;  background-size:cover; }
+.header-in{padding:0; background:url(../images/training-601214.jpg) no-repeat center center; top:0; width:100%; z-index:99;  background-size:cover; }
 
 
 
@@ -92,11 +92,11 @@ ul.sub-menu li:last-child{border-bottom:0px; margin-left:0;}
 
 
 
-.home-post{background:#ebebeb; margin-bottom:30px;}
+.home-post{background:#fff; margin-bottom:30px;}
 
-.home-post img{max-width:100%;}
+.home-post img{max-width:100%; margin: auto;}
 
-.postText{padding:10px;}
+.postText{padding:10px; text-align: center;}
 
 .home-post h3, .home-post h3 a{font-size:22px; color:#0033a0; text-decoration:none; font-weight:bold; margin:5px 0;}
 
@@ -318,7 +318,7 @@ twitt-hadding a{padding-bottom:10px;}
 
 .fc-toolbar .fc-center{position:relative; left:0; width:100%;}
 
-.fc-toolbar .fc-center h2{text-align:center; background:#007bcc; color:#fff; width:100%; padding:10px; font-size:17px; margin:10px 0 0;}
+.fc-toolbar .fc-center h2{text-align:center; background:#0f7c3c; color:#fff; width:100%; padding:10px; font-size:17px; margin:10px 0 0;}
 
 .inner-content p{line-height:26px;}
 

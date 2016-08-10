@@ -44,7 +44,7 @@ get_header(); ?>
                                 Strength </li>
                             <li><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icon-running.png"/> Running/Rowing
                             </li>
-                            <li><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icon-strength.png"/> WOD
+                         <!--   <li><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icon-strength.png"/> WOD  -->
                             </li>
                         </ul>
                     </div>
