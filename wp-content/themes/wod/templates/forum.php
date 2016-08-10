@@ -36,7 +36,7 @@ get_header(); ?>
 
             <div class="col-md-8 col-sm-8">
 
-                <?php echo do_shortcode('[bbp-single-forum id=403]');?>
+                <?php echo do_shortcode('[bbp-single-forum id=286]');?>
 
             </div>
         </div>       </div>   </div>
