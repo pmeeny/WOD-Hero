@@ -98,7 +98,7 @@ quotes[0] = "<tr>" +
     "</tr><tr>" +
     "<td>50 kb press</td>" +
     "</tr><tr>";
-authors[0] = "FILTHY 50s(For Time)";
+authors[0] = "FILTHY 50s(For Time), Source: www.crossfit.com";
 
 quotes[1] = "<tr>" +
     "<td>21 Thrusters</td>" +
@@ -113,7 +113,7 @@ quotes[1] = "<tr>" +
     "</tr><tr>" +
     "<td>9 Pull-ups</td>" +
     "</tr><tr>";
-authors[1] = "FRAN(For time)";
+authors[1] = "FRAN(For time), Source: www.crossfit.com";
 
 
 quotes[2] = "<tr>" +
@@ -125,7 +125,7 @@ quotes[2] = "<tr>" +
     "</tr><tr>" +
     "<td>100 Air Squats</td>" +
     "</tr><tr>"
-authors[2] = "ANGIE(For time)";
+authors[2] = "ANGIE(For time), Source: www.crossfit.com";
 
 quotes[3] = "<tr>" +
     "<td>Run 400 metres</td>" +
@@ -136,7 +136,7 @@ quotes[3] = "<tr>" +
     "</tr><tr>" +
     "<td>100 Air Squats</td>" +
     "</tr><tr>"
-authors[3] = "KELLY(5 rounds for time)";
+authors[3] = "KELLY(5 rounds for time), Source: www.crossfit.com";
 
 quotes[4] = "<tr>" +
     "<td>100 Calorie row</td>" +
@@ -149,7 +149,7 @@ quotes[4] = "<tr>" +
     "</tr><tr>" +
     "<td>100 Calorie row</td>" +
     "</tr><tr>"
-authors[4] = "HILDY(For time)";
+authors[4] = "HILDY(For time), Source: www.crossfit.com";
 
 quotes[5] = "<tr>" +
     "<td>Run 800 metres</td>" +
@@ -158,7 +158,7 @@ quotes[5] = "<tr>" +
     "</tr><tr>" +
     "<td>50 Sit-ups</td>" +
     "</tr><tr>"
-authors[5] = "MICHAEL(3 rounds for time)";
+authors[5] = "MICHAEL(3 rounds for time), Source: www.crossfit.com";
 
 quotes[6] = "<tr>" +
     "<td>Deadlift 5-5-3-3-3-1-1-1-1 reps</td>" +
@@ -172,7 +172,7 @@ quotes[7] = "<tr>" +
     "</tr><tr>" +
     "<td>Burpees</td>" +
     "</tr><tr>"
-authors[7] = "WORKOUT 16.5(For time)";
+authors[7] = "WORKOUT 16.5(For time), Source: www.crossfit.com";
 
 quotes[8] = "<tr>" +
     "<td>Run 400 metres</td>" +
@@ -181,12 +181,12 @@ quotes[8] = "<tr>" +
     "</tr><tr>" +
     "<td>12 Pull-ups</td>" +
     "</tr><tr>"
-authors[8] = "HELEN(3 rounds for time)";
+authors[8] = "HELEN(3 rounds for time), Source: www.crossfit.com";
 
 quotes[9] = "<tr>" +
     "<td>Run 5km</td>" +
     "</tr><tr>"
-authors[9] = "RUN 5KM(For time)";
+authors[9] = "RUN 5KM(For time), Source: www.crossfit.com";
 
 quotes[10] = "<tr>" +
     "<td>Row 500 metres</td>" +
@@ -195,12 +195,12 @@ quotes[10] = "<tr>" +
     "</tr><tr>" +
     "<td>25 hip extensions</td>" +
     "</tr><tr>"
-authors[10] = "WOD(3 rounds for time)";
+authors[10] = "WOD(3 rounds for time), Source: www.crossfit.com";
 
 quotes[11] = "<tr>" +
     "<td>Front squat 3-3-3-3-3 reps</td>" +
     "</tr><tr>"
-authors[11] = "WOD";
+authors[11] = "WOD, , Source: www.crossfit.com";
 
 quotes[12] = "<tr>" +
     "<td>Run 800 metres</td>" +
@@ -209,7 +209,7 @@ quotes[12] = "<tr>" +
     "</tr><tr>" +
     "<td>12 Pull-ups</td>" +
     "</tr><tr>"
-authors[12] = "WOD(4 rounds for time)";
+authors[12] = "WOD(4 rounds for time), , Source: www.crossfit.com";
 
 quotes[13] = "<tr>" +
     "<td>Row 1000 metres</td>" +
@@ -218,17 +218,66 @@ quotes[13] = "<tr>" +
     "</tr><tr>" +
     "<td>24 Pull-ups</td>" +
     "</tr><tr>"
-authors[13] = "WOD(3 rounds for time)";
+authors[13] = "WOD(3 rounds for time), Source: www.crossfit.com";
 
 quotes[14] = "<tr>" +
-    "<td>5 Pull-ups</td>" +
+    "<td>10 Pull-ups</td>" +
+    "</tr><tr>" +
+    "<td>10 KB Swings</td>" +
+    "</tr><tr>" +
+    "<td>20 Box Jumps</td>" +
+    "</tr><tr>"
+authors[14] = "26 minute AMRAP, Source: www.crossfit.com";
+
+quotes[15] = "<tr>" +
+    "<td>10 Pull-ups</td>" +
     "</tr><tr>" +
     "<td>10 Push-ups</td>" +
     "</tr><tr>" +
     "<td>15 Air Squats</td>" +
     "</tr><tr>"
-authors[14] = "CINDY(20 minute AMRAP)";
+authors[15] = "CINDY(20 minute AMRAP), Source: www.crossfit.com";
 
+quotes[16] = "<tr>" +
+    "<td>Row 750 metres</td>" +
+    "</tr><tr>"
+authors[16] = "5 rounds for time, Source: www.crossfit.com";
+
+quotes[17] = "<tr>" +
+    "<td>Run 1 mile</td>" +
+    "</tr><tr>" +
+    "<td>100 Sit-ups</td>" +
+    "</tr><tr>" +
+    "<td>100 back extensions</td>" +
+    "</tr><tr>" +
+    "<td>Run 1 mile</td>" +
+    "</tr><tr>"
+authors[17] = "For time, Source: www.crossfit.com";
+
+quotes[18] = "<tr>" +
+    "<td>Clean and jerk 15-12-9 reps</td>" +
+    "</tr><tr>"
+authors[18] = "GWEN, Source: www.crossfit.com";
+
+quotes[19] = "<tr>" +
+    "<td>24 Air Squats</td>" +
+    "</tr><tr>" +
+    "<td>24 Push-ups</td>" +
+    "</tr><tr>" +
+    "<td>24 walking lunges</td>" +
+    "</tr><tr>" +
+    "<td>run 400 metres</td>" +
+    "</tr><tr>"
+authors[19] = "6 rounds for time, Source: www.crossfit.com";
+
+quotes[20] = "<tr>" +
+    "<td>Run 400 metres</td>" +
+    "</tr><tr>" +
+    "<td>30 Box Jumps</td>" +
+    "</tr><tr>" +
+    "<td>30 Wall balls</td>" +
+    "</tr><tr>"
+authors[20] = "KELLY(5 rounds for time), Source: www.crossfit.com";
 
 function rotate() {
 

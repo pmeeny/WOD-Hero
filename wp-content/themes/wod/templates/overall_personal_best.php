@@ -79,8 +79,12 @@ get_header();
                                         ?>
                                         
                                         <?php
-        
-                                        if($post->ID == 363 || $post->ID == 364 || $post->ID == 365 || $post->ID == 370 || $post->ID == 371 || $post->ID == 372 || $post->ID == 375 || $post->ID == 376 || $post->ID == 377 || $post->ID == 379 || $post->ID == 380){ ?>
+                                        //$localhost=$_SERVER["HTTP_HOST"];
+                                        if($post->post_title == "Back Squat" || $post->post_title == "Bench Press"|| $post->post_title == "Clean & Jerk"|| $post->post_title == "Clean & Press"|| $post->post_title == "Deadlift"
+                                          || $post->post_title == "Front Squat" || $post->post_title == "Hang Clean" || $post->post_title == "Hang Snatch" ||
+                                        $post->post_title == "Power Clean" || $post->post_title == "Power Snatch" || $post->post_title == "Push Press" || $post->post_title == "Strict Press"
+
+                                        ){ ?>
                                         
                                         <li><input type="checkbox" id="<?php echo $post->ID; ?>_Exercise" <?php if(!empty($_REQUEST['exercise']) && in_array($post->ID, $_REQUEST['exercise'])){ echo "checked"; } ?>  name="exercise[]" value="<?php echo $post->ID; ?>"><label for="<?php echo $post->ID; ?>_Exercise"> <?php the_title(); ?></label></li><?php
                                         

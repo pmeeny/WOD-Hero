@@ -726,8 +726,27 @@ function getSingleWorkoutDetail(workout_date){
         },
         success: function(data) {
             ajaxLoaderStop();
-            $('#workoutDetailModal').html(data.workout_detail);
-            $('#workoutDetailModal').modal('show');
+
+            //var content="<?php if(!(is_user_logged_in() )) { wp_redirect(site_url().'/login'); exit(); } $user_detail = wp_get_current_user(); if($user_detail->roles[0] == 'trainer'){ wp_redirect(site_url().'/settings'); exit(); } get_header(); ?>";
+            //var content1='<div class="clear"></div> <div class="bridcrumb"> <div class="container"> <ol class="breadcrumb"> <li><a href="<?php echo site_url(); ?>">Home</a></li> <li class="active"><a><?php the_title(); ?></a></li> </ol> </div> </div>';
+            //var content2='<div class="container">';
+            //var content3="<div class="inner-content"> <h2><?php if(get_post_meta( get_the_ID(), 'Title', true )){echo get_post_meta( get_the_ID(), 'Title', true );}else{ echo get_the_title(); } ?></h2> <div class="row"> <div class="col-md-4 col-sm-4"> <?php get_sidebar(); ?>";
+           // var content4='</div>';
+
+           // document.write(content);
+           // document.write(content1);
+           // document.write(content2);
+           ///document.write(content3);
+          //  document.write(content4);
+            //document.write(newContent);
+
+            //document.write(data.workout_detail);
+          //  document.close();
+
+            document.getElementById("overallCalendar").innerHTML = data.workout_detail;
+
+            //$('#workoutDetailModal').html(data.workout_detail);
+            //$('#workoutDetailModal').modal('show');
         }
     });
 }

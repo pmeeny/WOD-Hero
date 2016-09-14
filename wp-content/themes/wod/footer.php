@@ -7,12 +7,12 @@ if(isset($social_settings['facebook_url'])){
 if(isset($social_settings['insta_url'])){
     $insta = $social_settings['insta_url'];
 }
-if(isset($social_settings['twitter_url'])){
-    $tw = $social_settings['twitter_url'];
-}
-if(isset($social_settings['youtube_url'])){
-    $youTube = $social_settings['youtube_url'];
-}
+//if(isset($social_settings['twitter_url'])){
+//    $tw = $social_settings['twitter_url'];
+//}
+//if(isset($social_settings['youtube_url'])){
+//    $youTube = $social_settings['youtube_url'];
+//}
 ?>
 <div class="footer">
     <div class="container">
@@ -39,7 +39,7 @@ if(isset($social_settings['youtube_url'])){
                     if(!empty($insta))
                     {
                         ?>
-                        <li><a href="<?php echo $insta; ?>" target="_blank"><i class="fa fa-instagram fa-2"></i></a></li>
+                        <li><a href="<?php echo "https://www.instagram.com/wodhero"; ?>" target="_blank"><i class="fa fa-instagram fa-2"></i></a></li>
                         <?php
 
                     }
@@ -48,24 +48,7 @@ if(isset($social_settings['youtube_url'])){
                     if(!empty($fb))
                     {
                         ?>
-                        <li><a href="<?php echo $fb; ?>" target="_blank"> <i class="fa fa-facebook fa-2"></i> </a></li>
-                       <?php
-
-                    }
-                    ?>
-                    <?php
-                    if(!empty($tw))
-                    {
-                        ?>
-                        <li><a href="<?php echo $tw; ?>" target="_blank"><i class="fa fa-twitter fa-2"></i></a></li>
-                        <?php
-                    }
-                    ?>
-                    <?php
-                    if(!empty($youTube))
-                    {
-                        ?>
-                        <li><a href="<?php echo $youTube; ?>" target="_blank"><i class="fa fa-youtube fa-2"></i></a></li>
+                        <li><a href="<?php echo "https://www.facebook.com/wodherohq"; ?>" target="_blank"> <i class="fa fa-facebook fa-2"></i> </a></li>
                        <?php
 
                     }

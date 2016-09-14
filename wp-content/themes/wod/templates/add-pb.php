@@ -172,7 +172,7 @@ for ($i = 0; $i < 60; $i++) {
                                                 </div>
 
 
-                                                <div class="form-group">
+                                              <div class="form-group">
                                                     <label>&nbsp;</label>
                                                     <div class="publishPB"><label> <input type="checkbox"
                                                                         name="PERSONALBEST[1][publish_pb]"

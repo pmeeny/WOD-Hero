@@ -639,11 +639,17 @@ function get_workout_lists_pb_specific(){
             while ($my_query->have_posts()) : $my_query->the_post();
             
             $workoutValue=get_the_ID();
-
+             //   $workoutType =  $my_query->post["post_title"];
+            $localhost=$_SERVER["HTTP_HOST"];
+            if($localhost == "localhost:8888")   {
             if($workoutValue == 363 || $workoutValue == 364 || $workoutValue == 365 || $workoutValue == 370 || $workoutValue == 371 || $workoutValue == 372
                || $workoutValue == 375 || $workoutValue == 376 || $workoutValue == 377 || $workoutValue == 379 || $workoutValue == 380 ){
- 
-            $state.='<option value="'.get_the_ID().'">'.get_the_title($post->ID).'</option>';
+                $state.='<option value="'.get_the_ID().'">'.get_the_title($post->ID).'</option>';
+            } }
+            else
+                if($workoutValue == 355 || $workoutValue == 354 || $workoutValue == 351 || $workoutValue == 350 || $workoutValue == 347 || $workoutValue == 346
+                    || $workoutValue == 345 || $workoutValue == 339 || $workoutValue == 338 || $workoutValue == 337 || $workoutValue == 336 ){
+                $state.='<option value="'.get_the_ID().'">'.get_the_title($post->ID).'</option>';
             }
            
             endwhile;
@@ -842,15 +848,15 @@ function getSingleWorkoutDetail(){
 
         $html = '';
 
-        $html.='<div class="modal-dialog">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" id="symptom_close" data-dismiss="modal" aria-label="Close" style="padding:5px 10px"><span aria-hidden="true">&times;</span></button>
-                    <h3 class="modal-title" id="myModalLabel">My Workout Detail On '.date('d M Y', strtotime($_POST['workout_date'])).'</h3>
+        $html.='<div class="dialog">
+                <div class="header11">
+                    <h3 class="title1" id="myModalLabel">My WOD completed on ' .date('d M Y', strtotime($_POST['workout_date'])).'</h3> 
 
                 </div>
-                <div class="modal-body gform_wrapper symptom_tracking_wrapper">';
-        $html.='<h3>WOD</h3>';
+                <br>
+                <div class="content">
+
+                <div class="body">';
         $html.='<table class="table">';
         $personalBest = array();
         $workOutDetails = array();
@@ -911,12 +917,12 @@ function getSingleWorkoutDetail(){
                 if(!($workOutDetailsNewArray[0][3]=="00:00:00")) {
 
                     //if (strpos($html, $workOutDetailsNewArray[0][3]) !== true){
-                    $html .= '<td><b><h4>Overall Time: ' . $workOutDetailsNewArray[0][3] . '</h4></b></td><tr></tr>';
+                    $html .= '<td><b><h4>Overall Time: ' . $workOutDetailsNewArray[0][3] . '</h4></b></td></td><tr></tr>';
                     //}
                 }
                 if($workOutDetailsNewArray[0][5]=="1") {
 
-                    $html .= '<td><b><h4>Overall Time: ' . "NA/NA/NA" . '</h4></b></td><tr></tr>';
+                    $html .= '<td><b><h4>Strength: ' . '</h4></b></td><tr></tr>';
                     //}
                 }
 
@@ -934,7 +940,8 @@ function getSingleWorkoutDetail(){
                             $metric= $workOutDetailsNewArray[0][4];
                         }
 
-                        $html .= '<td>'.$workOutDetailsNewArray[0][0]."(". $metric. ")".'</td>';
+                        $html .= '<td>'.$workOutDetailsNewArray[0][0]."(". $metric. ")".'</td>';// add this back
+                    //$html .= ''.$workOutDetailsNewArray[0][0]."(". $metric. ")".'';
                     }
                 }
 
@@ -962,18 +969,52 @@ function getSingleWorkoutDetail(){
                             //$html.='<td>Reps:'.$workOutDetailsNewArray[0][1].'</td>';
 
                             // second workout
-                            if ((!(strpos($html, $workOutDetailsNewArray1[0][0]) == true)) && (!(strpos($html, $workOutDetailsNewArray1[0][1]) == true)))  {
-                                $html .= '<td>'.$workOutDetailsNewArray1[0][0] . "(". $workOutDetailsNewArray1[0][1]. " reps)".'</td>';
+                           // if ((!(strpos($html, $workOutDetailsNewArray1[0][0]) == true)) && (!(strpos($html, $workOutDetailsNewArray1[0][1]) == true)))  { KEEP
+                                if ((!(strpos($html, $workOutDetailsNewArray1[0][0]) == true)))  {
+                               // $html .= '<td>'.$workOutDetailsNewArray1[0][0] . "(". $workOutDetailsNewArray1[0][1]. " reps)".'</td>'; //add this back
+
+                                $metric="";
+                                if($workOutDetailsNewArray1[0][1] != ""){
+                                    $metric=$workOutDetailsNewArray1[0][1]." reps";
+                                    if(!($workOutDetailsNewArray1[0][2]) ==""){
+                                        $metric=$metric."@".$workOutDetailsNewArray1[0][2]."kg";
+                                    }
+                                }
+                                if(($workOutDetailsNewArray1[0][4] != "") && ($workOutDetailsNewArray1[0][4] != " ")){
+                                    $metric= $workOutDetailsNewArray1[0][4];
+                                }
+
+                                $html .= '<td>'.$workOutDetailsNewArray1[0][0]."(". $metric. ")".'</td>';
+
+
+                               ///$html .= ','.$workOutDetailsNewArray1[0][0] . "(". $workOutDetailsNewArray1[0][1]. " reps)";
                             }
 
 
                             // $html.='<td>Key:'.$workOutDetailsNewArray1[0][2].'</td>';
-                            if (!($workOutDetailsNewArray1[0][3] == "00:00:00")) {
-                                $html .= '<td>Time:' . $workOutDetailsNewArray1[0][3] . '</td>';
-                            }
-                            if($workOutDetailsNewArray1[0][4] != ""){
-                            //    $html .= '<td>'.$workOutDetailsNewArray1[0][4].'</td>';
-                            }
+                        ////    if (!($workOutDetailsNewArray1[0][3] == "00:00:00")) {
+                        ////        $html .= '<td>Time:' . $workOutDetailsNewArray1[0][3] . '</td>';
+                       // //    }
+                       ////     if(($workOutDetailsNewArray[0][4] != "") && ($workOutDetailsNewArray[0][4] != " ")){
+                       // //        $html .= '<td>'.$workOutDetailsNewArray[0][4].'</td>';
+                       // //    }
+
+                         //   if ((!(strpos($html, $workOutDetailsNewArray[0][0]) == true)) ) {
+
+                          //      $metric="";
+                          //      if($workOutDetailsNewArray[0][1] != ""){
+                         //           $metric=$workOutDetailsNewArray[0][1]." reps";
+                         //           if(!($workOutDetailsNewArray[0][2]) ==""){
+                         //               $metric=$metric."@".$workOutDetailsNewArray[0][2]."kg";
+                         //           }
+                         //       }
+                         //       if(($workOutDetailsNewArray[0][4] != "") && ($workOutDetailsNewArray[0][4] != " ")){
+                         //           $metric= $workOutDetailsNewArray[0][4];
+                         //       }
+
+                         //       $html .= '<td>'.$workOutDetailsNewArray[0][0]."(". $metric. ")".'</td>';// add this back
+                                //$html .= ''.$workOutDetailsNewArray[0][0]."(". $metric. ")".'';
+                         //   }
 
                             //if ((!(strpos($html, $workOutDetailsNewArray1[0][0]) == true)) && (!(strpos($html, $workOutDetailsNewArray1[0][1]) == true)) && (!(strpos($html, $workOutDetailsNewArray1[0][4]) == true)))  {
 
@@ -995,7 +1036,7 @@ function getSingleWorkoutDetail(){
             $n=$n+1;
             $html.='</tr>';
         }
-
+        $html.='</tr>';
 
         //foreach($workOutDetails as $key => $value) {
          //   $html.='<tr>';

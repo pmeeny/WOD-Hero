@@ -12,11 +12,10 @@
             <li><a href="<?php echo site_url().'/social-media/'; ?>"> <span> <i class="fa fa-share-alt"></i> </span> My gyms social media</a></li>
             <li><a href="<?php echo site_url().'/add-workoutpb/'; ?>"> <span><i class="fa fa-plus-square"></i></span> Add a WOD</a></li>
             <li><a href="<?php echo site_url().'/add-pb/'; ?>"> <span><i class="fa fa-plus-square"></i></span> Add a personal best</a></li>
-            <li><a href="<?php echo site_url().'/gym-finder/'; ?>"> <span><i class="fa fa-user"></i></span> Gym Finder</a></li>
+            <li><a href="<?php echo site_url().'/gym-finder/'; ?>"> <span><i class="fa fa-users"></i></span> Gym Finder</a></li>
             <li><a href="<?php echo site_url().'/random-wod/'; ?>"> <span><i class="fa fa-user"></i></span> Random WOD Generator</a></li>
             <li><a href="<?php echo site_url().'/youtube-channel/'; ?>"> <span><i class="fa fa-user"></i></span> WOD Hero youtube channel</a></li>
-            <li><a href="<?php echo site_url().'/forum/'; ?>"> <span><i class="fa fa-user"></i></span> Forum</a></li>
-            <li><a href="<?php echo site_url().'/events/'; ?>"> <span><i class="fa fa-user"></i></span> Events</a></li>
+            <li><a href="<?php echo site_url().'/events/'; ?>"> <span><i class="fa fa-users"></i></span> Events</a></li>
         <?php } ?>
     </ul>
 </div>

@@ -32,7 +32,7 @@ get_header(); ?>
                     <?php get_sidebar(); ?>
                 </div>
 
-                <div class="col-md-8 col-sm-8">
+                <div class="col-md-8 col-sm-8" id="overallCalendar">
                     <div id="workout_calendar"></div>
 
                     <div class="workout_calendar_help">
@@ -53,7 +53,9 @@ get_header(); ?>
         </div>
     </div>
 
-<div class="modal fade" id="workoutDetailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"></div>
+<!--<div class="modal fade" id="workoutDetailModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"></div> -->
+
+<div id="workout"></div>
 
 <script type="text/javascript">
     var drawFlag = false;
