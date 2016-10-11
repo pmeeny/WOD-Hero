@@ -35,7 +35,8 @@ get_header(); ?>
                         <?php
                         $user_detail = wp_get_current_user();
                         $my_trainer = get_user_meta( $user_detail->ID, 'my_trainer', true );
-                        $insta_last = get_user_meta( $my_trainer, 'my_instagram', true );
+                        //$insta_last = get_user_meta( $my_trainer, 'my_instagram', true );
+                        $insta_last="";
                         $fb_last = get_user_meta( $my_trainer, 'my_facebook', true );
                         $tw_last = get_user_meta( $my_trainer, 'my_twitter', true ); ?>
                         <?php

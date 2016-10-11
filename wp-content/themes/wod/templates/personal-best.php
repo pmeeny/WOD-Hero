@@ -102,7 +102,7 @@ get_header(); ?>
                                                      }
                                                      else
                                                      {
-                                                         $('#personal_graph1').html('No Result111 Found');
+                                                         $('#personal_graph1').html('No Result Found');
                                                      }
 
 

@@ -39,8 +39,8 @@ get_header(); ?>
                                 	<div class="col-sm-3 col-xs-4"><label>User Type</label></div>
                                     <div class="col-sm-9  col-xs-8"><select class="form-control" name="user_type" id="user_type">
                                         <option value="">Select User Type</option>
-                                        <option value="normal_user">Normal User</option>
-                                        <option value="trainer">Trainer</option>
+                                        <option value="normal_user">Athlete</option>
+                                        <option value="trainer">Gym</option>
                                     </select></div>
                                 </div>
                               </div>
@@ -83,8 +83,6 @@ get_header(); ?>
                         <div class="signup-inner">
                             <h3>Join with Your Social Account</h3>
                             <a href="javascript:void(0)" onclick="Login()"><img src="<?php bloginfo('template_url'); ?>/images/fb-button.png"></a>
-
-                            <a href="javascript:void(0)" onclick="twitterLogin();"><img src="<?php bloginfo('template_url'); ?>/images/tweet-button.png"></a>
 
                             <a href="javascript:GooglePluslogin();"><img src="<?php bloginfo('template_url'); ?>/images/g+Button.png"></a>
                         </div>

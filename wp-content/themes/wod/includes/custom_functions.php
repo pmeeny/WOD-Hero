@@ -73,7 +73,7 @@ function NewUserEmailNotification($user, $user_email, $key, $meta = '') {
     $message_headers = "From: \"{$from_name}\" <{$admin_email}>\n" . "Content-Type: text/plain; charset=\"" . get_option('blog_charset') . "\"\n";
     $message = sprintf(
         apply_filters( 'wpmu_signup_user_notification_email',
-            __( "Hi %s,\n\nThank you for registering with %s.\n\nTo activate your account, please click the following link:\n\n%s\n\nYou will then receive an email with your login details." ),
+            __( "Hi %s,\n\nThank you for registering with %s.\n\nTo activate your account, please click the following link:\n\n%s\n\nThanks\n\nThe WOD Hero team." ),
             $user, $user_email, $key, $meta
         ),
         $user,
@@ -647,7 +647,7 @@ function get_workout_lists_pb_specific(){
                 $state.='<option value="'.get_the_ID().'">'.get_the_title($post->ID).'</option>';
             } }
             else
-                if($workoutValue == 355 || $workoutValue == 354 || $workoutValue == 351 || $workoutValue == 350 || $workoutValue == 347 || $workoutValue == 346
+                if($workoutValue == 355 || $workoutValue == 354 || $workoutValue == 351 || $workoutValue == 352 || $workoutValue == 350 || $workoutValue == 347 || $workoutValue == 346
                     || $workoutValue == 345 || $workoutValue == 339 || $workoutValue == 338 || $workoutValue == 337 || $workoutValue == 336 ){
                 $state.='<option value="'.get_the_ID().'">'.get_the_title($post->ID).'</option>';
             }
@@ -732,7 +732,13 @@ function addWorkoutPB(){
 
             $over_all_publish = !empty($over_all_publish) ? absint($over_all_publish) : 0;
             $dataInsert['over_all_publish'] = $over_all_publish;
-
+            if($rounds != ""){
+                $dataInsert['rounds'] = $rounds;
+            }
+            if(!empty($weight['text'])) {
+                $dataInsert['pbweight'] = $weight['text'];
+            }
+            if($reps == ""){ $reps=1; }
             $dataInsert['reps'] = $reps;
             $dataInsert['complete_date'] = $completed_date;
             $dataInsert['publish'] = (isset($publish_pb) && $publish_pb == 'yes') ? 1 : '0';
@@ -872,11 +878,14 @@ function getSingleWorkoutDetail(){
                 $times = json_decode($result['times'],true);
                 $addDate = json_decode($result['add_date'],true);
                 $reps = json_decode($result['reps'],true);
+                $rounds = json_decode($result['rounds'],true);
                 $isPB = json_decode($result['publish'],true);
 
                 $time_slot  =  explode(':',$times['text']);
 
-                array_push($workOutDetails, $addDate, array(get_the_title($result['wk_name']), json_decode($result['reps'],true) ,$weight['text'], time_formatted_pad($time_slot[0]).':'.time_formatted_pad($time_slot[1]).':'.time_formatted_pad($time_slot[2]), $distance['text']." ".$distance['unit'], $isPB));
+                array_push($workOutDetails, $addDate, array(get_the_title($result['wk_name']), json_decode($result['reps'],true) ,$weight['text'],
+
+                    time_formatted_pad($time_slot[0]).':'.time_formatted_pad($time_slot[1]).':'.time_formatted_pad($time_slot[2]), $distance['text']." ".$distance['unit'], $isPB, $rounds));
 
                 //$workOutDetails = array($addDate, array(get_the_title($result['wk_name']), json_decode($result['reps'],true) ,$weight['text'], time_formatted_pad($time_slot[0]).':'.time_formatted_pad($time_slot[1]).':'.time_formatted_pad($time_slot[2])));
 /*
@@ -917,7 +926,7 @@ function getSingleWorkoutDetail(){
                 if(!($workOutDetailsNewArray[0][3]=="00:00:00")) {
 
                     //if (strpos($html, $workOutDetailsNewArray[0][3]) !== true){
-                    $html .= '<td><b><h4>Overall Time: ' . $workOutDetailsNewArray[0][3] . '</h4></b></td></td><tr></tr>';
+                    $html .= '<td><b><h4>Overall Time: ' . $workOutDetailsNewArray[0][3] .  " ,Rounds: " . $workOutDetailsNewArray[0][6]. '</h4></b></td></td><tr></tr>';
                     //}
                 }
                 if($workOutDetailsNewArray[0][5]=="1") {

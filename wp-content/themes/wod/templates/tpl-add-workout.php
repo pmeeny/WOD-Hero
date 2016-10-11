@@ -98,11 +98,23 @@ for ($i = 0; $i < 60; $i++) {
                                                         </select>
                                                     </div>
                                                 </div>
+
+
                                             </div>
-                                        </div>                             
-    <div  class="clone_data">
-      
-                                    <div class="row_data"> 
+
+                                </div>
+
+                                <div class="tr_rounds">
+                                    <label>Rounds</label>
+                                    <div><div class="form-group"> <input name="PERSONALBEST[1][rounds]" min="0"
+                                                                         class="form-control rounds field_required"
+                                                                         type="number" ></div></div>
+                                </div>
+
+                                <div  class="clone_data">
+
+                                    <div class="row_data">
+
                                         <div class="labelBox">
                                             <label>Select Workout Category</label>
                                             <div>
@@ -184,12 +196,12 @@ foreach ($categories as $category):
                                                                                  class="form-control-wod"
                                                                                  type="text" ></textarea></div></div>
                                         </div>
-
+                                        
                                         <div class="clear"></div>
-                                               <!-- <div class="form-group hidden">
+                                                <div class="form-group hidden">
                                                     <input name="PERSONALBEST[1][times][unit]"  class="form-control
                                                     field_required times" value="hours/mins/secs"  type="hidden" />
-                                                </div> -->
+                                                </div>
 
 <!--
                                                 <div class="form-group">

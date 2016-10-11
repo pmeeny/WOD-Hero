@@ -16,7 +16,7 @@ get_header();
 
 ?>
 
-=<body onload="rotate()">
+<body onload="rotate()">
    <div class="clear"></div>
 
     <div class="bridcrumb">

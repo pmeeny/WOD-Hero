@@ -171,7 +171,7 @@ get_header(); ?>
                             $gender_last = get_user_meta( $user_detail->ID, 'my_gender', true ); ?>
 
                                     <tr>
-                                        <td width="38%"><label>YOUR PERSONAL TRAINER*</label></td>
+                                        <td width="38%"><label>YOUR GYM*</label></td>
                                         <td width="62%">
                                             <div class="form-group">
                                                 <select name="trainer_id" id="trainer_id" class="form-control field_required">

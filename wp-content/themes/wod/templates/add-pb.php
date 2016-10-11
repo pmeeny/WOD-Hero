@@ -77,7 +77,7 @@ get_header();
                                             <div>
                                                 <div class="form-group">
                                                     <input type="number" min="0" class="form-control  weight field_required" name="PERSONALBEST[1][weight][text]"  style="float: left; margin-right: 10px; width:29%">
-                                                    <select style="width: 20%;" class="form-control weight_metter field_required"
+                                                    <select style="width: 20%;" class="form-control weight_metter"
                                                             placeholder="" name="PERSONALBEST[1][weight][unit]"></select>
                                                 </div>
                                             </div>
@@ -96,20 +96,20 @@ get_header();
                                             <label>Distance</label>
                                             <div>
                                                 <div class="form-group">
-                                                    <input type="number" min="0"  class="form-control weight distance field_required" name="PERSONALBEST[1][distance][text]"  style="float: left; margin-right: 10px; width:29%">
+                                                    <input type="number" min="0"  class="form-control distance field_required" name="PERSONALBEST[1][distance][text]"  style="float: left; margin-right: 10px; width:29%">
                                                     <select style="width: 20%;" class="form-control weight_metter field_required"
                                                             placeholder="" name="PERSONALBEST[1][distance][unit]"></select>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div class="tr_reps hide">
+                                      <!--  <div class="tr_reps hide">
                                             <label>Reps</label>
                                             <div><div class="form-group"> <input name="PERSONALBEST[1][reps]" min="0"
                                                                                  class="form-control reps field_required"
                                                                                  type="number" ></div></div>  
                                             
-                                        </div> 
+                                        </div>  -->
                                         <div class="tr_times hide">
                                         <label>Time Hours/Mins/Secs</label>
                                             <div class="form-group">
@@ -182,7 +182,7 @@ for ($i = 0; $i < 60; $i++) {
 
                                                 <div class="form-group">
                                                     <label>&nbsp;</label>
-                                                    <div class="publishPB"><label> <input type="checkbox" name="PERSONALBEST[1][over_all_publish]" value="1"> <span>Publish your PB to the overall gyms</span></label></div>
+                                                    <div class="publishPB"><label> <input type="checkbox" name="PERSONALBEST[1][over_all_publish]" value="1"> <span>This PB appears in the overall PB page</span></label></div>
                                                 </div>
 
                                             <div class="remove hide btn btnred">DELETE</div>

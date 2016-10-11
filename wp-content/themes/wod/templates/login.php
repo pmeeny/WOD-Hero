@@ -93,8 +93,6 @@ get_header(); ?>
 
                             <a href="javascript:void(0)" onclick="Login()"><img src="<?php bloginfo('template_url'); ?>/images/fb-button.png"></a>
 
-                            <a href="javascript:void(0)" onclick="twitterLogin();"><img src="<?php bloginfo('template_url'); ?>/images/tweet-button.png"></a>
-
                             <a href="javascript:GooglePluslogin();"><img src="<?php bloginfo('template_url'); ?>/images/g+Button.png"></a>
 
                         </div>

@@ -34,8 +34,8 @@
                                 <li class="blue-Btn"><a href="<?php echo site_url().'/mydashboard'; ?>"><?php echo substr($user, 0, 11);  ?></a></li>
                                 <li class="gren-Btn"><a href="<?php echo wp_logout_url( home_url() ); ?>">Logout</a></li>
                             <?php }else{ ?>
-                                <li class="gren-Btn"><a href="<?php echo site_url().'/login'; ?>">Login</a></li>
-                                <li class="blue-Btn"><a href="<?php echo site_url().'/sign-up'; ?>">Signup</a></li>
+                             <!--   <li class="gren-Btn"><a href="<//?php echo site_url().'/login'; ?>">Login</a></li>
+                                <li class="blue-Btn"><a href="<//?php echo site_url().'/sign-up'; ?>">Signup</a></li> -->
                             <?php } ?>
                             </ul>
                         </div>

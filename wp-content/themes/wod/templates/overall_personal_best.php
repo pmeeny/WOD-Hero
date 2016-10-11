@@ -13,8 +13,8 @@ if($user_detail->roles[0] == 'trainer'){
 }
 
 get_header();
-
 ?>
+
     <div class="clear"></div>
 
     <div class="bridcrumb">
@@ -26,6 +26,9 @@ get_header();
         </div>
     </div>
 
+
+
+
     <div class="container">
         <div class="inner-content">
             <h2><?php if (get_post_meta(get_the_ID(), 'Title', true)) {
@@ -34,10 +37,14 @@ get_header();
     echo get_the_title();
 } ?></h2>
             <div class="row">
+
+                <form id="myForm" name="myForm" method="post" action="<?php echo site_url('overall-personal-best'); ?>">
+
+
                 <div class="col-md-4 col-sm-4">
                     <?php get_sidebar(); ?>
                     <div class="sideFilter">
-                    <form method="get" action="<?php echo site_url('overall-personal-best'); ?>">
+
                     <?php
                         if(isset($_REQUEST['paging']))
                         {
@@ -50,7 +57,7 @@ get_header();
                            <div class="gender-section">
                                <div class="sub-heading">Gender</div>
                                  <ul>
-                                     <li><input type="radio" required <?php if(isset($_REQUEST['gender']) && $_REQUEST['gender'] == 'male'){ echo "checked"; } ?> name="gender" id="Male" value="male"><label for="Male">Male</label></li>
+                                     <li><input type="radio"  required <?php if(isset($_REQUEST['gender']) && $_REQUEST['gender'] == 'male'){ echo "checked"; } ?> name="gender" id="Male" value="male"><label for="Male">Male</label></li>
                                      <li><input type="radio" <?php if(isset($_REQUEST['gender']) &&  $_REQUEST['gender'] == 'female'){ echo "checked"; } ?> name="gender" id="Female" value="female"><label for="Female">Female</label></li>
                                  </ul>
                             </div>
@@ -86,7 +93,9 @@ get_header();
 
                                         ){ ?>
                                         
-                                        <li><input type="checkbox" id="<?php echo $post->ID; ?>_Exercise" <?php if(!empty($_REQUEST['exercise']) && in_array($post->ID, $_REQUEST['exercise'])){ echo "checked"; } ?>  name="exercise[]" value="<?php echo $post->ID; ?>"><label for="<?php echo $post->ID; ?>_Exercise"> <?php the_title(); ?></label></li><?php
+                                        <li><input type="checkbox" id="<?php echo $post->ID; ?>_Exercise"
+                                                <?php if(!empty($_REQUEST['exercise']) && in_array($post->ID, $_REQUEST['exercise'])){ echo "checked"; } ?>
+                                                   name="exercise[]" value="<?php echo $post->ID; ?>"><label for="<?php echo $post->ID; ?>_Exercise"> <?php the_title(); ?></label></li><?php
                                         
                                         }
                                         $p++;
@@ -98,9 +107,9 @@ get_header();
                                </ul>
                             </div>
                             <div class="submit-section">
-                               <button type="submit">Filter</button>
+                               <button type="submit" id="submitBtn">Filter</button>
                             </div>
-                            </form>
+
                     </div>
                 </div>
                 <div class="col-md-8 col-sm-8">
@@ -132,7 +141,7 @@ get_header();
                                           ".$inner_query."
                                           LEFT  JOIN {$wpdb->prefix}add_workout wd ON wd.user_id = u.ID
                                           ".$condition."
-                                          ORDER BY wd.id DESC";
+                                          ORDER BY wd.pbweight DESC";
 
                 error_log($total_sql_query);
                 /*
@@ -212,19 +221,18 @@ get_header();
                                           ".$inner_query."
                                           LEFT  JOIN {$wpdb->prefix}add_workout wd ON wd.user_id = u.ID
                                           ".$condition."
-                                          ORDER BY wd.id DESC ".$limit;
+                                          ORDER BY wd.pbweight DESC ".$limit;
 
                         $overall_personal_best=  $wpdb->get_results($sql_query);
-
                  ?>
                     <div class="table-responsive">
   <table class="table table-condensed table-striped table-bordered table-hover no-margin overall_personal_best  ">
     <thead>
       <tr>
-        <th style="width:20%">Trainee Name</th>
-        <th style="width:20%" class="exercise">Gym Name</th>
+        <th style="width:20%">Athlete</th>
+        <th style="width:20%" class="exercise">Gym</th>
         <th style="width:15%" class="exercise">Exercise</th>
-        <th style="width:15%" class="exercise">Exercise Detail</th>
+        <th style="width:15%" class="exercise">Weight</th>
         <th style="width:15%" class="exercise">Date</th>
       </tr>
     </thead>
@@ -319,10 +327,16 @@ if(!empty($overall_personal_best)) {
 
 </div>
 
-                        <div class="clear"></div>
-                    </div>
-                </div>
+
+
+                   </form>
+
+                <div class="clear"></div>
             </div>
-        </div>
-    </div>
+
+
+                </div>
+
+            </div>
+
 <?php get_footer(); ?>

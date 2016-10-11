@@ -628,9 +628,13 @@ function get_workout_lists_pb_specific(id,sid,obj){
         },
         success: function(data) {
             ajaxLoaderStop();
-            obj.parents('.row_data').find('.tr_reps, .tr_weight, .tr_times, .tr_box_jump, .tr_distance').find('input[type="text"] , select , input[type="number"]').val('');
+            obj.parents('.row_data').find('.tr_reps, .tr_weight, .tr_times, .tr_box_jump, .tr_distance').find('input[type="text"] , input[type="number"] , input[type="number"]').val('');
 
-            obj.parents('.row_data').find('.tr_reps, .tr_weight, .tr_times, .tr_box_jump, .tr_distance').addClass('hide');
+            obj.parents('.row_data').find('.tr_weight').find('input[type="number"]').attr('class','form-control weight field_required');
+            obj.parents('.row_data').find('.tr_reps').find('input[type="number"]').val('1');
+            //obj.parents('.row_data').find('.tr_reps').addAttr('readonly');
+            obj.parents('.row_data').find('.tr_reps').find('input[type="number"]').attr('readonly','true');
+
             if(data.states!=''){
                 if(data.set){
                     obj.parents('.row_data').find('.'+data.id).html(data.states);
