@@ -200,7 +200,7 @@ authors[10] = "WOD(3 rounds for time), Source: www.crossfit.com";
 quotes[11] = "<tr>" +
     "<td>Front squat 3-3-3-3-3 reps</td>" +
     "</tr><tr>"
-authors[11] = "WOD, , Source: www.crossfit.com";
+authors[11] = "WOD, Source: www.crossfit.com";
 
 quotes[12] = "<tr>" +
     "<td>Run 800 metres</td>" +
@@ -209,7 +209,7 @@ quotes[12] = "<tr>" +
     "</tr><tr>" +
     "<td>12 Pull-ups</td>" +
     "</tr><tr>"
-authors[12] = "WOD(4 rounds for time), , Source: www.crossfit.com";
+authors[12] = "WOD(4 rounds for time), Source: www.crossfit.com";
 
 quotes[13] = "<tr>" +
     "<td>Row 1000 metres</td>" +

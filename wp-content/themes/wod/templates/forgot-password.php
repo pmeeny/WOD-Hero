@@ -43,8 +43,8 @@ get_header(); ?>
                         </form>
 
                             <div class="clear"></div>
-                            <p class="green-bg">Have username and password then login to your account.<a href="<?php echo site_url().'/login'; ?>">Click Here</a></p>
-                            <p class="green-bg">Not A member yet? Create new account <a href="<?php echo site_url().'/sign-up'; ?>">Click Here</a></p>
+                            <p class="green-bg">If you have your username and password then login to your account.<a href="<?php echo site_url().'/login'; ?>">Click Here</a></p>
+                            <p class="green-bg">Not a member yet? Create a new account <a href="<?php echo site_url().'/sign-up'; ?>">Click Here</a></p>
                         </div>
                     </div>
                     </div>
