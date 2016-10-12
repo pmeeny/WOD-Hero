@@ -57,8 +57,8 @@
                                     </ul>
                                 </li>
                         <?php }else{ ?>
-                            <li class="gren-Btn"><a href="<?php echo site_url().'/login'; ?>">Login</a></li>
-                            <li class="blue-Btn"><a href="<?php echo site_url().'/sign-up'; ?>">Signup</a></li>
+                            <!--<li class="gren-Btn"><a href="<?php //echo site_url().'/login'; ?>">Login</a></li> -->
+                           <!-- <li class="blue-Btn"><a href="<?php //echo site_url().'/sign-up'; ?>">Signup</a></li> -->
                         <?php } ?>
                         </ul>
                         
