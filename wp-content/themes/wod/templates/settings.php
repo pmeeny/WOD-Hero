@@ -175,7 +175,7 @@ get_header(); ?>
                                         <td width="62%">
                                             <div class="form-group">
                                                 <select name="trainer_id" id="trainer_id" class="form-control field_required">
-                                                    <option value="">Select Your Personal Trainer</option>
+                                                    <option value="">Select your GYM</option>
                                                     <?php $args=array('role'=>'trainer', 'orderby' => 'user_nicename', 'order' => 'ASC');
                                                     $trainers = get_users($args);
                                                     foreach($trainers as $trainer){

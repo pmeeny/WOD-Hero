@@ -260,7 +260,7 @@ p.green-bg a{text-decoration:none;}
 
 width:65%; margin:10px auto 30px; border:1px solid #ccc;/* padding:8px;*/ border-radius:3px;}
 
-.personal-best ul.tabStyle li{float:left; width:33.3%; border-right:1px solid #ccc;}
+.personal-best ul.tabStyle li{float:left; width:50%; border-right:1px solid #ccc;}
 
 .personal-best ul.tabStyle li:last-child{border-right:none;}
 
@@ -457,7 +457,7 @@ ul.f-social{float:right;}
 
 .sub-heading{color:#24292e; font-size:14px; text-transform:uppercase; margin-bottom:10px; font-weight:600;}
 
-.gender-section{margin:20px 0;}
+.gender-section{margin:1px 0;}
 
 .gender-section ul, .exercise-section ul{list-style:none; margin:0; padding:0;}
 
