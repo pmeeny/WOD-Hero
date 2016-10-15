@@ -1514,12 +1514,12 @@ function wod_hero_action_callback()
 
     }
     else {
-        wp_redirect(site_url('/settings/') . '?error=' . urlencode('Form submission failed!, Please fill the required field.'));
+        wp_redirect(site_url('/settings/') . '?error=' . urlencode('Form submission failed!, Please fill in the required field.'));
         exit();
 
     }
 
-    wp_redirect(site_url('/settings/') . '?msg=' . urlencode('Successfully update!'));
+    wp_redirect(site_url('/settings/') . '?msg=' . urlencode('Successfully updated!'));
     exit();
 
 }

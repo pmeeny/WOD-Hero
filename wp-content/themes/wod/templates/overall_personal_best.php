@@ -338,5 +338,5 @@ if(!empty($overall_personal_best)) {
                 </div>
 
             </div>
-
+    </div>
 <?php get_footer(); ?>
