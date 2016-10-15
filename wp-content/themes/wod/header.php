@@ -57,22 +57,22 @@
                                     </ul>
                                 </li>
                         <?php }else{ ?>
-                            <!--<li class="gren-Btn"><a href="<?php //echo site_url().'/login'; ?>">Login</a></li> -->
-                           <!-- <li class="blue-Btn"><a href="<?php //echo site_url().'/sign-up'; ?>">Signup</a></li> -->
+                            <li class="gren-Btn"><a href="<?php echo site_url().'/login'; ?>">Login</a></li>
+                                <li class="blue-Btn"><a href="<?php echo site_url().'/sign-up'; ?>">Signup</a></li>
                         <?php } ?>
                         </ul>
                         
-                        <!--<nav id="menu">
+                       <!-- <nav id="menu">
                             <ul class="nav navbar-nav">
                                 <?php echo wod_main_menu(); ?>
                                 <?php if(is_user_logged_in() ) {
                                     $user_detail = wp_get_current_user();
                                     $user = get_user_meta($user_detail->ID,'first_name',true); ?>
-                                    <li class="blue-Btn"><a href="<?php //echo site_url().'/mydashboard'; ?>"><?php //echo $user; ?></a></li>
-                                    <li class="gren-Btn"><a href="<?php //echo wp_logout_url( home_url() ); ?>">Logout</a></li>
+                                    <li class="blue-Btn"><a href="<?php echo site_url().'/mydashboard'; ?>"><?php echo $user; ?></a></li>
+                                    <li class="gren-Btn"><a href="<?php echo wp_logout_url( home_url() ); ?>">Logout</a></li>
                                 <?php }else{ ?>
-                                    <li class="gren-Btn"><a href="<?php //echo site_url().'/login'; ?>">Login</a></li>
-                                    <li class="blue-Btn"><a href="<?php ///echo site_url().'/sign-up'; ?>">Signup</a></li>
+                                    <li class="gren-Btn"><a href="<?php echo site_url().'/login'; ?>">Login</a></li>
+                                    <li class="blue-Btn"><a href="<?php echo site_url().'/sign-up'; ?>">Signup</a></li>
                                 <?php } ?>
                             </ul>
                         </nav>-->
