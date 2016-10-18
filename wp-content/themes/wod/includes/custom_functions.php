@@ -714,6 +714,14 @@ function addWorkoutPB(){
             extract($val);
             $dataInsert = array();
             $dataInsert['user_id'] = get_current_user_id();
+
+            $trainee_info = get_userdata(get_current_user_id());
+            $trainer_id = get_user_meta( get_current_user_id(), 'my_trainer', true );
+            $gym_name_id = get_user_meta( $trainer_id, 'gym_name', true );
+            $gym_name = get_the_title($gym_name_id);
+
+            $dataInsert['gym_name'] = $gym_name;
+
             $dataInsert['wk_category'] = $workout_cat;
             $dataInsert['wk_name'] = $workout_name;
             if(!empty($box_jump['text'])){

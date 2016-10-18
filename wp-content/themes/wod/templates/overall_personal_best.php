@@ -62,30 +62,22 @@ get_header();
                                  </ul>
                             </div>
 
-                   <!--     <div class="gym-section">
-                            <div class="sub-heading">Gym
-                                <select class="form-control" name="gym" id="gym">
-                                    <option value="Crossfit C2F" data-name="Crossfit C2F">Crossfit C2F</option>
-                                    <option value="Crossfit Athlone" data-name="Crossfit Athlone">Crossfit Athlone</option>
-                                </select>
-                            </div>
-                        </div> -->
-                       <!-- <div class="gym-section"> NEEDED to filter by gym
-                            <!--
+                        <div class="gym-section">
                             <div class="sub-heading">GYM</div>
                                 <div class="form-group">
-                                    <select name="trainer_id" id="trainer_id" class="form-control field_required">
-                                        <option value="">Select Your Personal Trainer</option>
-                                        <?php //$args=array('role'=>'trainer', 'orderby' => 'user_nicename', 'order' => 'ASC');
-                                        //$trainers = get_users($args);
-                                        //foreach($trainers as $trainer){
-                                           // $fname = get_user_meta( $trainer->ID, 'first_name', true );
-                                           // $lname = get_user_meta( $trainer->ID, 'last_name', true ); ?>
-                                            <option value="<?php //echo $trainer->ID; ?>" <?php //if(isset($trainer_last) && $trainer_last == $trainer->ID){ echo 'selected="selected"'; } ?>><?php //echo $fname." ".$lname; ?></option>
-                                        <?php //} ?>
+                                    <select name="gym_name" id="gym_name" class="form-control field_required">
+                                        <option value="">Select your GYM</option>
+                                        <?php $args=array('role'=>'trainer', 'orderby' => 'user_nicename', 'order' => 'ASC');
+                                        $trainers = get_users($args);
+                                        foreach($trainers as $trainer){
+                                            $fname = get_user_meta( $trainer->ID, 'first_name', true );
+                                            $lname = get_user_meta( $trainer->ID, 'last_name', true ); ?>
+                                            <option value="<?php echo $trainer->ID; ?>" <?php if(isset($trainer_last) && $trainer_last == $trainer->ID){ echo 'selected="selected"'; } ?>><?php echo $fname." ".$lname;
+                                                ?></option>
+                                        <?php } ?>
                                     </select>
                                 </div>
-                            </div> -->
+                            </div>
                             <div class="exercise-section">
                                <div class="sub-heading">Exercise</div>
                                <ul>
@@ -141,10 +133,15 @@ get_header();
                         $exercise = implode(',',$_REQUEST['exercise']);
                         $conditionArray[] = " wd.wk_name IN (".$exercise.")";
                     }
+                  $sql_trainer="";
+                    if(isset($_REQUEST['gym_name']) && !empty($_REQUEST['gym_name'])){
 
-                    //if(isset($_REQUEST['trainer_id']) && !empty($_REQUEST['trainer_id'])){
-                    //    $trainer_id = $_REQUEST['trainer_id'];
-                    //}
+                        $trainer_id = $_REQUEST['gym_name'];
+                        $fname = get_user_meta( $trainer_id, 'first_name', true );
+                        $lname = get_user_meta( $trainer_id, 'last_name', true );
+                        $trainer_id_value="'".$fname." ".$lname."'";
+                        $sql_trainer="AND wd.gym_name =".$trainer_id_value;
+                    }
 
                     $conditionArray[] = " wd.over_all_publish = '1'";
                     if($conditionArray)
@@ -153,16 +150,16 @@ get_header();
                         $condition .= implode(' AND ',$conditionArray);
                     }
 
-                    error_log($total_sql_query);
+                   // error_log($total_sql_query);
 
                     $total_sql_query = "SELECT wd.*,u.ID as IdUser
                                           FROM {$wpdb->prefix}users u
                                           ".$inner_query."
                                           LEFT  JOIN {$wpdb->prefix}add_workout wd ON wd.user_id = u.ID
-                                          ".$condition."
+                                          ".$condition.$sql_trainer."
                                           ORDER BY wd.pbweight DESC";
 
-                error_log($total_sql_query);
+                //error_log($total_sql_query);
                 /*
                  * error_log($total_sql_query);
                  *[15-Jul-2016 21:49:20 UTC] SELECT wd.*,u.ID as IdUser
@@ -239,7 +236,7 @@ get_header();
                                           FROM {$wpdb->prefix}users u
                                           ".$inner_query."
                                           LEFT  JOIN {$wpdb->prefix}add_workout wd ON wd.user_id = u.ID
-                                          ".$condition."
+                                          ".$condition.$sql_trainer."
                                           ORDER BY wd.pbweight DESC ".$limit;
 
                         $overall_personal_best=  $wpdb->get_results($sql_query);
