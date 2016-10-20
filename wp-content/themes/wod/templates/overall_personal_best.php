@@ -72,8 +72,12 @@ get_header();
                                         foreach($trainers as $trainer){
                                             $fname = get_user_meta( $trainer->ID, 'first_name', true );
                                             $lname = get_user_meta( $trainer->ID, 'last_name', true ); ?>
-                                            <option value="<?php echo $trainer->ID; ?>" <?php if(isset($trainer_last) && $trainer_last == $trainer->ID){ echo 'selected="selected"'; } ?>><?php echo $fname." ".$lname;
-                                                ?></option>
+                                            <option value="<?php echo $trainer->ID; ?>" <?php if(isset($_POST['gym_name']) &&  $_POST['gym_name'] == $trainer->ID){
+                                                echo 'selected="selected"'; } ?>>
+
+                                                <?php echo $fname." ".$lname;
+                                                ?>
+                                            </option>
                                         <?php } ?>
                                     </select>
                                 </div>
