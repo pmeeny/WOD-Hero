@@ -122,15 +122,6 @@ get_header(); ?>
                                             </div>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td><i class="fa fa-instagram fa-fw"></i><label>INSTAGRAM</label></td>
-                                        <td>
-                                            <div class="form-group">
-                                                <input type="text" class="form-control check_real_val" name="insta_link" id="insta_link" value="<?php if(isset($insta_last) && $insta_last != ''){ echo $insta_last; } ?>">
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
                                         <td><i class="fa fa-facebook-square fa-fw"></i><label>FACEBOOK</label></td>
                                         <td>
                                             <div class="form-group">

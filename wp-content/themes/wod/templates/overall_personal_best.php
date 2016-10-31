@@ -57,7 +57,7 @@ get_header();
                            <div class="gender-section">
                                <div class="sub-heading">Gender</div>
                                  <ul>
-                                     <li><input type="radio"  required <?php if(isset($_REQUEST['gender']) && $_REQUEST['gender'] == 'male'){ echo "checked"; } ?> name="gender" id="Male" value="male"><label for="Male">Male</label></li>
+                                     <li><input type="radio" <?php if(isset($_REQUEST['gender']) && $_REQUEST['gender'] == 'male'){ echo "checked"; } ?> name="gender" id="Male" value="male"><label for="Male">Male</label></li>
                                      <li><input type="radio" <?php if(isset($_REQUEST['gender']) &&  $_REQUEST['gender'] == 'female'){ echo "checked"; } ?> name="gender" id="Female" value="female"><label for="Female">Female</label></li>
                                  </ul>
                             </div>
