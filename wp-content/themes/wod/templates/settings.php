@@ -68,7 +68,7 @@ get_header(); ?>
                                 </tr>
 
                                 <tr>
-                                    <td width="23%"><label>UPLOAD YOUR PHOTO*</label></td>
+                                    <td width="23%"><label>UPLOAD YOUR PHOTO</label></td>
                                     <td width="77%">
                                         <div class="form-group">
                                             <div class="photo">
@@ -205,21 +205,21 @@ get_header(); ?>
         var index = 0;
 
 
-        if(jQuery("#userprofilePic").find('img').length > 0)
-        {
-            jQuery("#userprofilePic").removeClass('has_error');
-             has_error = false;
+        //if(jQuery("#userprofilePic").find('img').length > 0)
+        ///{
+        //    jQuery("#userprofilePic").removeClass('has_error');
+        //     has_error = false;
 
 
-        }
-        else
-        {
+        //}
+        //else
+        //{
 
-            jQuery("#userprofilePic").addClass('has_error');
-             has_error = true;
-             jQuery("#userprofilePic").focus();
+        //    jQuery("#userprofilePic").addClass('has_error');
+        //     has_error = true;
+        //     jQuery("#userprofilePic").focus();
 
-        }
+        ///}
 
 
 
@@ -367,25 +367,25 @@ get_header(); ?>
     });
 
 
-jQuery("body").delegate('#userprofilePic', 'click', function($){
+//jQuery("body").delegate('#userprofilePic', 'click', function($){
 
-     if(jQuery("#userprofilePic").find('img').length > 0)
-        {
-            jQuery("#userprofilePic").removeClass('has_error');
-             has_error = false;
+     //if(jQuery("#userprofilePic").find('img').length > 0)
+     //   {
+     //       jQuery("#userprofilePic").removeClass('has_error');
+     //        has_error = false;
 
 
-        }
-        else
-        {
+    //    }
+    //    else
+    //    {
 
-            jQuery("#userprofilePic").addClass('has_error');
-             has_error = true;
-             jQuery("#userprofilePic").focus();
+  //          jQuery("#userprofilePic").addClass('has_error');
+ //            has_error = true;
+ //            jQuery("#userprofilePic").focus();
 
-        }
+ //       }
 
-});
+//});
 
     //add validation
     jQuery("body").delegate('.field_required', 'keyup , change', function($){

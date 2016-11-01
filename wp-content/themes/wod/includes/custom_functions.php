@@ -1468,7 +1468,7 @@ function wod_hero_action_callback()
         $profile_picture = get_user_meta(get_current_user_id(), 'profile_picture');
         $display_name = $_POST['display_name'];
         // pre($_POST); exit();
-        if (empty($display_name) || empty($profile_picture[0]) || (empty($trainer_id) && $current_user_detail->roles[0] != 'trainer')) {
+        if (empty($display_name) || (empty($trainer_id) && $current_user_detail->roles[0] != 'trainer')) {
             wp_redirect(site_url('/settings/') . '?error=' . urlencode('Sorry! Please fill the required field*.'));
             exit();
         }

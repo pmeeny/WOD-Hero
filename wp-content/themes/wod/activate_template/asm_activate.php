@@ -21,8 +21,8 @@
                                 echo "<p class='alert alert-success'>Your account is now active!.</p>"; ?>
 
                                 <div id="signup-welcome">
-                                    <p><span class="h3"><?php _e('Email address:'); ?></span> <?php echo $user_info->user_email ?></p>
-                                    <p><span class="h3"><?php _e('Password:'); ?></span> <?php echo $secret; ?></p>
+                                    <p><span class="h4"><?php _e('Email address:'); ?></span> <?php echo $user_info->user_email ?></p>
+                                    <p><span class="h4"><?php _e('Password:'); ?></span> <?php echo "The password you used when registering" ?></p>
                                 </div>
 
                                 <?php
