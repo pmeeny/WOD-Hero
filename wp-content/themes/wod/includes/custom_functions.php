@@ -58,9 +58,10 @@ add_action('wp_authenticate','login_with_email_address');
 function NewUserEmailNotification($user, $user_email, $key, $meta = '') {
     $sitename = get_bloginfo( 'name' );
     $blog_id = get_current_blog_id();
+    $name=$_POST['name'];
 
     $message  = sprintf(__('New user registration on your blog %s:'), get_option('blogname')) . "\r\n\r\n";
-    $message .= sprintf(__('Username: %s'), $user) . "\r\n\r\n";
+    $message .= sprintf(__('Username: %s'), $name) . "\r\n\r\n";
     $message .= sprintf(__('E-mail: %s'), $user_email) . "\r\n";
 
     @wp_mail(get_option('admin_email'), sprintf(__('[%s] New User Registration'), get_option('blogname')), $message);
@@ -74,9 +75,9 @@ function NewUserEmailNotification($user, $user_email, $key, $meta = '') {
     $message = sprintf(
         apply_filters( 'wpmu_signup_user_notification_email',
             __( "Hi %s,\n\nThank you for registering with %s.\n\nTo activate your account, please click the following link:\n\n%s\n\nThanks\n\nThe WOD Hero team." ),
-            $user, $user_email, $key, $meta
+            $name, $user_email, $key, $meta
         ),
-        $user,
+        $name,
         $sitename,
         //site_url( "activate/?key=$key" )
         site_url("?activate=asm_activation&key=$key")
@@ -85,10 +86,10 @@ function NewUserEmailNotification($user, $user_email, $key, $meta = '') {
     $subject = sprintf(
         apply_filters( 'wpmu_signup_user_notification_subject',
             __( '%3$s - Activate your account' ),
-            $user, $user_email, $key, $meta
+            $name, $user_email, $key, $meta
         ),
         $from_name,
-        $user,
+        $name,
         $sitename
     );
     wp_mail($user_email, $subject, $message, $message_headers);
