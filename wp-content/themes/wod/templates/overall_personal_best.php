@@ -182,9 +182,9 @@ get_header();
                     $p = new pagination;
                     $p->Items(count($list_items));
                     $default_posts_per_page = get_option( 'posts_per_page' );
-                    if($default_posts_per_page < 10)
+                    if($default_posts_per_page < 15)
                     {
-                        $default_posts_per_page = 10;
+                        $default_posts_per_page = 15;
                     }
                     $p->limit($default_posts_per_page);
                     $page_link = get_permalink(get_the_ID());
