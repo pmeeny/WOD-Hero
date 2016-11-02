@@ -22,22 +22,21 @@
 
                                 <div id="signup-welcome">
                                     <p><span class="h4"><?php _e('Email address:'); ?></span> <?php echo $user_info->user_email ?></p>
-                                    <p><span class="h4"><?php _e('Password:'); ?></span> <?php echo "The password you used when registering" ?></p>
                                 </div>
 
                                 <?php
                                 printf( __('<a href="%1$s">View your site</a> or <a href="%2$s">Log in</a>'), site_url(), get_permalink(15));
                             }
                             else{
-                                echo "<p class='alert alert-danger'>Activation link has been expired!.</p>";
+                                echo "<p class='alert alert-danger'>Activation link has expired!.</p>";
                             }
                         }
                         else{
-                            echo "<p class='alert alert-danger'>Activation Key Doesn't matach with the requested key.</p>";
+                            echo "<p class='alert alert-danger'>Activation Key doesn't match with the requested key.</p>";
                         }
                     }
                     else{
-                        echo "<p class='alert alert-danger'>Activation Key Required.</p>";
+                        echo "<p class='alert alert-danger'>Activation Key required.</p>";
                     }
                     ?>
                 </div>

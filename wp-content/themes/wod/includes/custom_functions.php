@@ -905,7 +905,7 @@ function getSingleWorkoutDetail(){
                 if(!($workOutDetailsNewArray[0][3]=="00:00:00")) {
 
                     //if (strpos($html, $workOutDetailsNewArray[0][3]) !== true){
-                    $html .= '<td><b><h4>Overall Time: ' . $workOutDetailsNewArray[0][3] .  " ,Rounds: " . $workOutDetailsNewArray[0][6]. '</h4></b></td></td><tr></tr>';
+                    $html .= '<td><b><h4>Overall Time: ' . $workOutDetailsNewArray[0][3] .  " Rounds: " . $workOutDetailsNewArray[0][6]. '</h4></b></td></td><tr></tr>';
                     //}
                 }
                 if($workOutDetailsNewArray[0][5]=="1") {
