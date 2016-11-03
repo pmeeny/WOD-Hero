@@ -85,6 +85,9 @@ get_header(); ?>
                             <a href="javascript:void(0)" onclick="Login()"><img src="<?php bloginfo('template_url'); ?>/images/fb-button.png"></a>
 
                             <a href="javascript:GooglePluslogin();"><img src="<?php bloginfo('template_url'); ?>/images/g+Button.png"></a>
+                            <!-- Start of HubSpot Embed -->
+                            <script type="text/javascript" src="//js.hs-scripts.com/2640887.js" id="LeadinEmbed-2640887" crossorigin="use-credentials" async defer></script>
+                            <!-- End of HubSpot Embed -->
                         </div>
                     </div>
                 </div>
