@@ -1,7 +1,7 @@
 <?php get_header('home'); ?>
 
     <div class="slider"> <div class="container">
-       <h1>LAUNCHING OCTOBER 2016</h1>
+       <h1>BETA VERSION LIVE</h1>
         </div> </div>
 
     <div class="container home-page-container">

@@ -75,7 +75,9 @@ get_header(); ?>
                                <div class="ftext"> <input type="submit" name="submit" value="Signup"> </div>
                             </form>
                             <div class="clear"></div>
-                            <p class="green-bg">Already A Member? <a href="<?php echo site_url().'/login'; ?>">Click Here</a> to Login here</p>
+                            <p class="green-bg">Already A Member? <a href="<?php echo site_url().'/login'; ?>">Click Here</a> to Login here
+                            <br>To get your gym listed, <a href="<?php echo site_url().'/contact-us'; ?>">Contact Us</a>
+                            </p>
                         </div>
                     </div>
 
@@ -85,9 +87,6 @@ get_header(); ?>
                             <a href="javascript:void(0)" onclick="Login()"><img src="<?php bloginfo('template_url'); ?>/images/fb-button.png"></a>
 
                             <a href="javascript:GooglePluslogin();"><img src="<?php bloginfo('template_url'); ?>/images/g+Button.png"></a>
-                            <!-- Start of HubSpot Embed -->
-                            <script type="text/javascript" src="//js.hs-scripts.com/2640887.js" id="LeadinEmbed-2640887" crossorigin="use-credentials" async defer></script>
-                            <!-- End of HubSpot Embed -->
                         </div>
                     </div>
                 </div>
