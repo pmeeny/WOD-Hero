@@ -53,6 +53,7 @@
                                     <ul class="sub-menu">
                                         <li><a href="<?php echo site_url().'/settings'; ?>"><i class="fa fa-cog"></i></i>Settings</a></li>
                                         <!--<li><a href="<?php /*echo site_url().'/options'; */?>"><i class="fa fa-share-alt fa-fw"></i>Options</a></li>-->
+                                        <li><a href="<?php echo site_url().'/features'; ?>"><i class="fa fa-share-alt fa-fw"></i>How-to Guide</a></li>
                                         <li><a href="<?php echo wp_logout_url( home_url() ); ?>"><i class="fa fa-sign-out fa-fw"></i>Logout</a></li>
                                     </ul>
                                 </li>
