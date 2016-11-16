@@ -171,18 +171,9 @@ for ($i = 0; $i < 60; $i++) {
                                                     field_required times" value="hours/mins/secs"  type="hidden" />
                                                 </div>
 
-
-                                              <div class="form-group">
-                                                    <label>&nbsp;</label>
-                                                    <div class="publishPB"><label> <input type="checkbox"
-                                                                        name="PERSONALBEST[1][publish_pb]"
-                                                                        value="yes"> <span>Set as my PB</span></label></div>
-                                                </div>
-
-
                                                 <div class="form-group">
                                                     <label>&nbsp;</label>
-                                                    <div class="publishPB"><label> <input type="checkbox" name="PERSONALBEST[1][over_all_publish]" value="1"> <span>This PB appears in the overall PB page</span></label></div>
+                                                    <div class="publishPB"><label> <input type="checkbox" name="PERSONALBEST[1][over_all_publish]" value="1"> <span>This PB appears on the overall PB page</span></label></div>
                                                 </div>
 
                                             <div class="remove hide btn btnred">DELETE</div>

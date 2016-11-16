@@ -750,7 +750,7 @@ function addWorkoutPB(){
             if($reps == ""){ $reps=1; }
             $dataInsert['reps'] = $reps;
             $dataInsert['complete_date'] = $completed_date;
-            $dataInsert['publish'] = (isset($publish_pb) && $publish_pb == 'yes') ? 1 : '0';
+            $dataInsert['publish'] = 1;
             $dataInsert['add_date'] = time();
             $wpdb->insert($wpdb->prefix.'add_workout',$dataInsert);
             if(!empty($wpdb->insert_id)){
