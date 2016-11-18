@@ -37,7 +37,6 @@ get_header(); ?>
     <div class="col-md-8 col-sm-8">
         
 <?php echo do_shortcode('[embedyt]http://www.youtube.com/playlist?list=PLjdmPFdZeXM82tFfZLIeJsJi0VUtvImv5[/embedyt]');?>
- 
     </div>  
 </div>       </div>   </div>    
         

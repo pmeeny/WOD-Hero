@@ -17,6 +17,7 @@
             <li><a href="<?php echo site_url().'/youtube-channel/'; ?>"> <span><i class="fa fa-user"></i></span> WOD Hero youtube channel</a></li>
             <li><a href="<?php echo site_url().'/events/'; ?>"> <span><i class="fa fa-users"></i></span> Crossfit Events</a></li>
             <li><a href="<?php echo site_url().'/nutrition/'; ?>"> <span><i class="fa fa-users"></i></span> Nutritional Information</a></li>
+                <li><a href="<?php echo site_url().'/body-fat-calculator/'; ?>"> <span><i class="fa fa-user"></i></span> Body fat % Calculator</a></li>
         <?php } ?>
     </ul>
 </div>
