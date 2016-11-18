@@ -38,7 +38,7 @@ get_header(); ?>
                     <script>
                             fatsecret.setContainer('container');
                             fatsecret.setCanvas('foods.search');
-                            fatsecret.setCanvasUrl('food.get', "<?php echo site_url(); ?>" + "/nutrition/");
+                            fatsecret.setCanvasUrl('food.get', "<?php echo site_url(); ?>" + "/nutritional-information/");
                     </script>
 
                     <h4>Type a food e.g. Sweet Potato to get it's nutritional information</h4>
