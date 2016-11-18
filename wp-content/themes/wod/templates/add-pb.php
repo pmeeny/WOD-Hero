@@ -96,7 +96,7 @@ get_header();
                                             <label>Distance</label>
                                             <div>
                                                 <div class="form-group">
-                                                    <input type="number" min="0"  class="form-control distance field_required" name="PERSONALBEST[1][distance][text]"  style="float: left; margin-right: 10px; width:29%">
+                                                    <input type="number" step="any" min="0"  class="form-control distance field_required" name="PERSONALBEST[1][distance][text]"  style="float: left; margin-right: 10px; width:29%">
                                                     <select style="width: 20%;" class="form-control weight_metter field_required"
                                                             placeholder="" name="PERSONALBEST[1][distance][unit]"></select>
                                                 </div>
