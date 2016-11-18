@@ -710,47 +710,51 @@ function addWorkoutPB(){
     extract($_POST);
     if(!empty($PERSONALBEST))
     {
-        foreach($PERSONALBEST as $key=>$val)
-        {
+        foreach($PERSONALBEST as $key=>$val) {
             extract($val);
             $dataInsert = array();
             $dataInsert['user_id'] = get_current_user_id();
 
             $trainee_info = get_userdata(get_current_user_id());
-            $trainer_id = get_user_meta( get_current_user_id(), 'my_trainer', true );
-            $gym_name_id = get_user_meta( $trainer_id, 'gym_name', true );
+            $trainer_id = get_user_meta(get_current_user_id(), 'my_trainer', true);
+            $gym_name_id = get_user_meta($trainer_id, 'gym_name', true);
             $gym_name = get_the_title($gym_name_id);
 
             $dataInsert['gym_name'] = $gym_name;
 
             $dataInsert['wk_category'] = $workout_cat;
             $dataInsert['wk_name'] = $workout_name;
-            if(!empty($box_jump['text'])){
+            if (!empty($box_jump['text'])) {
                 $dataInsert['box_jump'] = json_encode($box_jump);
             }
-            if(!empty($distance['text'])){
+            if (!empty($distance['text'])) {
                 $dataInsert['distance'] = json_encode($distance);
             }
-            if(!empty($weight['text'])){
+            if (!empty($weight['text'])) {
                 $dataInsert['weight'] = json_encode($weight);
             }
-            if(!empty($times['text']['hours']) || !empty($times['text']['mins']) || !empty($times['text']['secs'])){
-               $times['text'] = implode(':',$times['text']);
-               $dataInsert['times'] = json_encode($times);
+            if (!empty($times['text']['hours']) || !empty($times['text']['mins']) || !empty($times['text']['secs'])) {
+                $times['text'] = implode(':', $times['text']);
+                $dataInsert['times'] = json_encode($times);
             }
 
             $over_all_publish = !empty($over_all_publish) ? absint($over_all_publish) : 0;
             $dataInsert['over_all_publish'] = $over_all_publish;
-            if($rounds != ""){
+            if ($rounds != "") {
                 $dataInsert['rounds'] = $rounds;
             }
-            if(!empty($weight['text'])) {
+            if (!empty($weight['text'])) {
                 $dataInsert['pbweight'] = $weight['text'];
             }
-            if($reps == ""){ $reps=1; }
+            if ($reps == "") {
+                $reps = 1;
+            }
             $dataInsert['reps'] = $reps;
             $dataInsert['complete_date'] = $completed_date;
-            $dataInsert['publish'] = 1;
+
+            if (($reps == "1") && ($dataInsert['pbweight'] != "")) {
+                $dataInsert['publish'] = 1;
+            }
             $dataInsert['add_date'] = time();
             $wpdb->insert($wpdb->prefix.'add_workout',$dataInsert);
             if(!empty($wpdb->insert_id)){
