@@ -34,14 +34,14 @@ get_header(); ?>
                     <?php get_sidebar(); ?>
                 </div>
                 <div class="col-md-8 col-sm-8">
-                    <script src="http://platform.fatsecret.com/js?key=d8a72963fafa40b593ca0d4475332a58&auto_template=false&theme=green"></script>
+                    <script src="http://platform.fatsecret.com/js?key=d8a72963fafa40b593ca0d4475332a58&auto_template=false&theme=blank"></script>
                     <script>
                             fatsecret.setContainer('container');
                             fatsecret.setCanvas('foods.search');
-                            fatsecret.setCanvasUrl('food.get', 'http://localhost:8888/test-site/nutrition/');
+                            fatsecret.setCanvasUrl('food.get', "<?php echo site_url(); ?>" + "/nutrition/");
                     </script>
 
-                    <h5>Type a food e.g. Sweet Potato to get its nutritional information</h5>
+                    <h4>Type a food e.g. Sweet Potato to get it's nutritional information</h4>
 
                     <div class="holder" >
                         <script>fatsecret.writeHolder("search");</script>
@@ -53,6 +53,5 @@ get_header(); ?>
                         <div id="container">
                         </div>
 
-                    </div>   </div></div></div>
-
+                    </div>   </div></div></div></div>
 <?php get_footer(); ?>
