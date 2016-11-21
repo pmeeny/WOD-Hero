@@ -27,7 +27,7 @@ get_header(); ?>
                     echo get_post_meta( get_the_ID(), 'Title', true );
                 }else{ echo get_the_title(); } ?></h2>
             <div class="row">
-                <div class="col-md-10 col-md-offset-1 light-blue">
+                <div class="col-md-10 col-md-offset-1">
                     <div class="col-md-6 col-sm-6 grayStyle">
                         <div class="box-inner">
                             <h3>Create A New Account here</h3>
@@ -81,14 +81,14 @@ get_header(); ?>
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-sm-6 l-BlueStyle">
+                    <!--<div class="col-md-6 col-sm-6 l-BlueStyle">
                         <div class="signup-inner">
-                            <h3>Join with Your Social Account</h3>
-                            <a href="javascript:void(0)" onclick="Login()"><img src="<?php bloginfo('template_url'); ?>/images/fb-button.png"></a>
+                            <h3>Join with Your Social Account-Coming soon</h3>
+                        <!--    <a href="javascript:void(0)" onclick="Login()"><img src="<?php //bloginfo('template_url'); ?>/images/fb-button.png"></a>
 
-                            <a href="javascript:GooglePluslogin();"><img src="<?php bloginfo('template_url'); ?>/images/g+Button.png"></a>
-                        </div>
-                    </div>
+                            <a href="javascript:GooglePluslogin();"><img src="<?php //bloginfo('template_url'); ?>/images/g+Button.png"></a> -->
+                       <!-- </div>
+                    </div> -->
                 </div>
             </div>
         </div>

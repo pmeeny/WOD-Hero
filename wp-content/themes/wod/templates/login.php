@@ -39,7 +39,7 @@ get_header(); ?>
 
             <div class="row">
 
-                <div class="col-md-10 col-md-offset-1 light-blue">
+                <div class="col-md-10 col-md-offset-1">
 
                     <div class="col-md-6 col-sm-6 grayStyle">
 
@@ -82,22 +82,22 @@ get_header(); ?>
                     </div>
 
 
-
+<!--
                     <div class="col-md-6 col-sm-6 l-BlueStyle">
 
                         <div class="box-inner1">
 
-                            <h3>Login with Your Social Account</h3>
+                            <h3>Login with Your Social Account-Coming soon</h3>
 
                             <?php //do_action( 'wordpress_social_login', array( 'mode' => 'login', 'caption' => '' ) ); ?>
 
-                            <a href="javascript:void(0)" onclick="Login()"><img src="<?php bloginfo('template_url'); ?>/images/fb-button.png"></a>
+                           <!-- <a href="javascript:void(0)" onclick="Login()"><img src="<?php //bloginfo('template_url'); ?>/images/fb-button.png"></a>
 
-                            <a href="javascript:GooglePluslogin();"><img src="<?php bloginfo('template_url'); ?>/images/g+Button.png"></a>
+                            <a href="javascript:GooglePluslogin();"><img src="<?php //bloginfo('template_url'); ?>/images/g+Button.png"></a> -->
 
-                        </div>
+                        <!--</div>
 
-                    </div>
+                    </div> -->
 
                 </div>
 
