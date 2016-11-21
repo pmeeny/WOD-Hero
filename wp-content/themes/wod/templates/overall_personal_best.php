@@ -38,7 +38,7 @@ get_header();
 } ?></h2>
             <div class="row">
 
-                <form id="myForm" name="myForm" method="post" action="<?php echo site_url('overall-personal-best'); ?>">
+                <form id="myForm" name="myForm" method="get" action="<?php echo site_url('overall-personal-best'); ?>">
 
 
                 <div class="col-md-4 col-sm-4">

@@ -39,8 +39,8 @@ get_header(); ?>
                                 	<div class="col-sm-3 col-xs-4"><label>User Type</label></div>
                                     <div class="col-sm-9  col-xs-8"><select class="form-control" name="user_type" id="user_type">
                                         <option value="">Select User Type</option>
-                                        <option value="normal_user">Athlete</option>
-                                        <option value="trainer">Gym</option>
+                                        <option value="normal_user">Gym User</option>
+                                        <option value="trainer">Gym Owner</option>
                                     </select></div>
                                 </div>
                               </div>
@@ -58,7 +58,7 @@ get_header(); ?>
                                 </div>
 
                                 <div class="form-group">
-                                    <input type="text" name="name" id="name" class="form-control" placeholder="Your Name">
+                                    <input type="text" name="name" id="name" class="form-control" placeholder="Your Full Name">
                                 </div>
                                 <div class="form-group">
                                     <input type="text" name="email" id="email" class="form-control" placeholder="Email Address">
