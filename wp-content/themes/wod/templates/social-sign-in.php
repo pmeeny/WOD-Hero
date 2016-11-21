@@ -29,8 +29,8 @@ get_header(); ?>
                                     <label>User Type</label>
                                     <select class="form-control" name="user_type" id="user_type">
                                         <option value="">Select User Type</option>
-                                        <option value="normal_user">Normal User</option>
-                                        <option value="trainer">Trainer</option>
+                                        <option value="normal_user">Gym User</option>
+                                        <option value="trainer">Gym Owner</option>
                                     </select></div>
                                 <div class="form-group user_gender_for_normal_user normal-hide">
                                     <label>Gender</label>
@@ -40,9 +40,16 @@ get_header(); ?>
                                         <option <?php if(strtolower($_SESSION['SocialLogin']['gender']) == 'female'){ echo 'selected'; } ; ?> value="female">Female</option>
                                     </select>
                                 </div>
-                                <div class="form-group">
-                                    <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" value="<?php echo $_SESSION['SocialLogin']['name']; ?>">
-                                </div>
+								<?php if(!empty($_SESSION['SocialLogin']['name'])): ?>
+									<div class="form-group">
+										<input type="text" name="name" id="name" class="form-control" placeholder="Your Full Name" value="<?php echo $_SESSION['SocialLogin']['name']; ?>">
+									</div>
+								<?php else: ?>
+									<div class="form-group">
+										<input type="text" name="name" id="name" class="form-control" placeholder="Your Full Name">
+									</div>
+								<?php endif; ?>
+
                                 <?php if(!empty($_SESSION['SocialLogin']['email'])): ?>
                                     <div class="form-group">
                                         <input type="text" name="email" id="email" class="form-control" placeholder="Email Address" value="<?php echo $_SESSION['SocialLogin']['email']; ?>" readonly="">
