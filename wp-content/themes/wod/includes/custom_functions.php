@@ -953,7 +953,7 @@ function getSingleWorkoutDetail(){
                             }
                                 if ((!(strpos($html, $workOutDetailsNewArray1[0][0]."(". $metric. ")") == true)))  {
 
-                                    $html .= '<td>'.$workOutDetailsNewArray1[0][0]."(". $metric. ")".'</td>';
+                                    $html .= '<tr><td>'.$workOutDetailsNewArray1[0][0]."(". $metric. ")".'</td></tr>';
 
                             }
                     }
