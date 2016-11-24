@@ -76,7 +76,7 @@ get_header();
                                             <label>Weight</label>
                                             <div>
                                                 <div class="form-group">
-                                                    <input type="number" min="0" class="form-control  weight field_required" name="PERSONALBEST[1][weight][text]"  style="float: left; margin-right: 10px; width:29%">
+                                                    <input type="number" min="0" step="any" class="form-control  weight field_required" name="PERSONALBEST[1][weight][text]"  style="float: left; margin-right: 10px; width:29%">
                                                     <select style="width: 20%;" class="form-control weight_metter"
                                                             placeholder="" name="PERSONALBEST[1][weight][unit]"></select>
                                                 </div>
