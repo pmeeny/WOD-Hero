@@ -649,7 +649,7 @@ function get_workout_lists_pb_specific(){
             } }
             else
                 if($workoutValue == 355 || $workoutValue == 354 || $workoutValue == 351 || $workoutValue == 352 || $workoutValue == 350 || $workoutValue == 347 || $workoutValue == 346
-                    || $workoutValue == 345 || $workoutValue == 339 || $workoutValue == 338 || $workoutValue == 337 || $workoutValue == 336 ){
+                    || $workoutValue == 345 || $workoutValue == 339 || $workoutValue == 338 || $workoutValue == 337 || $workoutValue == 336 || $workoutValue == 463){
                 $state.='<option value="'.get_the_ID().'">'.get_the_title($post->ID).'</option>';
             }
            

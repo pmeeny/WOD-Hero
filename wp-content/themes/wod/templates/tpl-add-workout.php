@@ -228,8 +228,8 @@ foreach ($categories as $category):
                                  <div class="clear"></div>
                                 <div class="bottom-Button">
                                     <div><div class="add_more_section"> <a href="javascript:void(0)" class="add_more
-                                    btn btnred">ADD NEW</a> </div></div>
-                                    <div><input type="submit" value="SUBMIT WORKOUT" class="submit_PB"></div>
+                                    btn btnred">ADD NEW ITEM</a> </div></div>
+                                    <div><input type="submit" value="SUBMIT WOD" class="submit_PB"></div>
                                 </div>
                         </form>
                         </div>
