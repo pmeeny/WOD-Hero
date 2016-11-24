@@ -679,7 +679,21 @@ input.fatsecret_button {
     background: #148a38;
     border-radius: 3px;
     color: #fff;
-    padding: 9px 20px;
+    padding: 3px 20px 5px;
     border: none;
-    margin-left: 20px;
+    /*margin-left: 20px; */
+}
+
+input.fatsecret_foodsearch_search_input{
+
+    width: 40%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
