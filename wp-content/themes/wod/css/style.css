@@ -673,3 +673,13 @@ ul.workout_images{top:0;}
 .workout_images li img{width:70%;}
 ul.workout_images li{margin:0;}
 }
+
+/* all buttons in the canvas */
+input.fatsecret_button {
+    background: #148a38;
+    border-radius: 3px;
+    color: #fff;
+    padding: 9px 20px;
+    border: none;
+    margin-left: 20px;
+}
