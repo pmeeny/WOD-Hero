@@ -39,14 +39,14 @@ get_header();
                             <div class="best1 workPB-box" width="100%" border="0" cellspacing="0" cellpadding="0">
 
                                 <div class="labelBox">
-                                    <label>Select Date</label>
+                                    <label>Select Date *</label>
                                     <div><div class="form-group"><input name="completed_date" id="completed_date"
                                                                         value="" class="form-control field_required" type="text" ></div></div>
                                 </div>
 
 
                                 <div class="overall_times">
-                                        <label>Time Hours/Mins/Secs</label>
+                                        <label>Time Hours/Mins/Secs *</label>
                                             <div class="form-group">
                                                 <div  class="input-append time ">
                                                     <div class="hours">
@@ -105,7 +105,7 @@ for ($i = 0; $i < 60; $i++) {
                                 </div>
 
                                 <div class="tr_rounds">
-                                    <label>Rounds</label>
+                                    <label>Rounds *</label>
                                     <div><div class="form-group"> <input name="PERSONALBEST[1][rounds]" min="0"
                                                                          class="form-control rounds field_required"
                                                                          type="number" ></div></div>
@@ -116,7 +116,7 @@ for ($i = 0; $i < 60; $i++) {
                                     <div class="row_data">
 
                                         <div class="labelBox">
-                                            <label>Select Workout Category</label>
+                                            <label>Select Workout Category *</label>
                                             <div>
                                                 <div class="form-group">
                                                     <select class="form-control workout_cat field_required" placeholder=""  name="PERSONALBEST[1][workout_cat]" onchange="get_workout_lists(this.value,'workout_name',jQuery(this));">
@@ -141,7 +141,7 @@ foreach ($categories as $category):
                                             </div>
                                         </div>
                                         <div class="labelBox">
-                                            <label>Select Workout Type</label>
+                                            <label>Select Workout Type *</label>
                                             <div>
                                                 <div class="form-group">
                                                     <select class="form-control workout_name field_required" placeholder=""
@@ -153,7 +153,7 @@ foreach ($categories as $category):
                                             </div>
                                         </div>
                                         <div class="tr_weight hide">
-                                            <label>Weight</label>
+                                            <label>Weight *</label>
                                             <div>
                                                 <div class="form-group">
                                                     <input type="number" min="0" class="form-control  weight field_required" name="PERSONALBEST[1][weight][text]"  style="float: left; margin-right: 10px; width:29%">
@@ -173,7 +173,7 @@ foreach ($categories as $category):
                                             </div>
                                         </div> -->
                                         <div class="tr_distance hide">
-                                            <label>Distance</label>
+                                            <label>Distance *</label>
                                             <div>
                                                 <div class="form-group">
                                                     <input type="number" min="0"  class="form-control distance field_required" name="PERSONALBEST[1][distance][text]"  style="float: left; margin-right: 10px; width:29%">
@@ -184,14 +184,14 @@ foreach ($categories as $category):
                                         </div>
 
                                         <div class="tr_reps hide">
-                                            <label>Reps</label>
+                                            <label>Reps *</label>
                                             <div><div class="form-group"> <input name="PERSONALBEST[1][reps]" min="0"
                                                                                  class="form-control reps field_required"
                                                                                  type="number" ></div></div>
                                         </div>
 
                                         <div class="tr_wod hide">
-                                            <label>WOD</label>
+                                            <label>WOD *</label>
                                             <div><div class="form-group"> <textarea name="PERSONALBEST[1][wod]" min="0" rows="15"
                                                                                  class="form-control-wod"
                                                                                  type="text" ></textarea></div></div>
