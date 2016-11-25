@@ -266,7 +266,7 @@ quotes[19] = "<tr>" +
     "</tr><tr>" +
     "<td>24 walking lunges</td>" +
     "</tr><tr>" +
-    "<td>run 400 metres</td>" +
+    "<td>Run 400 metres</td>" +
     "</tr><tr>"
 authors[19] = "6 rounds for time, Source: www.crossfit.com";
 
