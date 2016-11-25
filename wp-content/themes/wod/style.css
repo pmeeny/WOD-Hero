@@ -25,6 +25,6 @@ ul.workout_images li{ display: inline-block; vertical-align:middle; margin:0 1px
 .photo #userprofilePic{ width:100%; text-transform:uppercase; font-weight:bold;}
 #upload{background: rgb(238,238,238); border:1px solid #dbdbdb; border-radius:3px; width:20%; padding:20px; text-align:center;}
 
-.has_error{ border: solid 1px #ff0000; }
+.has_error{ border: solid 3px #ff0000; }
 .normal-hide{display:none;}
 a.fc-event{cursor: pointer;}
