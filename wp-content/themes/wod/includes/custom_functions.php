@@ -769,7 +769,7 @@ function addWorkoutPB(){
 
 
     if($db_process){
-        respond_by_json(true,'Workout has been added successfully, Well Done.','alert-success','','');
+        respond_by_json(true,'WOD/PB has been added successfully, Well Done!','alert-success','','');
     }
     else{
         respond_by_json(true,'Something went wrong please try again.','alert-danger','','');
