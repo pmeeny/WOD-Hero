@@ -314,7 +314,7 @@ jQuery(document).ready(function($){
                     if(response.success && response.class == 'alert-success'){
                         $("#addWkMessage").removeClass("alert-danger alert-success").addClass(response.class);
                         $('#addWkMessage').html(response.message).show();
-                        $('#addWkMessage').delay(5000).fadeOut(5000);
+                        //$('#addWkMessage').delay(5000).fadeOut(5000);
                         $('#addWorkoutPB')[0].reset();
                         //jQuery("#addWorkoutPB input:text,#addWorkoutPB textarea,#addWorkoutPB select").val('');
                         jQuery(".tr_reps ,.tr_weight ,.tr_times ,.tr_box_jump ,.tr_distance").addClass('hide');
