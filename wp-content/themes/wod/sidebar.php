@@ -14,9 +14,8 @@
             <li><a href="<?php echo site_url().'/add-pb/'; ?>"> <span><i class="fa fa-plus-square"></i></span> Add a Personal Best</a></li>
             <li><a href="<?php echo site_url().'/gym-finder/'; ?>"> <span><i class="fa fa-users"></i></span> Gym Finder</a></li>
             <li><a href="<?php echo site_url().'/random-wod/'; ?>"> <span><i class="fa fa-user"></i></span> Random WOD Generator</a></li>
-            <li><a href="<?php echo site_url().'/youtube-channel/'; ?>"> <span><i class="fa fa-user"></i></span> WOD Hero youtube channel</a></li>
             <li><a href="<?php echo site_url().'/events/'; ?>"> <span><i class="fa fa-users"></i></span> Crossfit Events</a></li>
-            <li><a href="<?php echo site_url().'/nutrition/'; ?>"> <span><i class="fa fa-users"></i></span> Nutritional Information</a></li>
+            <li><a href="<?php echo site_url().'/nutrition/'; ?>"> <span><i class="fa fa-bar-chart"></i></span> Nutritional Information</a></li>
                 <li><a href="<?php echo site_url().'/body-fat-calculator/'; ?>"> <span><i class="fa fa-user"></i></span> Body fat % Calculator</a></li>
         <?php } ?>
     </ul>
