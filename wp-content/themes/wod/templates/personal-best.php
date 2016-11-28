@@ -36,7 +36,7 @@ get_header(); ?>
                          $lastPerBest = getLastPersonalBest();
                          if(empty($lastPerBest))
                          {
-                             echo '<p style="line-height: 15px;" class="alert alert-warning text-center">No personal best found.</p>';
+                             echo '<p style="line-height: 15px;" class="alert alert-warning text-center">No personal best found. Click on the Add a Personal Best button to add one.</p>';
                          }
                          else
                          {
