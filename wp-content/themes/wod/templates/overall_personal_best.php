@@ -65,7 +65,7 @@ get_header();
                         <div class="gym-section">
                             <div class="sub-heading">GYM</div>
                                 <div class="form-group">
-                                    <select name="gym_name" id="gym_name" class="form-control field_required">
+                                    <select name="gym_name" id="gym_name" class="form-control">
                                         <option value="">Select your GYM</option>
                                         <?php $args=array('role'=>'trainer', 'orderby' => 'user_nicename', 'order' => 'ASC');
                                         $trainers = get_users($args);
