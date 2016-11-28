@@ -16,7 +16,7 @@
         </div>
 
         <div class="row">
-            <?php $args = array( 'posts_per_page' => 3, 'category_name'=>'blog' );
+            <?php $args = array( 'posts_per_page' => 6, 'category_name'=>'blog' );
             $myposts = new WP_Query( $args );
             if ( $myposts->have_posts() ) :
                 while ( $myposts->have_posts() ) : $myposts->the_post(); ?>
