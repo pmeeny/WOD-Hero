@@ -33,7 +33,7 @@
                                 echo '</a>';
                             } ?>
                             <div class="postText">
-                                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                <h3><?php the_title(); ?></h3>
                                 <?php echo apply_filters('the_content', substr(get_the_content(), 0, 200) ); ?>
                             </div>
                         </div>
