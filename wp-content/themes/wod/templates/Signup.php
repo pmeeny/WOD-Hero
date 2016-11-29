@@ -75,7 +75,7 @@ get_header(); ?>
                                <div class="ftext"> <input type="submit" name="submit" value="Signup"> </div>
                             </form>
                             <div class="clear"></div>
-                            <p class="green-bg">Already A Member? <a href="<?php echo site_url().'/login'; ?>">Click Here</a> to Login here
+                            <p class="green-bg">Already a Member? <a href="<?php echo site_url().'/login'; ?>">Click Here</a> to Login here
                             <br>To get your gym listed, <a href="<?php echo site_url().'/contact-us'; ?>">Contact Us</a>
                             </p>
                         </div>
@@ -110,7 +110,7 @@ get_header(); ?>
                     name: {
                         validators: {
                             notEmpty: {
-                                message: 'Name is required and cannot be empty'
+                                message: 'Full Name is required and cannot be empty'
                             }
                         }
                     },
@@ -144,7 +144,7 @@ get_header(); ?>
                             },
                             identical: {
                                 field: 'password',
-                                message: 'The password and its confirm are not same'
+                                message: 'The password and its confirmation are not the same'
                             }
                         }
                     }
