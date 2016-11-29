@@ -94,7 +94,7 @@ jQuery(document).ready(function($){
                         message: 'Email address is required and cannot be empty'
                     },
                     emailAddress: {
-                        message: 'Email address is not a valid.'
+                        message: 'Email address entered is not valid.'
                     },
                 }
             }
@@ -144,7 +144,7 @@ jQuery(document).ready(function($){
                     },
                     identical: {
                         field: 'pass2',
-                        message: 'The Password and its confirm are not the same'
+                        message: 'The Password and its confirmation are not the same'
                     }
                 }
             },
@@ -155,7 +155,7 @@ jQuery(document).ready(function($){
                     },
                     identical: {
                         field: 'pass1',
-                        message: 'The password and its confirm are not the same'
+                        message: 'The Password and its confirmation are not the same'
                     }
                 }
             },
