@@ -174,7 +174,13 @@ p.green-bg a{text-decoration:none;}
 
 .box-inner1 a img, .signup-inner a img{max-width:100%;}
 
-.signup-inner{min-height:540px; padding:20px; text-align:center;}
+.signup-inner{
+    padding: 35px;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    font-weight: bold;
+    text-align: center;}
 
 
 
