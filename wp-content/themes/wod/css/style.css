@@ -184,6 +184,16 @@ p.green-bg a{text-decoration:none;}
 
 
 
+.login-inner{
+    padding: 35px;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    font-weight: bold;
+    text-align: center;}
+
+.login-inner h3{font-size:18px; color:#1a1a1b; text-transform:uppercase; padding-bottom:10px; font-weight:bold;}
+
 .sideLink{background:#f0f0f0; border:1px solid #dddddd; border-radius:3px;}
 
 .sideLink ul{list-style:none; margin:0; padding:0;}
