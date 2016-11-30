@@ -80,7 +80,16 @@ get_header(); ?>
                         </div>
 
                     </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="login-inner">
+                            <h3>Affiliates</h3>
+                            <!--   <a href="javascript:void(0)" onclick="Login()"><img src="<?php //bloginfo('template_url'); ?>/images/fb-button.png"></a>
 
+                            <a href="javascript:GooglePluslogin();"><img src="<?php //bloginfo('template_url'); ?>/images/g+Button.png"></a> -->
+
+                            <img src="<?php bloginfo('template_url'); ?>/images/chapter2fitness.jpg" style="width:200px;height:200px;">
+                        </div>
+                    </div>
 
 <!--
                     <div class="col-md-6 col-sm-6 l-BlueStyle">
