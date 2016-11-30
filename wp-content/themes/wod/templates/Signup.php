@@ -75,20 +75,22 @@ get_header(); ?>
                                <div class="ftext"> <input type="submit" name="submit" value="Signup"> </div>
                             </form>
                             <div class="clear"></div>
-                            <p class="green-bg">Already a Member? <a href="<?php echo site_url().'/login'; ?>">Click Here</a> to Login here
+                            <p class="green-bg">Already a member? <a href="<?php echo site_url().'/login'; ?>">Click Here</a> to login
                             <br>To get your gym listed, <a href="<?php echo site_url().'/contact-us'; ?>">Contact Us</a>
                             </p>
                         </div>
                     </div>
 
-                    <!--<div class="col-md-6 col-sm-6 l-BlueStyle">
+                    <div class="col-md-6 col-sm-6">
                         <div class="signup-inner">
-                            <h3>Join with Your Social Account-Coming soon</h3>
-                        <!--    <a href="javascript:void(0)" onclick="Login()"><img src="<?php //bloginfo('template_url'); ?>/images/fb-button.png"></a>
+                            <h3>Affiliates</h3>
+                      <!--   <a href="javascript:void(0)" onclick="Login()"><img src="<?php //bloginfo('template_url'); ?>/images/fb-button.png"></a>
 
                             <a href="javascript:GooglePluslogin();"><img src="<?php //bloginfo('template_url'); ?>/images/g+Button.png"></a> -->
-                       <!-- </div>
-                    </div> -->
+
+                            <img src="<?php bloginfo('template_url'); ?>/images/chapter2fitness.jpg" style="width:200px;height:200px;">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -110,7 +112,7 @@ get_header(); ?>
                     name: {
                         validators: {
                             notEmpty: {
-                                message: 'Full Name is required and cannot be empty'
+                                message: 'Name is required and cannot be empty'
                             }
                         }
                     },
@@ -144,7 +146,7 @@ get_header(); ?>
                             },
                             identical: {
                                 field: 'password',
-                                message: 'The password and its confirmation are not the same'
+                                message: 'The password and its confirm are not same'
                             }
                         }
                     }
