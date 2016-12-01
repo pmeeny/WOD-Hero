@@ -238,7 +238,7 @@ function registerplus() {
                 if(!empty($gender)){
                     update_user_meta($user_id,'gender',$gender);
                 }
-
+                update_user_meta($user_id, 'my_trainer', $trainer_id);
                 update_user_meta($user_id,'_user_status','active');
                 respond_by_json(true,"Registration successful. Please check your email and activate your account.",'alert-success');
             }

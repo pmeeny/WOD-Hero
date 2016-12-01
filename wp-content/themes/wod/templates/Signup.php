@@ -56,6 +56,21 @@ get_header(); ?>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="gym_id_val form-group normal-hide">
+                                    <div class="row ">
+                                    <div class="col-sm-3 col-xs-4"><label>Gym</label></div>
+                                    <div class="col-sm-9 col-xs-8"><select name="trainer_id" id="trainer_id" class="form-control field_required">
+                                        <option value="">Select your GYM</option>
+                                        <?php $args=array('role'=>'trainer', 'orderby' => 'user_nicename', 'order' => 'ASC');
+                                        $trainers = get_users($args);
+                                        foreach($trainers as $trainer){
+                                            $fname = get_user_meta( $trainer->ID, 'first_name', true );
+                                            $lname = get_user_meta( $trainer->ID, 'last_name', true ); ?>
+                                            <option value="<?php echo $trainer->ID; ?>" <?php if(isset($trainer_last) && $trainer_last == $trainer->ID){ echo 'selected="selected"'; } ?>><?php echo $fname." ".$lname; ?></option>
+                                        <?php } ?>
+                                    </select></div>
+                                    </div>
+                                </div>
 
                                 <div class="form-group">
                                     <input type="text" name="name" id="name" class="form-control" placeholder="Your Full Name">
@@ -102,6 +117,13 @@ get_header(); ?>
         jQuery(document).ready(function($){
             $('#wod_register').formValidation({
                 fields: {
+                    trainer_id: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Dont forget to select your gym'
+                            }
+                        }
+                    },
                     user_type: {
                         validators: {
                             notEmpty: {
@@ -109,6 +131,7 @@ get_header(); ?>
                             }
                         }
                     },
+
                     name: {
                         validators: {
                             notEmpty: {
@@ -122,7 +145,7 @@ get_header(); ?>
                                 message: 'Email Address is required and cannot be empty'
                             },
                             emailAddress: {
-                                message: 'The value is not a valid email address'
+                                message: 'The value is not a valid email address, make sure it contains no spaces'
                             },
 
                         }

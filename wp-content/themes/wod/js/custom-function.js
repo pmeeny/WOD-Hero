@@ -348,11 +348,17 @@ jQuery(document).ready(function($){
             {
                 jQuery('.user_gender_for_normal_user').slideDown('slow');
                 jQuery('.user_gender_for_normal_user').find('#gender').attr('required', "required");
+
+                jQuery('.gym_id_val').slideDown('slow');
+                jQuery('.gym_id_val').find('#trainer_id').attr('required', "required");
             }
             else
             {
                 jQuery('.user_gender_for_normal_user').slideUp('slow');
                 jQuery('.user_gender_for_normal_user').find('#gender').removeAttr('required');
+
+                jQuery('.gym_id_val').slideUp('slow');
+                jQuery('.gym_id_val').find('#trainer_id').removeAttr('required');
 
             }
         });
