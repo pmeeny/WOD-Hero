@@ -14,7 +14,7 @@ get_header();
     <div class="bridcrumb">
         <div class="container">
             <ol class="breadcrumb">
-                <li><a href="<?php echo site_url(); ?>">Home</a></li>
+                <li><a href="<?php echo site_url() ?>/mydashboard/">Home</a></li>
                 <li class="active"><a><?php the_title(); ?></a></li>
             </ol>
         </div>

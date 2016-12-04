@@ -48,7 +48,7 @@ get_header(); ?>
                                     <div class="row ">
                                         <div class="form-group">
                                             <div class="col-sm-3 col-xs-4"><label>Gender</label></div>
-                                            <div class="col-sm-9  col-xs-8"><select class="form-control" name="gender" id="gender">
+                                            <div class="col-sm-9  col-xs-8"><select class="form-control field_required" name="gender" id="gender">
                                                     <option value="">Select User Gender</option>
                                                     <option value="male">Male</option>
                                                     <option value="female">Female</option>
@@ -120,7 +120,14 @@ get_header(); ?>
                     trainer_id: {
                         validators: {
                             notEmpty: {
-                                message: 'Dont forget to select your gym'
+                                message: "Don't forget to select your gym"
+                            }
+                        }
+                    },
+                    gender: {
+                        validators: {
+                            notEmpty: {
+                                message: "Don't forget to set your gender"
                             }
                         }
                     },
