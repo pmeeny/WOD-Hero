@@ -103,6 +103,12 @@ for ($i = 0; $i < 60; $i++) {
                                             </div>
 
                                 </div>
+                                <div class="tr_wod_desc">
+                                    <label>WOD Description *</label>
+                                    <div><div class="form-group"> <input name="PERSONALBEST[1][wod_desc]"
+                                                                         class="form-control wod_desc field_required" placeholder="EMOM, AMRAP, Team of 2 etc."
+                                                                         ></div></div>
+                                </div>
 
                                 <div class="tr_rounds">
                                     <label>Rounds *</label>

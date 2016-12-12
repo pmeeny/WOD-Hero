@@ -749,6 +749,11 @@ function addWorkoutPB(){
             if ($reps == "") {
                 $reps = 1;
             }
+
+            if ($wod_desc != "") {
+                $dataInsert['wod_desc'] = $wod_desc;
+            }
+
             $dataInsert['reps'] = $reps;
             $dataInsert['complete_date'] = $completed_date;
 
@@ -892,11 +897,12 @@ function getSingleWorkoutDetail(){
                 $reps = json_decode($result['reps'],true);
                 $rounds = json_decode($result['rounds'],true);
                 $isPB = json_decode($result['publish'],true);
+                $wod_desc = $result['wod_desc'];
 
                 $time_slot  =  explode(':',$times['text']);
 
                 array_push($workOutDetails, $addDate, array(get_the_title($result['wk_name']), json_decode($result['reps'],true) ,$weight['text'],
-                    time_formatted_pad($time_slot[0]).':'.time_formatted_pad($time_slot[1]).':'.time_formatted_pad($time_slot[2]), $distance['text']." ".$distance['unit'], $isPB, $rounds));
+                    time_formatted_pad($time_slot[0]).':'.time_formatted_pad($time_slot[1]).':'.time_formatted_pad($time_slot[2]), $distance['text']." ".$distance['unit'], $isPB, $rounds, $wod_desc));
 
             }
         $n=0;
@@ -909,7 +915,8 @@ function getSingleWorkoutDetail(){
                 if(!($workOutDetailsNewArray[0][3]=="00:00:00")) {
 
                     //if (strpos($html, $workOutDetailsNewArray[0][3]) !== true){
-                    $html .= '<td><b><h4>Overall Time: ' . $workOutDetailsNewArray[0][3] .  " Rounds: " . $workOutDetailsNewArray[0][6]. '</h4></b></td></td><tr></tr>';
+                    $html .= '<td><b><h4>Overall Time: ' . $workOutDetailsNewArray[0][3] .  ' Rounds: ' . $workOutDetailsNewArray[0][6].  ' Desc: ' . $workOutDetailsNewArray[0][7] . '</h4></b></td></td><tr></tr>';
+                    $html .= '<td><b><h4>Description: ' . $workOutDetailsNewArray[0][7] . '</h4></b></td></td><tr></tr>';
                     //}
                 }
                 if($workOutDetailsNewArray[0][5]=="1") {
