@@ -224,8 +224,8 @@ function registerplus() {
             if (!is_wp_error($user_id)) {
 
                 $code = syonencryptor('encrypt',$user_id);
-                add_user_meta($user_id, 'has_to_be_activated', $code, true);
-                add_user_meta( $user_id, 'meta_secret', $password, true );
+                //add_user_meta($user_id, 'has_to_be_activated', $code, true);
+                //add_user_meta( $user_id, 'meta_secret', $password, true );
                 NewUserEmailNotification($user_login, $email, $code);
 
                 if(!empty($first_name)){

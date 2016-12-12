@@ -40,7 +40,7 @@ get_header(); ?>
                                     <div class="col-sm-9  col-xs-8"><select class="form-control" name="user_type" id="user_type">
                                         <option value="">Select User Type</option>
                                         <option value="normal_user">Gym User</option>
-                                        <option value="trainer">Gym Owner</option>
+                                        <option disabled value="trainer">Gym Owner</option>
                                     </select></div>
                                 </div>
                               </div>
@@ -91,7 +91,7 @@ get_header(); ?>
                             </form>
                             <div class="clear"></div>
                             <p class="green-bg">Already a member? <a href="<?php echo site_url().'/login'; ?>">Click Here</a> to login
-                            <br>To get your gym listed, <a href="<?php echo site_url().'/contact-us'; ?>">Contact Us</a>
+                            <br>Gym Owners, to get your gym listed <a href="<?php echo site_url().'/contact-us'; ?>">Contact Us</a>
                             </p>
                         </div>
                     </div>

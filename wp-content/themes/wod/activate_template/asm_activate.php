@@ -12,10 +12,10 @@
                         $user_id = syonencryptor('decrypt',$_REQUEST['key']);
                         $requested_key = $_REQUEST['key'];
                         if($user_id){
-                            $code = get_user_meta( $user_id, 'has_to_be_activated', true );
-                            if ($code == $requested_key) {
-                                delete_user_meta( $user_id, 'has_to_be_activated' );
-                                $secret =  get_user_meta($user_id, 'meta_secret',true);
+                            //$code = get_user_meta( $user_id, 'has_to_be_activated', true );
+                            //if ($code == $requested_key) {
+                                //delete_user_meta( $user_id, 'has_to_be_activated' );
+                                //$secret =  get_user_meta($user_id, 'meta_secret',true);
                                 //asthmacare_welcome_user_notification($user_id,$secret);
                                 $user_info = get_userdata($user_id);
                                 echo "<p class='alert alert-success'>Your account is now active!.</p>"; ?>
@@ -26,10 +26,10 @@
 
                                 <?php
                                 printf( __('<a href="%1$s">View your site</a> or <a href="%2$s">Log in</a>'), site_url(), get_permalink(15));
-                            }
-                            else{
-                                echo "<p class='alert alert-danger'>Activation link has expired!.</p>";
-                            }
+                            //}
+                            //else{
+                            //    echo "<p class='alert alert-danger'>Activation link has expired!.</p>";
+                            //}
                         }
                         else{
                             echo "<p class='alert alert-danger'>Activation Key doesn't match with the requested key.</p>";

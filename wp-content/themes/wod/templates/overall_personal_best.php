@@ -250,9 +250,9 @@ get_header();
     <thead>
       <tr>
         <th style="width:20%">Athlete</th>
-        <th style="width:20%" class="exercise">Gym</th>
         <th style="width:15%" class="exercise">Exercise</th>
         <th style="width:15%" class="exercise">Weight</th>
+          <th style="width:20%" class="exercise">Gym</th>
         <th style="width:15%" class="exercise">Date</th>
       </tr>
     </thead>
@@ -274,7 +274,7 @@ get_header();
                     <td>
                         <span class="trainee_name"><?php echo $trainee_info->first_name, ' ' ,$trainee_info->last_name; ?></span>
                     </td>
-                    <td class="trainer_name"><?php echo $gym_name; ?></td>
+
                     <td class="exercise">
                         <span class="exercise-title"><?php echo get_the_title($obj->wk_name); ?></span>
                     </td>
@@ -313,6 +313,7 @@ get_header();
                            }
                         }
                         ?></td>
+                    <td class="trainer_name"><?php echo $gym_name; ?></td>
                     <td>
                         <span class="trainee_date"><?php echo date('d M Y', strtotime($obj->complete_date)); ?></span>
                     </td>
