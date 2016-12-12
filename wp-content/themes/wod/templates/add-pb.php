@@ -173,7 +173,7 @@ for ($i = 0; $i < 60; $i++) {
 
                                                 <div class="form-group">
                                                     <label>&nbsp;</label>
-                                                    <div class="publishPB"><label> <input type="checkbox" name="PERSONALBEST[1][over_all_publish]" value="1"> <span>Tick this box and everyone will see your PB!</span></label></div>
+                                                    <div class="publishPB"><label> <input type="checkbox" name="PERSONALBEST[1][over_all_publish]" value="1" checked> <span>Tick this box and everyone will see your PB!</span></label></div>
                                                 </div>
 
                                             <div class="remove hide btn btnred">DELETE</div>
