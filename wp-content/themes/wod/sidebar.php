@@ -7,7 +7,12 @@
             <li><a href="<?php echo wp_logout_url( home_url() ); ?>"> <span> <i class="fa fa-sign-out"></i> </span>Logout</a></li>
         <?php }else{ ?>
             <li><a href="<?php echo site_url().'/mydashboard'; ?>"><span><i class="fa fa-bar-chart"></i></span> Dashboard</a></li>
-            <li><a href="<?php echo site_url().'/overall-personal-best/'; ?>"> <span><i class="fa fa-users"></i></span> Overall Personal Bests</a></li>
+            <li><a href="<?php
+
+                $user_detail = wp_get_current_user();
+                $trainer_last = get_user_meta( $user_detail->ID, 'my_trainer', true );
+
+                echo site_url().'/overall-personal-best/?gym_name='.$trainer_last ; ?>"> <span><i class="fa fa-users"></i></span> Overall Personal Bests</a></li>
             <li><a href="<?php echo site_url().'/personal-best/'; ?>"> <span><i class="fa fa-user"></i></span> My Personal Bests</a></li>
             <li><a href="<?php echo site_url().'/social-media/'; ?>"> <span> <i class="fa fa-share-alt"></i> </span> My gyms social media</a></li>
             <li><a href="<?php echo site_url().'/add-workoutpb/'; ?>"> <span><i class="fa fa-plus-square"></i></span> Add a WOD</a></li>

@@ -14,7 +14,6 @@ if($user_detail->roles[0] == 'trainer'){
 
 get_header();
 ?>
-
     <div class="clear"></div>
 
     <div class="bridcrumb">
@@ -38,7 +37,7 @@ get_header();
 } ?></h2>
             <div class="row">
 
-                <form id="myForm" name="myForm" method="get" action="<?php echo site_url('overall-personal-best'); ?>">
+                <form id="myForm" name="myForm" method="get" action="<?php echo site_url('overall-personal-best'); ?>" >
 
 
                 <div class="col-md-4 col-sm-4">
@@ -182,9 +181,9 @@ get_header();
                     $p = new pagination;
                     $p->Items(count($list_items));
                     $default_posts_per_page = get_option( 'posts_per_page' );
-                    if($default_posts_per_page < 15)
+                    if($default_posts_per_page < 18)
                     {
-                        $default_posts_per_page = 15;
+                        $default_posts_per_page = 18;
                     }
                     $p->limit($default_posts_per_page);
                     $page_link = get_permalink(get_the_ID());
