@@ -52,7 +52,7 @@
                 </div>
                 <div class="col-md-3 col-sm-3">
                     <div class="home-post">
-                        <h3> registered</h3>
+                        <h3>Users registered</h3>
                         <h1><?php echo getUserCount(); ?></h1>
                     </div>
                 </div>
