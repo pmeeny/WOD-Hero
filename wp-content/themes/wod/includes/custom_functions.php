@@ -916,7 +916,6 @@ function getSingleWorkoutDetail(){
 
                     //if (strpos($html, $workOutDetailsNewArray[0][3]) !== true){
                     $html .= '<td><b><h4>Overall Time: ' . $workOutDetailsNewArray[0][3] .  ' Rounds: ' . $workOutDetailsNewArray[0][6].  ' Desc: ' . $workOutDetailsNewArray[0][7] . '</h4></b></td></td><tr></tr>';
-                    $html .= '<td><b><h4>Description: ' . $workOutDetailsNewArray[0][7] . '</h4></b></td></td><tr></tr>';
                     //}
                 }
                 if($workOutDetailsNewArray[0][5]=="1") {
@@ -1554,3 +1553,51 @@ function time_formatted_pad($number) {
     return   $number;
 }
 
+
+function getRegGyms(){
+    global $wpdb;
+
+    $total_sql_query = "SELECT COUNT(*) as crossfitgyms FROM {$wpdb->prefix}users
+                                          WHERE display_name LIKE '%Crossfit%'";
+    $list_items = $wpdb->get_results($total_sql_query);
+
+    foreach($list_items as $key=>$obj) {
+        //return $obj->crossfitgyms;
+        return 1;
+    }
+
+}
+
+function getUserCount(){
+
+    global $wpdb;
+    $total_sql_query = "SELECT COUNT(*) as crossfitgyms FROM {$wpdb->prefix}users
+                                          WHERE display_name NOT LIKE '%Crossfit%'";
+    $list_items = $wpdb->get_results($total_sql_query);
+
+    foreach($list_items as $key=>$obj) {
+        return $obj->crossfitgyms;
+    }
+}
+
+
+
+function getWODsLogged(){
+    global $wpdb;
+    $total_sql_query = "SELECT COUNT(*) as wodslogged FROM {$wpdb->prefix}add_workout WHERE gym_name = 'Crossfit C2F'  AND pbweight = '0' AND times != ''";
+    $list_items = $wpdb->get_results($total_sql_query);
+
+    foreach($list_items as $key=>$obj) {
+        return $obj->wodslogged;
+    }
+}
+
+function getPBsLogged(){
+    global $wpdb;
+    $total_sql_query = "SELECT COUNT(*) as pblogged FROM {$wpdb->prefix}add_workout WHERE gym_name = 'Crossfit C2F' AND pbweight != '0'";
+    $list_items = $wpdb->get_results($total_sql_query);
+
+    foreach($list_items as $key=>$obj) {
+        return $obj->pblogged;
+    }
+}

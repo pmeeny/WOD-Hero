@@ -42,5 +42,32 @@
             <?php endif; ?>
         </div>
     </div>
-
+    <div class="footerStats">
+            <div class="row">
+                <div class="col-md-3 col-sm-3">
+                    <div class="home-post">
+                        <h3>Gyms registered</h3>
+                        <h1><?php echo getRegGyms(); ?></h1>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <div class="home-post">
+                        <h3> registered</h3>
+                        <h1><?php echo getUserCount(); ?></h1>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <div class="home-post">
+                        <h3>WODs logged</h3>
+                        <h1><?php echo getWODsLogged(); ?></h1>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <div class="home-post">
+                        <h3>PBs logged</h3>
+                        <h1><?php echo getPBsLogged(); ?></h1>
+                    </div>
+                </div>
+        </div>
+    </div>
 <?php get_footer(); ?>
