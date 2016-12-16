@@ -6,6 +6,10 @@
 
     <div class="container home-page-container">
         <div class="row">
+        </div>
+        <div class="row">
+        </div>
+
             <div class="col-md-12">
                 <div class="home-aboutText">
                     <?php $page_data = get_page(40); ?>
@@ -13,7 +17,6 @@
                     <?php echo apply_filters('the_content', $page_data->post_content); ?>
                 </div>
             </div>
-        </div>
 
         <div class="row">
             <?php $args = array( 'posts_per_page' => 6, 'category_name'=>'blog' );
@@ -42,32 +45,34 @@
             <?php endif; ?>
         </div>
     </div>
+
     <div class="footerStats">
-            <div class="row">
-                <div class="col-md-3 col-sm-3">
-                    <div class="home-post">
-                        <h3>Gyms registered</h3>
-                        <h1><?php echo getRegGyms(); ?></h1>
-                    </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-3">
+                <div class="home-post">
+                    <h3>Gyms registered</h3>
+                    <h1><?php echo getRegGyms(); ?></h1>
                 </div>
-                <div class="col-md-3 col-sm-3">
-                    <div class="home-post">
-                        <h3>Users registered</h3>
-                        <h1><?php echo getUserCount(); ?></h1>
-                    </div>
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <div class="home-post">
+                    <h3>Users registered</h3>
+                    <h1><?php echo getUserCount(); ?></h1>
                 </div>
-                <div class="col-md-3 col-sm-3">
-                    <div class="home-post">
-                        <h3>WODs logged</h3>
-                        <h1><?php echo getWODsLogged(); ?></h1>
-                    </div>
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <div class="home-post">
+                    <h3>WODs logged</h3>
+                    <h1><?php echo getWODsLogged(); ?></h1>
                 </div>
-                <div class="col-md-3 col-sm-3">
-                    <div class="home-post">
-                        <h3>PBs logged</h3>
-                        <h1><?php echo getPBsLogged(); ?></h1>
-                    </div>
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <div class="home-post">
+                    <h3>PBs logged</h3>
+                    <h1><?php echo getPBsLogged(); ?></h1>
                 </div>
+            </div>
         </div>
+        <?php echo wdi_feed(array('id'=>'1')); ?>
     </div>
 <?php get_footer(); ?>

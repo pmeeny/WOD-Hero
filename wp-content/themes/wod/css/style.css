@@ -78,7 +78,7 @@ ul.sub-menu li:last-child{border-bottom:0px; margin-left:0;}
 
 
 
-.slider{margin:0 auto; background:url(../images/training-601214.jpg) no-repeat center center; background-size:cover; height:635px; text-align:center;}
+.slider{margin:0 auto; background:url(../images/training-601214.jpg) no-repeat center center; background-size:cover; height:635px; text-align:center; border-bottom:4px solid #148c39; }
 
 .slider h1{font-size:78px; color:#fff; text-transform:uppercase; font-weight:bold; text-shadow:1px 1px 4px #000; margin-top:22%;}
 
