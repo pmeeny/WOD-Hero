@@ -644,12 +644,12 @@ function get_workout_lists_pb_specific(){
             $localhost=$_SERVER["HTTP_HOST"];
             if($localhost == "localhost:8888")   {
             if($workoutValue == 363 || $workoutValue == 364 || $workoutValue == 365 || $workoutValue == 370 || $workoutValue == 371 || $workoutValue == 372
-               || $workoutValue == 375 || $workoutValue == 376 || $workoutValue == 377 || $workoutValue == 379 || $workoutValue == 380 ){
+               || $workoutValue == 375 || $workoutValue == 376 || $workoutValue == 377 || $workoutValue == 379 || $workoutValue == 380 || $workoutValue == 746  || $workoutValue == 747  || $workoutValue == 748 ){
                 $state.='<option value="'.get_the_ID().'">'.get_the_title($post->ID).'</option>';
             } }
             else
                 if($workoutValue == 355 || $workoutValue == 354 || $workoutValue == 351 || $workoutValue == 352 || $workoutValue == 350 || $workoutValue == 347 || $workoutValue == 346
-                    || $workoutValue == 345 || $workoutValue == 339 || $workoutValue == 338 || $workoutValue == 337 || $workoutValue == 336 || $workoutValue == 463){
+                    || $workoutValue == 345 || $workoutValue == 339 || $workoutValue == 338 || $workoutValue == 337 || $workoutValue == 336 || $workoutValue == 463 || $workoutValue == 500  || $workoutValue == 501  || $workoutValue == 502 ){
                 $state.='<option value="'.get_the_ID().'">'.get_the_title($post->ID).'</option>';
             }
            

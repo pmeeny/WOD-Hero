@@ -100,6 +100,7 @@ get_header();
                                         if($post->post_title == "Back Squat" || $post->post_title == "Bench Press"|| $post->post_title == "Clean & Jerk"|| $post->post_title == "Clean & Press"|| $post->post_title == "Deadlift"
                                           || $post->post_title == "Front Squat" || $post->post_title == "Hang Clean" || $post->post_title == "Hang Snatch" ||
                                         $post->post_title == "Power Clean" || $post->post_title == "Power Snatch" || $post->post_title == "Push Press" || $post->post_title == "Strict Press" || $post->post_title == "OH Squat"
+                                            || $post->post_title == "Split Jerk" || $post->post_title == "Push Jerk" || $post->post_title == "Full Snatch"
 
                                         ){ ?>
                                         
